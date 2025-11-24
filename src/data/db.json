@@ -1,0 +1,904 @@
+{
+  "users": [
+    {
+      "id": "aef0",
+      "name": "sasa",
+      "email": "Ladgamer777@gmail.com",
+      "password": "777777777777",
+      "terms": false
+    },
+    {
+      "id": "dd8d",
+      "name": "swalih",
+      "email": "swalink555@gmail.com",
+      "password": "12345678",
+      "terms": false
+    },
+    {
+      "id": "6d48",
+      "name": "swalih",
+      "email": "user@gmail.com",
+      "password": "1234",
+      "terms": true
+    }
+  ],
+  "cart": [],
+  "products": [
+    {
+      "id": "iphone-17-pro",
+      "name": "iPhone 17 Pro",
+      "category": "Smartphone",
+      "brand": "Apple",
+      "price": 129999,
+      "currency": "INR",
+      "stock": 14,
+      "images": [
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17pro-digitalmat-gallery-1-202509_GEO_EMEA?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=ekJPc2lPUlRuRk50SkcyOVdnU1d0TjFla0N0Znl3UThxdjB3SW91ZDVJeFptNC9yejJUMWI2dmhrTGRMd2F4ZjhpVENtU1Jsa01tcGtZS0IwM01XVkVaMm9lVjZWaGFvQVRMeWxLakVNdXRpc2lSR1BSMzNQQm5UMU83ZFVxQmFYSVI4ZkRTLy83YU5OdEFVT1FiTW9R",
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17pro-digitalmat-gallery-3-202509?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=ekJPc2lPUlRuRk50SkcyOVdnU1d0TjFla0N0Znl3UThxdjB3SW91ZDVJeGNmQmJPaDM2aGx4aDFNbXhCczNyV28xUkhYejcxalRvY0FPQVpMcmoxMDlLQzdVZ2V3VnpqcXFKTGxlK1dFUXhxRHVRU1Y3V3BkbTR4MkxPZTk5REQ",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "shortDescription": "iPhone 17 Pro — titanium frame and pro camera system.",
+      "features": [
+      "6.1-inch Super Retina XDR display",
+      "Titanium design with textured matte glass back",
+      "A17 Pro chip with 6-core CPU",
+      "Pro camera system with 48MP Main camera",
+      "USB-C connector for charging and data transfer"
+      ],
+      "specs": {
+        "display": "6.1-inch ProMotion OLED",
+        "chip": "A19 Pro",
+        "mainCamera": "48MP Pro triple-lens",
+        "material": "Titanium",
+        "os": "iOS 19"
+      },
+      "variants": {
+        "storage": ["256GB", "512GB", "1TB"],
+        "colors": ["Orange", "Silver","Deep Blue"]
+      },
+      "rating": 4.9
+    },
+    {
+      "id": "iphone-17",
+      "name": "iPhone 17",
+      "category": "Smartphone",
+      "brand": "Apple",
+      "price": 79999,
+      "currency": "INR",
+      "stock": 22,
+      "images": [
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-digitalmat-gallery-3-202509_GEO_EMEA?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=SVhTK013TmU5bXcxZm9yb0hnWkxGU0JYMGNRelI2WXAyb0IycFNGSFF5QXlNUWtzZldTWFRVcW9XNGZ1blhXOWVkZGptNUJaWitJZ3gyOURkSTlZQ3VCc3FjamJwVXJjd2U3WEc3Smc2MXpkZWxUbVcrZTZlY2ZZSjRZQ2QyaW1mbW94YnYxc1YvNXZ4emJGL0IxNFp3",
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-finish-unselect-gallery-1-202509_GEO_EMEA?wid=5120&hei=2880&fmt=webp&qlt=90&.v=WGdCRlQ0YVlqbTdXTEkxRnVQb0oxdFgrSXpWVEhWaW9YTGlWRHFoSHU0OGVVRGcwVkxmNk9rdGtMbGV1WEU3aHNCckZqMTMrS3dIUWFPL2dFWXJDTmhNQnJMcnc4RkxJd3ZMc3hKZVVFWHUxNjR2WDVZSE9wdmlwTk5JUnpsUEZyYW1LQys4QTB0dktyalpuNkJlVVN3&traceId=1",
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-digitalmat-gallery-2-202509?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=SVhTK013TmU5bXcxZm9yb0hnWkxGZHp0bzhwRTZxYVNNMnVRTXVpMUZES0U5aWg1WE9Xd3BOSWtnNzkvSWZLd0ZGMGUwb1Y3aUJoOFNtZnEvQXJFMEJYVzFZSG9ORXhsSkhTN0hjejcrL012STE2N3lLaGN2TEw1SWFFVXhJdG8",
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-digitalmat-gallery-4-202509?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=SVhTK013TmU5bXcxZm9yb0hnWkxGV01QRDErVGRSejdiZElhV1JWdUVLeUU5aWg1WE9Xd3BOSWtnNzkvSWZLd0ZGMGUwb1Y3aUJoOFNtZnEvQXJFMEJYVzFZSG9ORXhsSkhTN0hjejcrL1ArTXlFTTV6c1Ayd1o2ZkVhV1JhK0U",
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-digitalmat-gallery-5-202509?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=SVhTK013TmU5bXcxZm9yb0hnWkxGUjZZYjZUb0RCWElvSXlYUWhuREtTeUU5aWg1WE9Xd3BOSWtnNzkvSWZLd0ZGMGUwb1Y3aUJoOFNtZnEvQXJFMEJYVzFZSG9ORXhsSkhTN0hjejcrL012STE2N3lLaGN2TEw1SWFFVXhJdG8",
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-digitalmat-gallery-6-202509?wid=728&hei=666&fmt=jpeg&qlt=90&.v=SVhTK013TmU5bXcxZm9yb0hnWkxGYnFKc2ptWjJYakpPRXdPVUNzTGpNT0U5aWg1WE9Xd3BOSWtnNzkvSWZLd1l1V3dXQmdJWnFRbkcraVFaYnkzVFk1WkdmSmlSUHRjbjg3K3JzSXZQSU81aWdqNHVwcUtlVHFoZ0JJaFYvWUs",
+        ""
+      ],
+      "shortDescription": "iPhone 17 with upgraded performance and battery.",
+      "specs": {
+        "display": "6.1-inch Super Retina XDR",
+        "chip": "A18 Pro",
+        "mainCamera": "48MP + 12MP",
+        "battery": "Improved battery life",
+        "os": "iOS 19"
+      },
+      "variants": {
+        "storage": ["128GB", "256GB", "512GB"],
+        "colors": ["Lavender", "Sage", "Mist Blue", "White", "Black"]
+      },
+      "rating": 4.8
+    },
+    {
+      "id": "iphone-17-pro-max",
+      "name": "iPhone 17 Pro Max",
+      "category": "Smartphone",
+      "brand": "Apple",
+      "price": 149999,
+      "currency": "INR",
+      "stock": 0,
+      "images": [
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17pro-digitalmat-gallery-5-202509?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=ekJPc2lPUlRuRk50SkcyOVdnU1d0TjFla0N0Znl3UThxdjB3SW91ZDVJeG1hWkZ6UHNRSXhlQnZJMURpUmV1QW8xUkhYejcxalRvY0FPQVpMcmoxMDlLQzdVZ2V3VnpqcXFKTGxlK1dFUXpucGszV1kvUjNNUmdVQ1lGWXlTekY",
+        "/images/iphones/iphone17promax/gold-512.jpg",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "shortDescription": "iPhone 17 Pro Max — largest display and best battery.",
+      "specs": {
+        "display": "6.7-inch ProMotion OLED",
+        "chip": "A19 Pro",
+        "mainCamera": "48MP Pro quad-lens",
+        "battery": "Extended battery life",
+        "material": "Titanium"
+      },
+      "variants": {
+        "storage": ["512GB", "1TB"],
+        "colors": ["Orange", "Silver","Deep Blue"]
+      },
+      "rating": 4.9
+    },
+    {
+      "id": "iphone-air",
+      "name": "iPhone Air",
+      "category": "Smartphone",
+      "brand": "Apple",
+      "price": 49999,
+      "currency": "INR",
+      "stock": 50,
+      "images": [
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-card-40-17air-202509?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=WVVFRzUzVk1oblJhbW9PbGNSU25jci9mUU0zMkc5ekxlZHFEM05NWkp3NUMxQXc4S3pBZE5lUDJlTzVYSUYydFMwV0hhcmdVdXZzZ1NwTlFUaEgwTCtUZHJHS0dDSWYyeUtQd0tjOERiaFE",
+        "/images/iphones/iphoneair/sky-128.jpg",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "shortDescription": "iPhone Air — lightweight design, great performance.",
+      "specs": {
+        "display": "6.1-inch OLED",
+        "chip": "A17 Lite",
+        "mainCamera": "48MP",
+        "battery": "Good battery life",
+        "weight": "Lightweight"
+      },
+      "variants": {
+        "storage": ["64GB", "128GB", "256GB"],
+        "colors": ["Light Gold", "Sky", "White", "Black"]
+      },
+      "rating": 4.5
+    },
+    {
+      "id": "iphone-16",
+      "name": "iPhone 16",
+      "category": "Smartphone",
+      "brand": "Apple",
+      "price": 74999,
+      "currency": "INR",
+      "stock": 9,
+      "images": [
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone16-digitalmat-gallery-1-202409?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=Y2tBd1RqSzMrd3hScm1lN290ZENDS041dXh2MUpWOGFNK2V6eVg1VGV3OHlLZ0xXbFByV2Vvak9rWndaamlPU3cvMldkdDlIc0lud2tjcDJ3djFCUkV2dGpWUjV5VzZtaGp2QjBiUXR3RUFOM1EvNmN2VndPa21RenM3N2pucTg",
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone16-digitalmat-gallery-2-202409?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=Y2tBd1RqSzMrd3hScm1lN290ZENDR2Q3SE9aM2lHWDNyaVZ5ajdQOU9yMHlLZ0xXbFByV2Vvak9rWndaamlPU3cvMldkdDlIc0lud2tjcDJ3djFCUkV2dGpWUjV5VzZtaGp2QjBiUXR3RUN2NjFXVEJNV2dlU044aXFFTEo4cGc",
+        "/images/iphones/iphone16/white-128.jpg",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "shortDescription": "iPhone 16 with advanced camera and A18 chip.",
+      "specs": {
+        "display": "6.1-inch Super Retina XDR",
+        "chip": "A18",
+        "mainCamera": "48MP",
+        "battery": "All-day battery",
+        "os": "iOS 19"
+      },
+      "variants": {
+        "storage": ["128GB", "256GB", "512GB"],
+        "colors": ["Teal", "Blue","Pink","White", "Black"]
+      },
+      "rating": 4.7
+    },
+    {
+      "id": "nothing-phone-3",
+      "name": "Nothing Phone 3",
+      "category": "Smartphone",
+      "brand": "Nothing",
+      "price": 36999,
+      "currency": "INR",
+      "stock": 28,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0376/5420/0459/files/0000s_0011_Phone-3-white.png?v=1753434595",
+        "https://nothingtech-in.myshopify.com/cdn/shop/files/phone-3.jpg?v=1752562421",
+        "https://m.media-amazon.com/images/I/51jc50L+tAL._SY300_SX300_QL70_FMwebp_.jpg",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "shortDescription": "Nothing Phone 3 — improved camera & performance.",
+      "specs": {
+        "display": "6.6-inch OLED",
+        "chip": "Snapdragon 8 Gen 3",
+        "camera": "50MP + 12MP",
+        "battery": "4700mAh"
+      },
+      "variants": {
+        "storage": ["128GB", "256GB"],
+        "colors": ["Black", "Silver"]
+      },
+      "rating": 4.4
+    },
+
+    {
+      "id": "nothing-phone-3a-Pro",
+      "name": "Nothing Phone 3a Pro",
+      "category": "Smartphone",
+      "brand": "Nothing",
+      "price": 32999,
+      "currency": "INR",
+      "stock": 40,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0376/5420/0459/files/0000s_0009_Phone-3a-Pro-grey.png?v=1753435871",
+        "/images/nothing/phone2/white-128.jpg",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "shortDescription": "Nothing Phone 3a Pro — clean design & smooth UI.",
+      "specs": {
+        "display": "6.5-inch OLED",
+        "chip": "Snapdragon 7s Gen 3",
+        "camera": "50MP",
+        "battery": "5000mAh"
+      },
+      "variants": {
+        "storage": ["128GB", "256GB"],
+        "colors": ["Black", "White"]
+      },
+      "rating": 4.3
+    },
+    {
+      "id": "nothing-phone-3a",
+      "name": "Nothing Phone 3a",
+      "category": "Smartphone",
+      "brand": "Nothing",
+      "price": 23999,
+      "currency": "INR",
+      "stock": 60,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0376/5420/0459/files/0000s_0004_Phone-3a-white.png?v=1753436094",
+        "/images/nothing/phone2a/green-64.jpg",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "shortDescription": "Nothing Phone 3a — budget-friendly with signature design.",
+      "specs": {
+        "display": "6.2-inch OLED",
+        "chip": "Mid-range SoC",
+        "camera": "48MP",
+        "battery": "5300mAh"
+      },
+      "variants": {
+        "storage": ["64GB", "128GB"],
+        "colors": ["Black", "White"]
+      },
+      "rating": 4.1
+    },
+
+    {
+      "id": "acer-nitro-v15-2025",
+      "name": "Acer Nitro V15 (2025)",
+      "category": "Laptop",
+      "brand": "Acer",
+      "price": 74999,
+      "currency": "INR",
+      "stock": 20,
+      "images": [
+        "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSLfr7dY8I9aMS-7SSNvK0xtd8WZ-kCHCrr5IngrcsZJs50rI2yovBCbVsx6LdtfHHYfgBeppbNAkvpy968JqFSgLHQeTTUK8zDd5491mKCev6gQBgveo7I",
+        "/images/laptops/acer/nitro-v15/black-2.jpg",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "shortDescription": "Acer Nitro V15 — gaming laptop with RTX graphics.",
+      "specs": {
+        "processor": "Intel i7 13th Gen",
+        "gpu": "NVIDIA RTX 4060",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "display": "15.6-inch FHD 144Hz"
+      },
+      "variants": {
+        "ram": ["16GB", "32GB"],
+        "storage": ["512GB", "1TB"]
+      },
+      "rating": 4.4
+    },
+    {
+      "id": "acer-nitro-v16-2025",
+      "name": "Acer Nitro V16 (2025)",
+      "category": "Laptop",
+      "brand": "Acer",
+      "price": 89999,
+      "currency": "INR",
+      "stock": 12,
+      "images": [
+        "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQzKkDkta9raFHZk1l6fF0qD7XJ0i3O5-M-7EUIxue81CRJyDUJ3oXHQdmCpc_eiU8lGXf_xcJj2Nu8fgnvxJZqs3tfJuzbRSzWXkzO5kfqVMQuMmnMDam0eQ",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "shortDescription": "Acer Nitro V16 — larger display, high-refresh gaming.",
+      "specs": {
+        "processor": "Intel i7 14th Gen",
+        "gpu": "NVIDIA RTX 4070",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "display": "16-inch QHD 165Hz"
+      },
+      "variants": {
+        "ram": ["16GB", "32GB"],
+        "storage": ["1TB"]
+      },
+      "rating": 4.5
+    },
+    {
+      "id": "acer-nitro-v16-lite-2025",
+      "name": "Acer Nitro V16 Lite",
+      "category": "Laptop",
+      "brand": "Acer",
+      "price": 89999,
+      "currency": "INR",
+      "stock": 12,
+      "images": [
+        "https://static-ecapac.acer.com/media/catalog/product/n/i/nitro_base_image_i5_un.366si.006.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=500&width=500&canvas=500:500",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "shortDescription": "Acer Nitro V16 — larger display, high-refresh gaming.",
+      "specs": {
+        "processor": "Intel Core i5-13420H Processor",
+        "gpu": "NVIDIA GeForce RTX 4050-6 GB GDDR6",
+        "ram": "16 GB",
+        "storage": "512 GB SSD",
+        "display": "16-inch QHD 165Hz"
+      },
+      "variants": {
+        "ram": ["16GB", "32GB"],
+        "storage": ["1TB"]
+      },
+      "rating": 4.5
+    },
+
+    {
+      "id": "lenovo-loq3-rtx4080",
+      "name": "Lenovo LOQ 3 (High) - RTX 4080",
+      "category": "Laptop",
+      "brand": "Lenovo",
+      "price": 189999,
+      "currency": "INR",
+      "stock": 6,
+      "images": [
+        "https://m.media-amazon.com/images/I/81f7dTXcl4L.jpg",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "shortDescription": "Lenovo LOQ 3 high model with top-tier GPU.",
+      "specs": {
+        "processor": "Intel i9 / Ryzen 9",
+        "gpu": "NVIDIA RTX 4060",
+        "ram": "32GB",
+        "storage": "1TB SSD",
+        "display": "16-inch QHD 240Hz"
+      },
+      "variants": {
+        "ram": ["32GB"],
+        "storage": ["1TB", "2TB"]
+      },
+      "rating": 4.7
+    },
+    {
+      "id": "lenovo-loq3-rtx4070",
+      "name": "Lenovo LOQ 3 (High) - RTX 4070",
+      "category": "Laptop",
+      "brand": "Lenovo",
+      "price": 139999,
+      "currency": "INR",
+      "stock": 8,
+      "images": [
+        "https://m.media-amazon.com/images/I/81AFuufzY-L.jpg",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "shortDescription": "Lenovo LOQ 3 high model balancing price and power.",
+      "specs": {
+        "processor": "Intel i7 / Ryzen 7",
+        "gpu": "NVIDIA RTX 4070",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "display": "16-inch FHD 165Hz"
+      },
+      "variants": {
+        "ram": ["16GB", "32GB"],
+        "storage": ["1TB"]
+      },
+      "rating": 4.6
+    },
+
+    {
+      "id": "asus-tuf-f16",
+      "name": "ASUS TUF Gaming F16",
+      "category": "Laptop",
+      "brand": "ASUS",
+      "price": 84999,
+      "currency": "INR",
+      "stock": 15,
+      "images": [
+        "https://m.media-amazon.com/images/I/81esbxfsMlL._SX679_.jpg",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "shortDescription": "ASUS TUF — durable gaming laptop, value-focused.",
+      "specs": {
+        "processor": "13th Gen,Intel Core i5-13450HX",
+        "gpu": "NVIDIA RTX 5050-8GB",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "display": "15.6-inch FHD 165Hz"
+      },
+      "variants": {
+        "ram": ["8GB", "16GB"],
+        "storage": ["512GB", "1TB"]
+      },
+      "rating": 4.3
+    },
+    {
+      "id": "asus-tuf-a15",
+      "name": "ASUS TUF A15",
+      "category": "Laptop",
+      "brand": "ASUS",
+      "price": 69999,
+      "currency": "INR",
+      "stock": 18,
+      "images": [
+        "https://m.media-amazon.com/images/I/81+DaZP4aSL._SX679_.jpg",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "shortDescription": "ASUS TUF A15 — AMD powered gaming performance.",
+      "specs": {
+        "processor": "Ryzen 7",
+        "gpu": "NVIDIA RTX 3050",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "display": "15.6-inch FHD 144Hz"
+      },
+      "variants": {
+        "ram": ["8GB", "16GB"],
+        "storage": ["512GB"]
+      },
+      "rating": 4.2
+    },
+    {
+      "id": "asus-tuf-gaming-pro",
+      "name": "ASUS TUF F16",
+      "category": "Laptop",
+      "brand": "ASUS",
+      "price": 139990,
+      "currency": "INR",
+      "stock": 10,
+      "images": [
+        "https://m.media-amazon.com/images/I/81uhoF43yAL._SX679_.jpg",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "shortDescription": "ASUS TUF F16 — higher-end TUF with stronger GPU.",
+      "specs": {
+        "processor": "14th Gen, Smartchoice,Intel Core i7 14650HX",
+        "gpu": "NVIDIA RTX 5060-8GB",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "display": "16-inch QHD 165Hz"
+      },
+      "variants": {
+        "ram": ["16GB", "32GB"],
+        "storage": ["1TB"]
+      },
+      "rating": 4.5
+    },
+    {
+      "id": "hp-victus-16",
+      "name": "HP Victus 16",
+      "category": "Laptop",
+      "brand": "HP",
+      "price": 89999,
+      "currency": "INR",
+      "stock": 12,
+      "images": [
+        "https://m.media-amazon.com/images/I/41-Fy0V3XZL._SY300_SX300_QL70_FMwebp_.jpg",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "shortDescription": "HP Victus 16 — larger display with improved thermals.",
+      "specs": {
+        "processor": "AMD Ryzen 9-8945HS",
+        "gpu": "NVIDIA 8GB RTX 4060",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "display": "16.1-inch FHD 144Hz"
+      },
+      "variants": {
+        "ram": ["16GB", "32GB"],
+        "storage": ["1TB"]
+      },
+      "rating": 4.3
+    },
+    
+    {
+      "id": "hp-victus-15",
+      "name": "HP Victus 15",
+      "category": "Laptop",
+      "brand": "HP",
+      "price": 74999,
+      "currency": "INR",
+      "stock": 20,
+      "images": [
+        "https://m.media-amazon.com/images/I/71yAQOj0FTL._SX679_.jpg",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "shortDescription": "HP Victus 15 — solid mid-range gaming laptop.",
+      "specs": {
+        "processor": "Intel Core i7, 13th Gen-13620H",
+        "gpu": "NVIDIA 6 GB RTX 3050",
+        "ram": "8GB",
+        "storage": "512GB SSD",
+        "display": "15.6-inch FHD 144Hz"
+      },
+      "variants": {
+        "ram": ["8GB", "16GB"],
+        "storage": ["512GB"]
+      },
+      "rating": 4.1
+    },
+
+    {
+      "id": "lenovo-legion-5",
+      "name": "Lenovo Legion 5",
+      "category": "Laptop",
+      "brand": "Lenovo",
+      "price": 129999,
+      "currency": "INR",
+      "stock": 9,
+      "images": [
+        "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQmDh-P-LjJMDwMEhQYWe5hw-aPLpN1CtNc4uD63s3VAULe5p-o_qdqHzw5r_EvobgQZnvkipKSiavaszC7SVCXwITtjkuOoPz_4Txlex8eKoU0GYbpLifocMzGD4KN&usqp=CAc",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "shortDescription": "Lenovo Legion 5 — powerful gaming with excellent cooling.",
+      "specs": {
+        "processor": "AMD Ryzen 9",
+        "gpu": "NVIDIA RTX 4070",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "display": "15.6-inch QHD 165Hz"
+      },
+      "variants": {
+        "ram": ["16GB", "32GB"],
+        "storage": ["1TB", "2TB"]
+      },
+      "rating": 4.6
+    },
+    {
+      "id": "lenovo-legion-7",
+      "name": "Lenovo Legion 7",
+      "category": "Laptop",
+      "brand": "Lenovo",
+      "price": 169999,
+      "currency": "INR",
+      "stock": 5,
+      "images": [
+        "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRzE-LF68BIl_IKwC4pj_xwi6nVO2S8KV0WeQCm0np75W-uiJMZqdZocYnnG68T2eDDWKlwxyOYMxbmjpcA6YtvTJZRV4gNAhR4YqNlUkOQiwq8D1OM9JJ1",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "shortDescription": "Lenovo Legion 7 — flagship Legion with top specs.",
+      "specs": {
+        "processor": "Intel i9",
+        "gpu": "NVIDIA RTX 4080",
+        "ram": "32GB",
+        "storage": "2TB SSD",
+        "display": "16-inch QHD 240Hz"
+      },
+      "variants": {
+        "ram": ["32GB"],
+        "storage": ["2TB"]
+      },
+      "rating": 4.8
+    },
+
+    {
+      "id": "macbook-m5-13",
+      "name": "MacBook M5 13-inch",
+      "category": "Laptop",
+      "brand": "Apple",
+      "price": 129999,
+      "currency": "INR",
+      "stock": 10,
+      "images": [
+        "https://www.apple.com/assets-www/en_WW/mac/01_product_tile/xlarge/mbp_14_16_b933a4e71_2x.jpg",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "shortDescription": "MacBook with M5 — top performance for professionals.",
+      "specs": {
+        "processor": "Apple M5",
+        "ram": "8GB",
+        "storage": "256GB SSD",
+        "display": "13.3-inch Liquid Retina",
+        "battery": "Up to 20 hours"
+      },
+      "variants": {
+        "ram": ["8GB", "16GB"],
+        "storage": ["256GB", "512GB"]
+      },
+      "rating": 4.9
+    },
+    {
+      "id": "macbook-m4-14",
+      "name": "MacBook M4 14-inch",
+      "category": "Laptop",
+      "brand": "Apple",
+      "price": 149999,
+      "currency": "INR",
+      "stock": 7,
+      "images": [
+        "https://www.apple.com/assets-www/en_WW/mac/01_product_tile/xlarge/mba_13_15_140e630d3_2x.jpg",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "shortDescription": "MacBook M4 series — balanced power and portability.",
+      "specs": {
+        "processor": "Apple M4",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "display": "14-inch Liquid Retina",
+        "battery": "Up to 18 hours"
+      },
+      "variants": {
+        "ram": ["16GB", "32GB"],
+        "storage": ["512GB", "1TB"]
+      },
+      "rating": 4.8
+    },
+
+    {
+      "id": "access-case-iphone-17-pro",
+      "name": "Silicone Case for iPhone 17 pro",
+      "category": "Accessory",
+      "brand": "StoreBrand",
+      "price": 799,
+      "currency": "INR",
+      "stock": 200,
+      "images": [
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MGF64?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=S0R5bjkzbTk4d0FPVGtMK2hQZUdVZ2tuVHYzMERCZURia3c5SzJFOTlPZ3JTRTZ5Yi94UDBnUUhiU2ZvQ2ZITkxhdEF2Qnk0U2VobnRLanVtaVJ5THc",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "shortDescription": "Slim silicone case for iPhone 16 series.",
+      "specs": {
+        "material": "Silicone",
+        "compatibility": "iPhone 16 / 17 / Air",
+        "colors": "Black, Blue, White"
+      },
+      "variants": {
+        "colors": ["Black", "Blue", "White"]
+      },
+      "rating": 4.2
+    },
+    {
+      "id": "access-charger-65w",
+      "name": "65W USB-C Fast Charger",
+      "category": "Accessory",
+      "brand": "StoreBrand",
+      "price": 1499,
+      "currency": "INR",
+      "stock": 150,
+      "images": [
+        "https://m.media-amazon.com/images/I/51CwRteygGL._SY741_.jpg",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "shortDescription": "65W USB-C GaN fast charger for laptops & phones.",
+      "specs": {
+        "output": "65W",
+        "ports": "1x USB-C",
+        "features": "GaN, Fast Charge"
+      },
+      "variants": {
+        "colors": ["White", "Black"]
+      },
+      "rating": 4.5
+    },
+    {
+      "id": "access-earbuds-wireless",
+      "name": "True Wireless Earbuds",
+      "category": "Accessory",
+      "brand": "SoundBrand",
+      "price": 3999,
+      "currency": "INR",
+      "stock": 120,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0376/5420/0459/files/0000s_0069_CMF-Buds-Pro-2-case-orange.png?v=1753437680"
+      ],
+      "shortDescription": "Wireless earbuds with active noise cancellation.",
+      "specs": {
+        "battery": "30 hours (with case)",
+        "features": "ANC, Bluetooth 5.3, Quick Pair"
+      },
+      "variants": {
+        "colors": ["Black", "White"]
+      },
+      "rating": 4.4
+    },
+    {
+      "id": "access-screen-protector-iphone",
+      "name": "Logitech Lift Vertical Ergonomic Mouse",
+      "category": "Accessory",
+      "brand": "Logitech",
+      "price": 5495,
+      "currency": "INR",
+      "stock": 300,
+      "images": [
+        "https://m.media-amazon.com/images/I/61OkuiCWbDL._SX679_.jpg"
+      ],
+      "shortDescription": "Wireless, Bluetooth or Logi Bolt USB Receiver, Quiet clicks, 4 Buttons, Compatible with Windows/macOS/iPadOS, Laptop, PC - Graphite",
+      "specs": {
+        "hardness": "9H",
+        "compatibility": "iPhone 16 / 17 / Air",
+        "features": "Oleophobic coating"
+      },
+      "variants": {
+        "models": ["Graphite"]
+      },
+      "rating": 4.1
+    },
+    {
+      "id": "EvoFox-Katana-S",
+      "name": "EvoFox Katana S Mini Wireless Mechanical Keyboard",
+      "category": "Accessory",
+      "brand": "EvoFox",
+      "price": 2399,
+      "currency": "INR",
+      "stock": 140,
+      "images": [
+        "https://m.media-amazon.com/images/I/61j3w3LIHqL._SX522_.jpg"
+      ],
+      "shortDescription": "Universal laptop cooling pad with RGB fans.",
+      "About-this": "Tri-Mode (3X BT, 2.4GHz & Wired) Connectivity | Hot-Swappable Red Switches | 68-Key Compact Layout | Rainbow Backlight | Rechargeable Battery",
+      "specs": {
+        "Connectivity Technology": "Bluetooth, 2.4GHz & Wired",
+        "compatibility": "MacOS, Windows",
+        "features": "MacOS, Windows"
+      },
+      "variants": {
+        "sizes": ["15-inch", "17-inch"]
+      },
+      "rating": 4.0
+    },
+    {
+      "id": "access-laptop-bag",
+      "name": "Offbeat - Armored premium Laptop 27ltr backapcks series",
+      "category": "Accessory",
+      "brand": "offbeat",
+      "price": 1890,
+      "currency": "INR",
+      "stock": 180,
+      "images": [
+        "https://m.media-amazon.com/images/I/61CnZjeZGgL._SX679_.jpg"
+      ],
+      "shortDescription": "Slim padded laptop sleeve for 13–15 inch laptops.",
+      "specs": {
+        "material": "Neoprene",
+        "sizes": "13-inch, 15-inch",
+        "features": "Water resistant"
+      },
+      "variants": {
+        "sizes": ["13-inch", "15-inch"],
+        "colors": ["Grey", "Black"]
+      },
+      "rating": 4.3
+    },
+
+    {
+      "id": "access-usb-c-to-lightning",
+      "name": "USB-C to Lightning Cable (1m)",
+      "category": "Accessory",
+      "brand": "Apple",
+      "price": 1999,
+      "currency": "INR",
+      "stock": 350,
+      "images": [
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MU2G3_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=ejdRTlJjUmp1dHRXbG9mdkF0dmJpRlZya2lKWlJmUEwrYndWOTJiVWJWQUYwVmtIbGRkS25RMVpBRlo0bk5DUVo0R3pnVmdwR2k3OGlKTzYyNVpEbFE"
+      ],
+      "shortDescription": "Durable braided USB-C to Lightning cable (1m).",
+      "specs": {
+        "length": "1m",
+        "compatibility": "iPhone, iPad",
+        "features": "Fast charging support"
+      },
+      "variants": {
+        "lengths": ["1m", "2m"]
+      },
+      "rating": 4.4
+    },
+
+    {
+      "id": "access-magsafe-wallet",
+      "name": "iPhone FineWoven Wallet with MagSafe Moss",
+      "category": "Accessory",
+      "brand": "Apple",
+      "price": 2499,
+      "currency": "INR",
+      "stock": 90,
+      "images": [
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MGH74_AV4?wid=2000&hei=2000&fmt=jpeg&qlt=90&.v=aXg0N3ppSVJKcTF1eHV1dU5tVjNEU1RkTXNZOFJZTitTVFE0NHl0VW5Cb0YwVmtIbGRkS25RMVpBRlo0bk5DUUdBT1NodzZZMVZMR3o5cWtzVUVud3c",
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MGH74?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=QWVQRnQzSTQvSSthZ0FrN0hIaDFaZ2tuVHYzMERCZURia3c5SzJFOTlPaWc2VXhiaHNBT1NtRnhyVHFkMm1SKzd2U2F3ZkUrYkNLNElnendiZnh3THc"
+      ],
+      "shortDescription": "MagSafe compatible wallet for iPhone (holds 3 cards).",
+      "specs": {
+        "material": "Leatherette",
+        "compatibility": "iPhone 12 and later (MagSafe)",
+        "capacity": "3 cards"
+      },
+      "variants": {
+        "colors": ["Black", "Brown"]
+      },
+      "rating": 4.2
+    }
+
+  ]
+
+  
+}
