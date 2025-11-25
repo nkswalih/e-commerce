@@ -7,7 +7,6 @@ import Login from './pages/LoginForm'
 import Terms from './pages/Terms'
 import Store from './pages/Store'
 import Apple from './pages/Apple'
-import Contact from './pages/Contact'
 import Laptop from './pages/Laptop'
 import Test from './pages/Test'
 import Profile from './pages/Profile'
@@ -17,6 +16,12 @@ import CartPage from './pages/Cart'
 import { ToastContainer } from 'react-toastify';
 import './styles/toast.css';
 import './index.css';
+import SearchPage from './pages/Search'
+import LaptopPage from './pages/Laptop'
+import CheckoutPage from './components/OrderPage/Checkout'
+import OrderConfirmation from './components/OrderPage/OrderConfirmation'
+import AccessoriesPage from './pages/Accessories'
+import EchooSupport from './pages/Support'
 
 function App() {
   return (
@@ -34,12 +39,17 @@ function App() {
           <Route path="/store" element={<Store/>}/>
           <Route path="/apple" element={<Apple/>}/>
           <Route path="/lap" element={<Laptop/>}/>
-          <Route path="/contact" element={<Contact/>}/>
           <Route path="/test" element={<Test/>}/>
           <Route path="/profile" element={<Profile/>}/>
           <Route path="/product/:productId" element={<ProductPage />} />
           <Route path="/store" element={<StorePage/>}/>
           <Route path="/cart" element={<CartPage/>}/>
+          <Route path="/search" element={<SearchPage/>}/>
+          <Route path="/laptop" element={<LaptopPage/>}/>
+          <Route path="/checkout" element={<CheckoutPage />} />
+          <Route path="/order-confirmation/:orderId" element={<OrderConfirmation />} />
+          <Route path="/accessories" element={<AccessoriesPage />} />
+          <Route path="/support" element={<EchooSupport />} />
         </Routes>
 
         <ToastContainer

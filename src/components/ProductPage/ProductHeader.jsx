@@ -17,12 +17,6 @@ const ProductHeader = ({ product }) => {
           {product.name}
         </h1>
         <div className="flex items-center gap-2 mt-2">
-          <div className="flex text-amber-400">
-            {"★".repeat(Math.floor(product.rating))}
-            <span className="text-gray-300">{"★".repeat(5 - Math.floor(product.rating))}</span>
-          </div>
-          <span className="text-sm text-gray-500">({product.rating})</span>
-          <span className="text-sm text-gray-500">•</span>
           <span className={`text-sm ${
             product.stock > 10 ? 'text-green-600' : product.stock > 0 ? 'text-orange-600' : 'text-red-600'
           }`}>

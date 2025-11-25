@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-50 border-t border-gray-200">
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-6 py-12">
+      <div className="max-w-7xl mx-auto px-6 py-12 ">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           
           {/* Brand Section */}
@@ -73,103 +73,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Support */}
-          <div>
-            <h3 className="text-gray-900 font-semibold mb-4">Support</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link 
-                  to="/support" 
-                  className="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm"
-                >
-                  Help Center
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/contact" 
-                  className="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm"
-                >
-                  Contact Us
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/warranty" 
-                  className="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm"
-                >
-                  Warranty
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/repair" 
-                  className="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm"
-                >
-                  Repair Services
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h3 className="text-gray-900 font-semibold mb-4">Company</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link 
-                  to="/about" 
-                  className="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm"
-                >
-                  About echOo
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/careers" 
-                  className="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm"
-                >
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/investors" 
-                  className="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm"
-                >
-                  Investors
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/news" 
-                  className="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm"
-                >
-                  Newsroom
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Newsletter Section */}
-        <div className="mt-12 pt-8 border-t border-gray-200">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              <h4 className="text-gray-900 font-semibold mb-2">Stay Updated</h4>
-              <p className="text-gray-600 text-sm">Get the latest news and offers from echOo</p>
-            </div>
-            <div className="flex space-x-2">
-              <input 
-                type="email" 
-                placeholder="Enter your email"
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent text-sm min-w-64"
-              />
-              <button className="bg-gray-900 text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition-colors duration-200 text-sm font-medium">
-                Subscribe
-              </button>
-            </div>
-          </div>
+      
         </div>
 
         {/* Bottom Bar */}

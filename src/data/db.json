@@ -20,6 +20,13 @@
       "email": "user@gmail.com",
       "password": "1234",
       "terms": true
+    },
+    {
+      "id": "238b",
+      "name": "FAQ",
+      "email": "user2@gmail.com",
+      "password": "1234",
+      "terms": true
     }
   ],
   "cart": [],
@@ -43,11 +50,11 @@
       ],
       "shortDescription": "iPhone 17 Pro — titanium frame and pro camera system.",
       "features": [
-      "6.1-inch Super Retina XDR display",
-      "Titanium design with textured matte glass back",
-      "A17 Pro chip with 6-core CPU",
-      "Pro camera system with 48MP Main camera",
-      "USB-C connector for charging and data transfer"
+        "6.1-inch Super Retina XDR display",
+        "Titanium design with textured matte glass back",
+        "A17 Pro chip with 6-core CPU",
+        "Pro camera system with 48MP Main camera",
+        "USB-C connector for charging and data transfer"
       ],
       "specs": {
         "display": "6.1-inch ProMotion OLED",
@@ -57,10 +64,18 @@
         "os": "iOS 19"
       },
       "variants": {
-        "storage": ["256GB", "512GB", "1TB"],
-        "colors": ["Orange", "Silver","Deep Blue"]
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ],
+        "colors": [
+          "Orange",
+          "Silver",
+          "Deep Blue"
+        ]
       },
-      "rating": 4.9
+      "status": "new"
     },
     {
       "id": "iphone-17",
@@ -88,10 +103,20 @@
         "os": "iOS 19"
       },
       "variants": {
-        "storage": ["128GB", "256GB", "512GB"],
-        "colors": ["Lavender", "Sage", "Mist Blue", "White", "Black"]
+        "storage": [
+          "128GB",
+          "256GB",
+          "512GB"
+        ],
+        "colors": [
+          "Lavender",
+          "Sage",
+          "Mist Blue",
+          "White",
+          "Black"
+        ]
       },
-      "rating": 4.8
+      "status": "new"
     },
     {
       "id": "iphone-17-pro-max",
@@ -119,10 +144,17 @@
         "material": "Titanium"
       },
       "variants": {
-        "storage": ["512GB", "1TB"],
-        "colors": ["Orange", "Silver","Deep Blue"]
+        "storage": [
+          "512GB",
+          "1TB"
+        ],
+        "colors": [
+          "Orange",
+          "Silver",
+          "Deep Blue"
+        ]
       },
-      "rating": 4.9
+      "status": "new"
     },
     {
       "id": "iphone-air",
@@ -150,10 +182,19 @@
         "weight": "Lightweight"
       },
       "variants": {
-        "storage": ["64GB", "128GB", "256GB"],
-        "colors": ["Light Gold", "Sky", "White", "Black"]
+        "storage": [
+          "64GB",
+          "128GB",
+          "256GB"
+        ],
+        "colors": [
+          "Light Gold",
+          "Sky",
+          "White",
+          "Black"
+        ]
       },
-      "rating": 4.5
+      "status": "new"
     },
     {
       "id": "iphone-16",
@@ -182,10 +223,19 @@
         "os": "iOS 19"
       },
       "variants": {
-        "storage": ["128GB", "256GB", "512GB"],
-        "colors": ["Teal", "Blue","Pink","White", "Black"]
-      },
-      "rating": 4.7
+        "storage": [
+          "128GB",
+          "256GB",
+          "512GB"
+        ],
+        "colors": [
+          "Teal",
+          "Blue",
+          "Pink",
+          "White",
+          "Black"
+        ]
+      }
     },
     {
       "id": "nothing-phone-3",
@@ -213,12 +263,17 @@
         "battery": "4700mAh"
       },
       "variants": {
-        "storage": ["128GB", "256GB"],
-        "colors": ["Black", "Silver"]
+        "storage": [
+          "128GB",
+          "256GB"
+        ],
+        "colors": [
+          "Black",
+          "Silver"
+        ]
       },
-      "rating": 4.4
+      "status": "new"
     },
-
     {
       "id": "nothing-phone-3a-Pro",
       "name": "Nothing Phone 3a Pro",
@@ -244,10 +299,16 @@
         "battery": "5000mAh"
       },
       "variants": {
-        "storage": ["128GB", "256GB"],
-        "colors": ["Black", "White"]
+        "storage": [
+          "128GB",
+          "256GB"
+        ],
+        "colors": [
+          "Black",
+          "White"
+        ]
       },
-      "rating": 4.3
+      "status": "new"
     },
     {
       "id": "nothing-phone-3a",
@@ -274,12 +335,17 @@
         "battery": "5300mAh"
       },
       "variants": {
-        "storage": ["64GB", "128GB"],
-        "colors": ["Black", "White"]
+        "storage": [
+          "64GB",
+          "128GB"
+        ],
+        "colors": [
+          "Black",
+          "White"
+        ]
       },
-      "rating": 4.1
+      "status": "new"
     },
-
     {
       "id": "acer-nitro-v15-2025",
       "name": "Acer Nitro V15 (2025)",
@@ -306,10 +372,16 @@
         "display": "15.6-inch FHD 144Hz"
       },
       "variants": {
-        "ram": ["16GB", "32GB"],
-        "storage": ["512GB", "1TB"]
+        "ram": [
+          "16GB",
+          "32GB"
+        ],
+        "storage": [
+          "512GB",
+          "1TB"
+        ]
       },
-      "rating": 4.4
+      "status": "new"
     },
     {
       "id": "acer-nitro-v16-2025",
@@ -336,10 +408,15 @@
         "display": "16-inch QHD 165Hz"
       },
       "variants": {
-        "ram": ["16GB", "32GB"],
-        "storage": ["1TB"]
+        "ram": [
+          "16GB",
+          "32GB"
+        ],
+        "storage": [
+          "1TB"
+        ]
       },
-      "rating": 4.5
+      "status": "new"
     },
     {
       "id": "acer-nitro-v16-lite-2025",
@@ -366,12 +443,16 @@
         "display": "16-inch QHD 165Hz"
       },
       "variants": {
-        "ram": ["16GB", "32GB"],
-        "storage": ["1TB"]
+        "ram": [
+          "16GB",
+          "32GB"
+        ],
+        "storage": [
+          "1TB"
+        ]
       },
-      "rating": 4.5
+      "status": "new"
     },
-
     {
       "id": "lenovo-loq3-rtx4080",
       "name": "Lenovo LOQ 3 (High) - RTX 4080",
@@ -397,10 +478,15 @@
         "display": "16-inch QHD 240Hz"
       },
       "variants": {
-        "ram": ["32GB"],
-        "storage": ["1TB", "2TB"]
+        "ram": [
+          "32GB"
+        ],
+        "storage": [
+          "1TB",
+          "2TB"
+        ]
       },
-      "rating": 4.7
+      "status": "new"
     },
     {
       "id": "lenovo-loq3-rtx4070",
@@ -427,12 +513,16 @@
         "display": "16-inch FHD 165Hz"
       },
       "variants": {
-        "ram": ["16GB", "32GB"],
-        "storage": ["1TB"]
+        "ram": [
+          "16GB",
+          "32GB"
+        ],
+        "storage": [
+          "1TB"
+        ]
       },
-      "rating": 4.6
+      "status": "new"
     },
-
     {
       "id": "asus-tuf-f16",
       "name": "ASUS TUF Gaming F16",
@@ -458,10 +548,16 @@
         "display": "15.6-inch FHD 165Hz"
       },
       "variants": {
-        "ram": ["8GB", "16GB"],
-        "storage": ["512GB", "1TB"]
+        "ram": [
+          "8GB",
+          "16GB"
+        ],
+        "storage": [
+          "512GB",
+          "1TB"
+        ]
       },
-      "rating": 4.3
+      "status": "new"
     },
     {
       "id": "asus-tuf-a15",
@@ -488,10 +584,14 @@
         "display": "15.6-inch FHD 144Hz"
       },
       "variants": {
-        "ram": ["8GB", "16GB"],
-        "storage": ["512GB"]
-      },
-      "rating": 4.2
+        "ram": [
+          "8GB",
+          "16GB"
+        ],
+        "storage": [
+          "512GB"
+        ]
+      }
     },
     {
       "id": "asus-tuf-gaming-pro",
@@ -518,10 +618,15 @@
         "display": "16-inch QHD 165Hz"
       },
       "variants": {
-        "ram": ["16GB", "32GB"],
-        "storage": ["1TB"]
+        "ram": [
+          "16GB",
+          "32GB"
+        ],
+        "storage": [
+          "1TB"
+        ]
       },
-      "rating": 4.5
+      "status": "new"
     },
     {
       "id": "hp-victus-16",
@@ -548,12 +653,16 @@
         "display": "16.1-inch FHD 144Hz"
       },
       "variants": {
-        "ram": ["16GB", "32GB"],
-        "storage": ["1TB"]
+        "ram": [
+          "16GB",
+          "32GB"
+        ],
+        "storage": [
+          "1TB"
+        ]
       },
-      "rating": 4.3
+      "status": "new"
     },
-    
     {
       "id": "hp-victus-15",
       "name": "HP Victus 15",
@@ -579,12 +688,15 @@
         "display": "15.6-inch FHD 144Hz"
       },
       "variants": {
-        "ram": ["8GB", "16GB"],
-        "storage": ["512GB"]
-      },
-      "rating": 4.1
+        "ram": [
+          "8GB",
+          "16GB"
+        ],
+        "storage": [
+          "512GB"
+        ]
+      }
     },
-
     {
       "id": "lenovo-legion-5",
       "name": "Lenovo Legion 5",
@@ -610,10 +722,15 @@
         "display": "15.6-inch QHD 165Hz"
       },
       "variants": {
-        "ram": ["16GB", "32GB"],
-        "storage": ["1TB", "2TB"]
-      },
-      "rating": 4.6
+        "ram": [
+          "16GB",
+          "32GB"
+        ],
+        "storage": [
+          "1TB",
+          "2TB"
+        ]
+      }
     },
     {
       "id": "lenovo-legion-7",
@@ -640,12 +757,14 @@
         "display": "16-inch QHD 240Hz"
       },
       "variants": {
-        "ram": ["32GB"],
-        "storage": ["2TB"]
-      },
-      "rating": 4.8
+        "ram": [
+          "32GB"
+        ],
+        "storage": [
+          "2TB"
+        ]
+      }
     },
-
     {
       "id": "macbook-m5-13",
       "name": "MacBook M5 13-inch",
@@ -671,10 +790,16 @@
         "battery": "Up to 20 hours"
       },
       "variants": {
-        "ram": ["8GB", "16GB"],
-        "storage": ["256GB", "512GB"]
+        "ram": [
+          "8GB",
+          "16GB"
+        ],
+        "storage": [
+          "256GB",
+          "512GB"
+        ]
       },
-      "rating": 4.9
+      "status": "new"
     },
     {
       "id": "macbook-m4-14",
@@ -701,12 +826,17 @@
         "battery": "Up to 18 hours"
       },
       "variants": {
-        "ram": ["16GB", "32GB"],
-        "storage": ["512GB", "1TB"]
+        "ram": [
+          "16GB",
+          "32GB"
+        ],
+        "storage": [
+          "512GB",
+          "1TB"
+        ]
       },
-      "rating": 4.8
+      "status": "new"
     },
-
     {
       "id": "access-case-iphone-17-pro",
       "name": "Silicone Case for iPhone 17 pro",
@@ -730,9 +860,12 @@
         "colors": "Black, Blue, White"
       },
       "variants": {
-        "colors": ["Black", "Blue", "White"]
-      },
-      "rating": 4.2
+        "colors": [
+          "Black",
+          "Blue",
+          "White"
+        ]
+      }
     },
     {
       "id": "access-charger-65w",
@@ -757,9 +890,11 @@
         "features": "GaN, Fast Charge"
       },
       "variants": {
-        "colors": ["White", "Black"]
-      },
-      "rating": 4.5
+        "colors": [
+          "White",
+          "Black"
+        ]
+      }
     },
     {
       "id": "access-earbuds-wireless",
@@ -778,9 +913,11 @@
         "features": "ANC, Bluetooth 5.3, Quick Pair"
       },
       "variants": {
-        "colors": ["Black", "White"]
-      },
-      "rating": 4.4
+        "colors": [
+          "Black",
+          "White"
+        ]
+      }
     },
     {
       "id": "access-screen-protector-iphone",
@@ -800,9 +937,10 @@
         "features": "Oleophobic coating"
       },
       "variants": {
-        "models": ["Graphite"]
-      },
-      "rating": 4.1
+        "models": [
+          "Graphite"
+        ]
+      }
     },
     {
       "id": "EvoFox-Katana-S",
@@ -823,9 +961,11 @@
         "features": "MacOS, Windows"
       },
       "variants": {
-        "sizes": ["15-inch", "17-inch"]
-      },
-      "rating": 4.0
+        "sizes": [
+          "15-inch",
+          "17-inch"
+        ]
+      }
     },
     {
       "id": "access-laptop-bag",
@@ -845,12 +985,16 @@
         "features": "Water resistant"
       },
       "variants": {
-        "sizes": ["13-inch", "15-inch"],
-        "colors": ["Grey", "Black"]
-      },
-      "rating": 4.3
+        "sizes": [
+          "13-inch",
+          "15-inch"
+        ],
+        "colors": [
+          "Grey",
+          "Black"
+        ]
+      }
     },
-
     {
       "id": "access-usb-c-to-lightning",
       "name": "USB-C to Lightning Cable (1m)",
@@ -869,11 +1013,12 @@
         "features": "Fast charging support"
       },
       "variants": {
-        "lengths": ["1m", "2m"]
-      },
-      "rating": 4.4
+        "lengths": [
+          "1m",
+          "2m"
+        ]
+      }
     },
-
     {
       "id": "access-magsafe-wallet",
       "name": "iPhone FineWoven Wallet with MagSafe Moss",
@@ -893,12 +1038,175 @@
         "capacity": "3 cards"
       },
       "variants": {
-        "colors": ["Black", "Brown"]
-      },
-      "rating": 4.2
+        "colors": [
+          "Black",
+          "Brown"
+        ]
+      }
     }
-
-  ]
-
-  
+  ],
+  "support-data": {
+    "supportCategories": [
+      {
+        "id": "smartphone",
+        "name": "Echoo Phone",
+        "icon": "📱",
+        "topics": [
+          "Set up your Echoo Phone",
+          "Transfer data to new Echoo Phone",
+          "Fix battery issues",
+          "Screen repair",
+          "Camera problems",
+          "Software updates"
+        ]
+      },
+      {
+        "id": "laptop",
+        "name": "Echoo Book",
+        "icon": "💻",
+        "topics": [
+          "Set up your Echoo Book",
+          "Keyboard not working",
+          "Battery replacement",
+          "Screen issues",
+          "Performance optimization",
+          "EchooOS support"
+        ]
+      },
+      {
+        "id": "tablet",
+        "name": "Echoo Pad",
+        "icon": "📟",
+        "topics": [
+          "Echoo Pad setup",
+          "Display issues",
+          "Battery problems",
+          "Echoo Pencil connectivity",
+          "App optimization",
+          "Accessory pairing"
+        ]
+      },
+      {
+        "id": "watch",
+        "name": "Echoo Time",
+        "icon": "⌚",
+        "topics": [
+          "Pair Echoo Time",
+          "Battery life issues",
+          "Health features",
+          "Band replacement",
+          "Software updates",
+          "Activity tracking"
+        ]
+      },
+      {
+        "id": "audio",
+        "name": "Echoo Sound",
+        "icon": "🎧",
+        "topics": [
+          "Connect Echoo Sound",
+          "Battery problems",
+          "Sound quality",
+          "Charging case issues",
+          "Noise cancellation",
+          "Firmware updates"
+        ]
+      },
+      {
+        "id": "music",
+        "name": "Echoo Stream",
+        "icon": "🎵",
+        "topics": [
+          "Echoo Stream subscription",
+          "Playlist issues",
+          "Audio quality",
+          "Family sharing",
+          "Download problems",
+          "Account management"
+        ]
+      },
+      {
+        "id": "tv",
+        "name": "Echoo Vision",
+        "icon": "📺",
+        "topics": [
+          "Echoo Vision setup",
+          "Streaming issues",
+          "Remote problems",
+          "App installation",
+          "Video quality",
+          "Audio sync issues"
+        ]
+      },
+      {
+        "id": "accessories",
+        "name": "Echoo Accessories",
+        "icon": "🎯",
+        "topics": [
+          "Case compatibility",
+          "Charger issues",
+          "Cable problems",
+          "Wireless charging",
+          "Accessory pairing",
+          "Warranty claims"
+        ]
+      }
+    ],
+    "accountSupport": [
+      {
+        "id": "password",
+        "name": "Forgotten Echoo Account password",
+        "description": "Reset your password and regain access to your account"
+      },
+      {
+        "id": "security",
+        "name": "Account security",
+        "description": "Two-factor authentication and security settings"
+      }
+    ],
+    "repairServices": [
+      {
+        "id": "repair",
+        "name": "Echoo Repair",
+        "description": "Professional repair services for all Echoo devices"
+      },
+      {
+        "id": "warranty",
+        "name": "Warranty status",
+        "description": "Check your device warranty coverage"
+      }
+    ],
+    "billingSupport": [
+      {
+        "id": "billing",
+        "name": "Billing and Subscriptions",
+        "description": "Manage your Echoo subscriptions and billing information"
+      },
+      {
+        "id": "refunds",
+        "name": "Refund requests",
+        "description": "Request refunds for purchases and subscriptions"
+      }
+    ],
+    "supportFeatures": [
+      {
+        "id": "my-support",
+        "title": "My Support",
+        "description": "Get warranty information, check your coverage status or look up an existing repair.",
+        "buttonText": "Sign in with your Echoo Account",
+        "icon": "🔧"
+      },
+      {
+        "id": "echoo-care",
+        "title": "EchooCare+",
+        "description": "Get unlimited repairs for accidental damage protection, priority access to Echoo experts, and more.",
+        "buttonText": "Learn more",
+        "icon": "⭐"
+      }
+    ],
+    "safetyNotice": {
+      "title": "Beware of counterfeit parts",
+      "content": "Some counterfeit and third-party power adapters and batteries may not be designed properly and could result in safety issues. To ensure you receive a genuine Echoo battery during a battery replacement, we recommend visiting an Echoo Authorised Service Provider. If you need a replacement adapter to charge your Echoo device, we recommend getting an Echoo power adapter.\n\nAlso non-genuine replacement displays may have compromised visual quality and may fail to work correctly. Echoo-certified screen repairs are performed by trusted experts who use genuine Echoo parts."
+    }
+  }
 }

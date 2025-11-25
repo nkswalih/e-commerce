@@ -3,8 +3,9 @@ import axios from 'axios';
 import StoreHeader from '../components/StorePage/StoreHeader';
 import CategoryFilter from '../components/StorePage/CategoryFilter';
 import ProductGrid from '../components/StorePage/ProductGrid';
-import ProductList from '../components/StorePage/ProductList';
+// import ProductList from '../components/StorePage/ProductList';
 import Footer from '../components/Footer';
+
 
 const StorePage = () => {
   const [products, setProducts] = useState([]);
@@ -85,11 +86,11 @@ const StorePage = () => {
         setActiveCategory={setActiveCategory}
       />
 
-      {viewMode === 'grid' ? (
-        <ProductGrid products={filteredProducts} />
+      <ProductGrid products={filteredProducts} />
+      {/* {viewMode === 'grid' ? (
       ) : (
         <ProductList products={filteredProducts} />
-      )}
+      )} */}
       <Footer/>
     </div>
   );

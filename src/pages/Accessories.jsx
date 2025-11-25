@@ -3,7 +3,7 @@ import axios from 'axios';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 import { useNavigate } from 'react-router-dom';
 
-const LaptopPage = () => {
+const AccessoriesPage = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -11,7 +11,8 @@ const LaptopPage = () => {
 
   // Current index for each category
   const [appleIndex, setAppleIndex] = useState(0);
-  const [gamingIndex, setGamingIndex] = useState(0);
+  const [casesIndex, setCasesIndex] = useState(0);
+  const [audioIndex, setAudioIndex] = useState(0);
   const [otherIndex, setOtherIndex] = useState(0);
 
   // Items per view based on screen size
@@ -55,21 +56,32 @@ const LaptopPage = () => {
     fetchProducts();
   }, []);
 
-  // Filter laptops by category and brand
-  const appleLaptops = products?.filter(product => 
-    product?.brand === 'Apple' && product?.category === 'Laptop'
+  // Filter accessories by category and type
+  const appleAccessories = products?.filter(product => 
+    product?.brand === 'Apple' && product?.category === 'Accessory'
   ) || [];
 
-  const gamingLaptops = products?.filter(product => 
-    product?.category === 'Laptop' && 
-    ['Acer', 'Lenovo', 'ASUS', 'HP'].includes(product?.brand) &&
-    product?.name.toLowerCase().includes('gaming')
+  const casesAccessories = products?.filter(product => 
+    product?.category === 'Accessory' && 
+    product?.name.toLowerCase().includes('case')
   ) || [];
 
-  const otherLaptops = products?.filter(product => 
-    product?.category === 'Laptop' && 
-    !['Apple'].includes(product?.brand) &&
-    !product?.name.toLowerCase().includes('gaming')
+  const audioAccessories = products?.filter(product => 
+    product?.category === 'Accessory' && 
+    (product?.name.toLowerCase().includes('earbud') || 
+     product?.name.toLowerCase().includes('airpod') ||
+     product?.name.toLowerCase().includes('headphone') ||
+     product?.name.toLowerCase().includes('audio'))
+  ) || [];
+
+  const otherAccessories = products?.filter(product => 
+    product?.category === 'Accessory' && 
+    !product?.name.toLowerCase().includes('case') &&
+    !product?.name.toLowerCase().includes('earbud') &&
+    !product?.name.toLowerCase().includes('airpod') &&
+    !product?.name.toLowerCase().includes('headphone') &&
+    !product?.name.toLowerCase().includes('audio') &&
+    product?.brand !== 'Apple'
   ) || [];
 
   // Navigation handlers
@@ -92,7 +104,7 @@ const LaptopPage = () => {
   if (loading) {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
-        <div className="text-xl text-gray-600">Loading laptops...</div>
+        <div className="text-xl text-gray-600">Loading accessories...</div>
       </div>
     );
   }
@@ -202,8 +214,9 @@ const LaptopPage = () => {
               <button
                 key={index}
                 onClick={() => {
-                  if (title === 'MacBook') setAppleIndex(index);
-                  else if (title === 'Gaming Laptops') setGamingIndex(index);
+                  if (title === 'Apple Accessories') setAppleIndex(index);
+                  else if (title === 'Phone Cases') setCasesIndex(index);
+                  else if (title === 'Audio & Headphones') setAudioIndex(index);
                   else setOtherIndex(index);
                 }}
                 className={`w-3 h-3 rounded-full transition-all ${
@@ -231,7 +244,7 @@ const LaptopPage = () => {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-6xl font-bold font-dm-sans text-gray-900 mb-6">
-            The latest Laptops
+            Premium Accessories
           </h1>
         </div>
         
@@ -239,40 +252,49 @@ const LaptopPage = () => {
         </div>
 
         <div className="text-3xl inline-flex font-semibold font-dm-sans text-gray-500 max-w-4xl mx-auto">
-          <p className='text-3xl inline-flex font-semibold font-dm-sans text-gray-900 max-w-4xl mx-auto'>Powerful Performance. </p>&nbsp;Find the perfect laptop for your needs.
+          <p className='text-3xl inline-flex font-semibold font-dm-sans text-gray-900 max-w-4xl mx-auto'>Essential Companions. </p>&nbsp;Enhance your device experience.
         </div>
 
-        {/* MacBook */}
+        {/* Apple Accessories */}
         <ProductGridSection
-          title="MacBook"
-          products={appleLaptops}
+          title="Apple Accessories"
+          products={appleAccessories}
           currentIndex={appleIndex}
-          onNext={() => nextSlide(appleLaptops, appleIndex, setAppleIndex)}
+          onNext={() => nextSlide(appleAccessories, appleIndex, setAppleIndex)}
           onPrev={() => prevSlide(appleIndex, setAppleIndex)}
         />
 
-        {/* Gaming Laptops */}
+        {/* Phone Cases */}
         <ProductGridSection
-          title="Gaming Laptops"
-          products={gamingLaptops}
-          currentIndex={gamingIndex}
-          onNext={() => nextSlide(gamingLaptops, gamingIndex, setGamingIndex)}
-          onPrev={() => prevSlide(gamingIndex, setGamingIndex)}
+          title="Phone Cases"
+          products={casesAccessories}
+          currentIndex={casesIndex}
+          onNext={() => nextSlide(casesAccessories, casesIndex, setCasesIndex)}
+          onPrev={() => prevSlide(casesIndex, setCasesIndex)}
         />
 
-        {/* Other Laptops */}
+        {/* Audio & Headphones */}
         <ProductGridSection
-          title="Professional Laptops"
-          products={otherLaptops}
+          title="Audio & Headphones"
+          products={audioAccessories}
+          currentIndex={audioIndex}
+          onNext={() => nextSlide(audioAccessories, audioIndex, setAudioIndex)}
+          onPrev={() => prevSlide(audioIndex, setAudioIndex)}
+        />
+
+        {/* Other Accessories */}
+        <ProductGridSection
+          title="Other Accessories"
+          products={otherAccessories}
           currentIndex={otherIndex}
-          onNext={() => nextSlide(otherLaptops, otherIndex, setOtherIndex)}
+          onNext={() => nextSlide(otherAccessories, otherIndex, setOtherIndex)}
           onPrev={() => prevSlide(otherIndex, setOtherIndex)}
         />
 
         {/* Empty State */}
-        {appleLaptops.length === 0 && gamingLaptops.length === 0 && otherLaptops.length === 0 && (
+        {appleAccessories.length === 0 && casesAccessories.length === 0 && audioAccessories.length === 0 && otherAccessories.length === 0 && (
           <div className="text-center py-20">
-            <p className="text-2xl text-gray-600">No laptops found.</p>
+            <p className="text-2xl text-gray-600">No accessories found.</p>
           </div>
         )}
       </main>
@@ -280,4 +302,4 @@ const LaptopPage = () => {
   );
 };
 
-export default LaptopPage;
+export default AccessoriesPage;

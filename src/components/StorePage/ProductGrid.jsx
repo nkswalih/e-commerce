@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { HeartIcon, EyeIcon } from '@heroicons/react/24/outline';
+import { addToCart } from '../ProductPage/utils/cartUtils';
 
 const ProductGrid = ({ products }) => {
   const getColorClass = (color) => {
@@ -38,8 +39,9 @@ const ProductGrid = ({ products }) => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {products.map((product) => (
-          <div
+          <Link
             key={product.id}
+            to={`/product/${product.id}`}
             className="group bg-white border border-gray-100 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
           >
             <div className="relative mb-4 overflow-hidden rounded-xl">
@@ -72,7 +74,13 @@ const ProductGrid = ({ products }) => {
 
               {/* Quick Add to Cart */}
               <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <button className="w-full bg-gray-900 text-white py-3 rounded-xl font-medium hover:bg-gray-800 transition-colors text-sm">
+                <button 
+                className="w-full bg-gray-900 text-white py-3 rounded-xl font-medium hover:bg-gray-800 transition-colors text-sm"
+                onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                addToCart(product);
+                }}>
                   Add to Bag
                 </button>
               </div>
@@ -88,14 +96,6 @@ const ProductGrid = ({ products }) => {
                   {product.name}
                 </h3>
               </Link>
-
-              <div className="flex items-center gap-2">
-                <div className="flex text-amber-400 text-sm">
-                  {"★".repeat(Math.floor(product.rating))}
-                  <span className="text-gray-300">{"★".repeat(5 - Math.floor(product.rating))}</span>
-                </div>
-                <span className="text-xs text-gray-500">{product.rating}</span>
-              </div>
 
               <div className="flex items-center gap-2">
                 <span className="text-lg font-dm-sans font-bold text-gray-900">
@@ -121,7 +121,7 @@ const ProductGrid = ({ products }) => {
                 </div>
               )}
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

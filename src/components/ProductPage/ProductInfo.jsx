@@ -12,7 +12,7 @@ const ProductInfo = ({ product, selectedOptions, quantity, onOptionChange, onQua
         <ProductHeader product={product} />
         
         {/* Variant Selectors */}
-        {product.variants?.colors && product.variants.colors.length > 0 && (
+        {/* {product.variants?.colors && product.variants.colors.length > 0 && (
           <VariantSelector
             type="color"
             label="Color"
@@ -20,7 +20,7 @@ const ProductInfo = ({ product, selectedOptions, quantity, onOptionChange, onQua
             selectedValue={selectedOptions.color}
             onSelect={(value) => onOptionChange('color', value)}
           />
-        )}
+        )} */}
 
         {product.variants?.storage && product.variants.storage.length > 0 && (
           <VariantSelector

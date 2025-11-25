@@ -99,9 +99,6 @@ const ProductActions = ({ product, selectedOptions, quantity, onQuantityChange }
         <button className="p-4 border border-gray-300 rounded-xl hover:bg-gray-50 transition-colors">
           <HeartIcon className="size-5 text-gray-600" />
         </button>
-        <button className="p-4 border border-gray-300 rounded-xl hover:bg-gray-50 transition-colors">
-          <ShareIcon className="size-5 text-gray-600" />
-        </button>
       </div>
     </div>
   );

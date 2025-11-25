@@ -10,6 +10,7 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import AuthButton from "../ui/AuthButton";
+import SearchDropdown from "../ui/SearchDropDown.jsx";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -19,9 +20,9 @@ export default function Navbar() {
   const navItems = [
     { path: "/store", label: "Store" },
     { path: "/apple", label: "Apple" },
-    { path: "/lap", label: "Lap" },
+    { path: "/laptop", label: "Lap" },
     { path: "/accessories", label: "Accessories" },
-    { path: "/contact", label: "Contact" },
+    { path: "/support", label: "Support" },
   ];
 
   const NavLinkStyle = ({ isActive }) =>
@@ -60,12 +61,12 @@ export default function Navbar() {
 
           {/* Right side items */}
           <div className="flex items-center">
-            <div className="flex items-center gap-5"> {/* ✅ Added items-center */}
+            <div className="flex items-center gap-5">
+              {/* SEARCH BAR */}
               <Link
-                to="/search"
                 className="p-1.5 text-gray-400 hover:text-gray-500 transition-colors flex items-center justify-center"
               >
-                <MagnifyingGlassIcon className="size-4 stroke-gray-700" />
+                <SearchDropdown/>
               </Link>
 
               <Link

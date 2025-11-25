@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import {
   TrashIcon,
@@ -17,6 +17,8 @@ const CartPage = () => {
   useEffect(() => {
     fetchCartData();
   }, []);
+
+  const Navigate = useNavigate();
 
   const fetchCartData = async () => {
     try {
@@ -267,7 +269,10 @@ const CartPage = () => {
                   </p>
                 </div>
 
-                <button className="w-full bg-gray-900 text-white py-4 px-6 rounded-xl font-medium hover:bg-gray-800 transition-colors mt-6">
+                <button 
+                onClick={() => Navigate("/checkout")}
+                className="w-full bg-gray-900 text-white py-4 px-6 rounded-xl font-medium hover:bg-gray-800 transition-colors mt-6"
+                >
                   Proceed to Checkout
                 </button>
 
