@@ -7,15 +7,18 @@ const ProductActions = ({ product, selectedOptions, quantity, onQuantityChange }
 
   const handleAddToBag = async () => {
     if (addingToCart || product.stock === 0) return;
+    const auth = localStorage.getItem('user');
+    if(!auth){
+       return toast.error("Please Sign in");
+    }
     
     setAddingToCart(true);
     
     // Simple localStorage approach that always works
     try {
       const cartItem = {
-        id: `${product.id}-${selectedOptions.color}-${selectedOptions.storage}-${selectedOptions.ram}`,
+        id: `${product.id}-${selectedOptions.storage}-${selectedOptions.ram}`,
         productId: product.id,
-        color: selectedOptions.color,
         storage: selectedOptions.storage,
         ram: selectedOptions.ram,
         quantity: quantity,
@@ -58,7 +61,7 @@ const ProductActions = ({ product, selectedOptions, quantity, onQuantityChange }
       
     } catch (error) {
       console.error('Cart error:', error);
-      alert('Failed to add item to cart. Please try again.');
+      toast.error('Failed to add item to cart. Please try again.');
     } finally {
       setAddingToCart(false);
     }

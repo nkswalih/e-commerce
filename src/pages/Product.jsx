@@ -4,6 +4,7 @@ import axios from 'axios';
 import ProductImages from '../components/ProductPage/ProductImages';
 import ProductInfo from '../components/ProductPage/ProductInfo';
 import ProductActions from '../components/ProductPage/ProductActions';
+import SimpleFooter from '../components/SimpleFoot';
 
 const ProductPage = () => {
   const { productId } = useParams();
@@ -108,6 +109,7 @@ const addToWishlist = (product) => {
           />
         </div>
       </div>
+      <SimpleFooter/>
     </div>
   );
 };

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 import { useNavigate } from 'react-router-dom';
+import SimpleFooter from '../components/SimpleFoot';
 
 const AppleProductsPage = () => {
   const [products, setProducts] = useState([]);
@@ -234,8 +235,8 @@ const AppleProductsPage = () => {
         <div className="flex justify-start">
         </div>
 
-        <div className="text-3xl inline-flex font-semibold font-dm-sans text-gray-500 max-w-4xl mx-auto">
-          <p className='text-3xl inline-flex font-semibold font-dm-sans text-gray-900 max-w-4xl mx-auto'>The latest. </p>&nbsp;Take a look at what's new right now.
+        <div className="text-3xl inline-flex font-dm-sans font-bold text-gray-500 max-w-4xl mx-auto">
+          <p className='text-3xl inline-flex font-dm-sans font-bold text-gray-900 max-w-4xl mx-auto'>The latest. </p>&nbsp;Take a look at what's new right now.
         </div>
 
         {/* iPhone 17 Series */}
@@ -272,6 +273,7 @@ const AppleProductsPage = () => {
           </div>
         )}
       </main>
+      <SimpleFooter/>
     </div>
   );
 };

@@ -16,19 +16,69 @@ const CartPage = () => {
 
   useEffect(() => {
     fetchCartData();
+    
   }, []);
 
+  
   const Navigate = useNavigate();
+
+  
+  const userId = localStorage.getItem('userId') ? Number(localStorage.getItem('userId')) : "aef0";
+
+  // --- helper: sync cart to server (patch if exists, post if not) ---
+  const syncCartToServer = async (updatedCart) => {
+    try {
+      
+      await axios.put(`http://localhost:3000/users/${userId}/cart`, { cart: updatedCart });
+    } catch (err) {
+      // if user not found, create user with id and cart
+      if (err.response && err.response.status === 404) {
+        try {
+          await axios.post('http://localhost:3000/users', { id: userId, cart: updatedCart });
+        } catch (postErr) {
+          console.error('Failed to create user on server:', postErr);
+        }
+      } else {
+        console.error('Failed to sync cart to server:', err);
+      }
+    }
+  };
 
   const fetchCartData = async () => {
     try {
-      // Fetch products and get cart from localStorage
+      // Fetch products
       const productsResponse = await axios.get('http://localhost:3000/products');
-      setProducts(productsResponse.data);
-      
-      // Get cart from localStorage
-      const savedCart = JSON.parse(localStorage.getItem('echoo-cart') || '[]');
-      setCartItems(savedCart);
+      setProducts(productsResponse.data || []);
+
+      // Fetch user cart from server; fallback to localStorage
+      let serverCart = [];
+      try {
+        const userResponse = await axios.get(`http://localhost:3000/users/${userId}`);
+        serverCart = userResponse.data?.cart || [];
+      } catch (err) {
+        // if user not found, create empty user so later syncs won't 404
+        if (err.response && err.response.status === 404) {
+          try {
+            await axios.post('http://localhost:3000/users', { id: userId, cart: [] });
+            serverCart = [];
+          } catch (postErr) {
+            console.error('Error creating user fallback:', postErr);
+            serverCart = [];
+          }
+        } else {
+          console.error('Error fetching user:', err);
+        }
+      }
+
+      const localCart = JSON.parse(localStorage.getItem('echoo-cart') || '[]');
+
+      // Prefer server cart if it has items, otherwise use local cart
+      const finalCart = (serverCart && serverCart.length > 0) ? serverCart : (localCart || []);
+
+      setCartItems(finalCart);
+      // keep localStorage in sync
+      localStorage.setItem('echoo-cart', JSON.stringify(finalCart));
+
       setLoading(false);
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -41,24 +91,27 @@ const CartPage = () => {
   };
 
   const getProductById = (id) => {
-    return products.find(product => product.id === id);
+    return products.find(product => String(product.id) === String(id));
   };
 
-  const updateQuantity = (itemId, newQuantity) => {
+  const updateQuantity = async (itemId, newQuantity) => {
     if (newQuantity < 1) return;
-    
+
     const updatedCart = cartItems.map(item =>
       item.id === itemId ? { ...item, quantity: newQuantity } : item
     );
-    
+
     setCartItems(updatedCart);
     updateCartInStorage(updatedCart);
+    // sync in background (await so errors can be logged)
+    await syncCartToServer(updatedCart);
   };
 
-  const removeFromCart = (itemId) => {
+  const removeFromCart = async (itemId) => {
     const updatedCart = cartItems.filter(item => item.id !== itemId);
     setCartItems(updatedCart);
     updateCartInStorage(updatedCart);
+    await syncCartToServer(updatedCart);
   };
 
   const formatPrice = (price) => {
@@ -71,8 +124,10 @@ const CartPage = () => {
 
   const calculateSubtotal = () => {
     return cartItems.reduce((total, item) => {
-      const product = getProductById(item.productId);
-      return total + (product?.price || item.productPrice || 0) * item.quantity;
+      const product = getProductById(item.productId ?? item.id);
+      const price = product?.price ?? item.productPrice ?? 0;
+      const qty = item.quantity ?? 1;
+      return total + price * qty;
     }, 0);
   };
 
@@ -82,9 +137,10 @@ const CartPage = () => {
     return subtotal + shipping;
   };
 
-  const clearCart = () => {
+  const clearCart = async () => {
     setCartItems([]);
-    localStorage.setItem('echoo-cart', JSON.stringify([]));
+    updateCartInStorage([]);
+    await syncCartToServer([]);
   };
 
   if (loading) {
@@ -104,9 +160,7 @@ const CartPage = () => {
             <h2 className="text-2xl font-dm-sans font-bold text-gray-900 mb-4">
               Your cart is empty
             </h2>
-            <p className="text-gray-600 mb-8">
-              Start shopping to add items to your cart
-            </p>
+            <p className="text-gray-600 mb-8">Start shopping to add items to your cart</p>
             <Link
               to="/store"
               className="bg-gray-900 text-white px-8 py-3 rounded-xl font-medium hover:bg-gray-800 transition-colors"
@@ -128,10 +182,7 @@ const CartPage = () => {
             <h1 className="text-3xl font-dm-sans font-bold text-gray-900">Shopping Cart</h1>
             <p className="text-gray-600 mt-2">{cartItems.length} items in your cart</p>
           </div>
-          <button
-            onClick={clearCart}
-            className="text-sm text-red-600 hover:text-red-700 font-medium"
-          >
+          <button onClick={clearCart} className="text-sm text-red-600 hover:text-red-700 font-medium">
             Clear Cart
           </button>
         </div>
@@ -144,56 +195,35 @@ const CartPage = () => {
                 const product = getProductById(item.productId);
 
                 return (
-                  <div
-                    key={item.id}
-                    className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-sm transition-all"
-                  >
+                  <div key={item.id} className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-sm transition-all">
                     <div className="flex gap-6">
                       {/* Product Image */}
                       <div className="w-24 h-24 bg-gray-50 rounded-xl flex items-center justify-center p-2">
-                        <img
-                          src={item.productImage || product?.images?.[0]}
-                          alt={item.productName}
-                          className="w-full h-full object-contain"
-                        />
+                        <img src={item.productImage || product?.images?.[0]} alt={item.productName} className="w-full h-full object-contain" />
                       </div>
 
                       {/* Product Details */}
                       <div className="flex-1">
                         <div className="flex justify-between items-start">
                           <div>
-                            <Link
-                              to={`/product/${item.productId}`}
-                              className="font-medium text-gray-900 hover:text-gray-700 transition-colors"
-                            >
+                            <Link to={`/product/${item.productId}`} className="font-medium text-gray-900 hover:text-gray-700 transition-colors">
                               {item.productName}
                             </Link>
                             <p className="text-sm text-gray-500 mt-1">{item.productBrand}</p>
-                            
+
                             {/* Variants */}
                             <div className="flex gap-4 mt-2 text-sm text-gray-600">
-                              {item.color && item.color !== '' && (
-                                <span>Color: {item.color}</span>
-                              )}
-                              {item.storage && item.storage !== '' && (
-                                <span>Storage: {item.storage}</span>
-                              )}
-                              {item.ram && item.ram !== '' && (
-                                <span>RAM: {item.ram}</span>
-                              )}
+                              {item.color && item.color !== '' && <span>Color: {item.color}</span>}
+                              {item.storage && item.storage !== '' && <span>Storage: {item.storage}</span>}
+                              {item.ram && item.ram !== '' && <span>RAM: {item.ram}</span>}
                             </div>
-                            
-                            <p className="text-lg font-dm-sans font-bold text-gray-900 mt-2">
-                              {formatPrice(item.productPrice)}
-                            </p>
+
+                            <p className="text-lg font-dm-sans font-bold text-gray-900 mt-2">{formatPrice(item.productPrice)}</p>
                           </div>
 
                           {/* Remove Button */}
-                          <button
-                            onClick={() => removeFromCart(item.id)}
-                            className="text-gray-400 hover:text-red-500 transition-colors"
-                          >
-                            <TrashIcon className="size-5" />
+                          <button onClick={() => removeFromCart(item.id)} className="text-gray-400 hover:text-red-500 transition-colors">
+                            <TrashIcon className="w-5 h-5" />
                           </button>
                         </div>
 
@@ -202,26 +232,18 @@ const CartPage = () => {
                           <div className="flex items-center gap-3">
                             <span className="text-sm text-gray-600">Quantity:</span>
                             <div className="flex items-center gap-2">
-                              <button
-                                onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                                className="w-8 h-8 border border-gray-300 rounded-lg flex items-center justify-center hover:bg-gray-50 transition-colors"
-                              >
-                                <MinusIcon className="size-4" />
+                              <button onClick={() => updateQuantity(item.id, (item.quantity ?? 1) - 1)} className="w-8 h-8 border border-gray-300 rounded-lg flex items-center justify-center hover:bg-gray-50 transition-colors">
+                                <MinusIcon className="w-4 h-4" />
                               </button>
                               <span className="w-8 text-center font-medium">{item.quantity}</span>
-                              <button
-                                onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                                className="w-8 h-8 border border-gray-300 rounded-lg flex items-center justify-center hover:bg-gray-50 transition-colors"
-                              >
-                                <PlusIcon className="size-4" />
+                              <button onClick={() => updateQuantity(item.id, (item.quantity ?? 1) + 1)} className="w-8 h-8 border border-gray-300 rounded-lg flex items-center justify-center hover:bg-gray-50 transition-colors">
+                                <PlusIcon className="w-4 h-4" />
                               </button>
                             </div>
                           </div>
 
                           <div className="text-right">
-                            <p className="text-lg font-dm-sans font-bold text-gray-900">
-                              {formatPrice(item.productPrice * item.quantity)}
-                            </p>
+                            <p className="text-lg font-dm-sans font-bold text-gray-900">{formatPrice((item.productPrice ?? 0) * (item.quantity ?? 1))}</p>
                           </div>
                         </div>
                       </div>
@@ -235,51 +257,37 @@ const CartPage = () => {
           {/* Order Summary */}
           <div className="lg:w-1/3">
             <div className="bg-gray-50 rounded-2xl p-6 sticky top-8">
-              <h3 className="text-lg font-dm-sans font-bold text-gray-900 mb-6">
-                Order Summary
-              </h3>
+              <h3 className="text-lg font-dm-sans font-bold text-gray-900 mb-6">Order Summary</h3>
 
               <div className="space-y-4">
                 <div className="flex justify-between text-sm">
                   <span className="text-gray-600">Subtotal</span>
-                  <span className="font-medium text-gray-900">
-                    {formatPrice(calculateSubtotal())}
-                  </span>
+                  <span className="font-medium text-gray-900">{formatPrice(calculateSubtotal())}</span>
                 </div>
 
                 <div className="flex justify-between text-sm">
                   <span className="text-gray-600">Shipping</span>
-                  <span className="font-medium text-gray-900">
-                    {calculateSubtotal() > 50000 ? 'Free' : formatPrice(99)}
-                  </span>
+                  <span className="font-medium text-gray-900">{calculateSubtotal() > 50000 ? 'Free' : formatPrice(99)}</span>
                 </div>
 
                 <div className="border-t border-gray-200 pt-4">
                   <div className="flex justify-between text-lg font-dm-sans font-bold">
                     <span className="text-gray-900">Total</span>
-                    <span className="text-gray-900">
-                      {formatPrice(calculateTotal())}
-                    </span>
+                    <span className="text-gray-900">{formatPrice(calculateTotal())}</span>
                   </div>
                   <p className="text-xs text-gray-500 mt-2">
-                    {calculateSubtotal() > 50000 
-                      ? 'You qualify for free shipping!' 
+                    {calculateSubtotal() > 50000
+                      ? 'You qualify for free shipping!'
                       : 'Add ₹' + (50000 - calculateSubtotal()).toLocaleString('en-IN') + ' more for free shipping'
                     }
                   </p>
                 </div>
 
-                <button 
-                onClick={() => Navigate("/checkout")}
-                className="w-full bg-gray-900 text-white py-4 px-6 rounded-xl font-medium hover:bg-gray-800 transition-colors mt-6"
-                >
+                <button onClick={() => Navigate('/checkout')} className="w-full bg-gray-900 text-white py-4 px-6 rounded-xl font-medium hover:bg-gray-800 transition-colors mt-6">
                   Proceed to Checkout
                 </button>
 
-                <Link
-                  to="/store"
-                  className="w-full border border-gray-300 text-gray-900 py-4 px-6 rounded-xl font-medium hover:bg-gray-50 transition-colors flex items-center justify-center"
-                >
+                <Link to="/store" className="w-full border border-gray-300 text-gray-900 py-4 px-6 rounded-xl font-medium hover:bg-gray-50 transition-colors flex items-center justify-center">
                   Continue Shopping
                 </Link>
               </div>

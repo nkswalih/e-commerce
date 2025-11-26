@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 import { useNavigate } from 'react-router-dom';
+import SimpleFooter from '../components/SimpleFoot';
 
 const LaptopPage = () => {
   const [products, setProducts] = useState([]);
@@ -276,6 +277,7 @@ const LaptopPage = () => {
           </div>
         )}
       </main>
+      <SimpleFooter/>
     </div>
   );
 };

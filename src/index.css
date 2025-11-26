@@ -7,6 +7,27 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProText-Regular.ttf");
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 500;
+  src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-Medium.ttf");
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-SemiBold.ttf");
+}
+
 body {
   font-family: "SF Pro Display", sans-serif;
 }
@@ -17,4 +38,7 @@ body {
   --font-sf-pro-light: SF Pro Text 100, "sans serif";
   --font-dm-sans: "DM Sans", sans-serif;
   --font-vent-sans: "Vend Sans", sans-serif;
+  --font-sf-pro-regular: "Sf pro regular", sans-serif;
+  --font-sf-pro-medium: "Sf pro medium", sans-serif;
+  --font-sf-pro-semibold: "Sf pro semibold", sans-serif;
 }

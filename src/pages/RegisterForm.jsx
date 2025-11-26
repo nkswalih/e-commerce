@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import SimpleFooter from "../components/SimpleFoot";
 import axios from "axios";
 import { useAuth } from "../contexts/AuthContext";
+import { toast } from "react-toastify";
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -28,7 +29,7 @@ const Register = () => {
     e.preventDefault();
 
     if (!formData.terms) {
-      alert("Please accept the terms and Conditions");
+      toast.success("Please accept the terms and Conditions");
       return;
     }
 
@@ -39,7 +40,7 @@ const Register = () => {
       );
 
       if (existingUser) {
-        alert("User with this email already exists");
+        toast.error("User with this email already exists");
         return;
       }
 
@@ -191,7 +192,7 @@ const Register = () => {
               </div>
 
               <div>
-                {/* ✅ Removed onClick from button - form onSubmit handles it */}
+               
                 <button
                   type="submit"
                   disabled={isSubmitDisable}
@@ -207,6 +208,5 @@ const Register = () => {
       <SimpleFooter />
     </div>
   );
-}; // ✅ Added missing closing brace for component
-
+}; 
 export default Register;

@@ -3,6 +3,7 @@ import axios from 'axios';
 import { MagnifyingGlassIcon, PhoneIcon, ChatBubbleLeftRightIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext'; // Import your auth context
+import SimpleFooter from '../components/SimpleFoot';
 
 const EchooSupport = () => {
   const [supportData, setSupportData] = useState(null);
@@ -225,38 +226,6 @@ const EchooSupport = () => {
           ))}
         </div>
 
-        {/* Contact Methods */}
-        <div className="bg-gray-900 rounded-2xl p-8 text-white mb-16">
-          <h2 className="text-3xl font-dm-sans font-bold mb-6 text-center">
-            Quick Contact Options
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-center p-6">
-              <PhoneIcon className="h-12 w-12 mx-auto mb-4 text-gray-300" />
-              <h3 className="text-xl font-semibold mb-2">Call Support</h3>
-              <p className="text-gray-300">24/7 phone support</p>
-              <p className="text-lg font-semibold mt-2">1-800-ECHOO-HELP</p>
-            </div>
-            <div className="text-center p-6">
-              <ChatBubbleLeftRightIcon className="h-12 w-12 mx-auto mb-4 text-gray-300" />
-              <h3 className="text-xl font-semibold mb-2">Live Chat</h3>
-              <p className="text-gray-300">Instant messaging support</p>
-              <button 
-                onClick={() => navigate('/live-chat')}
-                className="mt-4 bg-white text-gray-900 px-6 py-2 rounded-lg font-medium hover:bg-gray-100 transition-colors"
-              >
-                Start Chat
-              </button>
-            </div>
-            <div className="text-center p-6">
-              <EnvelopeIcon className="h-12 w-12 mx-auto mb-4 text-gray-300" />
-              <h3 className="text-xl font-semibold mb-2">Email Support</h3>
-              <p className="text-gray-300">Response within 24 hours</p>
-              <p className="text-lg font-semibold mt-2">support@echoo.com</p>
-            </div>
-          </div>
-        </div>
-
         {/* Safety Notice */}
         <div className="bg-yellow-50 border border-yellow-200 rounded-2xl p-8">
           <h3 className="text-2xl font-dm-sans font-bold text-gray-900 mb-4">
@@ -267,6 +236,7 @@ const EchooSupport = () => {
           </p>
         </div>
       </main>
+      <SimpleFooter/>
     </div>
   );
 };

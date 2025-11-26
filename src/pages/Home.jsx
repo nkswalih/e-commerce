@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import IphoneAir from '../components/Hero Section/ProductHero2';
 import MainHero from '../components/Hero Section/Hero';
 import AppleMac from '../components/Hero Section/ProductHero3';
+import SimpleFooter from '../components/SimpleFoot';
 
 const Home = () => {
 
@@ -27,7 +28,7 @@ const Home = () => {
       <section className="py-20 bg-gray-900">
       </section> */}
       <div className='text-black'>
-      <Footer/>
+      <SimpleFooter/>
       </div>
     </div>
   );

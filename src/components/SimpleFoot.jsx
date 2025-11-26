@@ -17,9 +17,9 @@ const SimpleFooter = () => {
                   </Link>
                 </div>
                 <div className="flex space-x-6 text-sm text-gray-600">
-                  <Link to="/privacy" className="hover:text-gray-900 transition-colors">Privacy Policy</Link>
-                  <Link to="/terms" className="hover:text-gray-900 transition-colors">Terms & Conditions</Link>
-                  <Link to="/contact" className="hover:text-gray-900 transition-colors">Contact</Link>
+                  <Link to="/store" className="hover:text-gray-900 transition-colors">Store</Link>
+                  <Link to="/terms_conditions" className="hover:text-gray-900 transition-colors">Terms & Conditions</Link>
+                  <Link to="/support" className="hover:text-gray-900 transition-colors">Support</Link>
                 </div>
               </div>
               <div className="mt-4 text-center md:text-left">

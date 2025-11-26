@@ -5,31 +5,38 @@
       "name": "sasa",
       "email": "Ladgamer777@gmail.com",
       "password": "777777777777",
-      "terms": false
+      "terms": false,
+      "cart": []
     },
     {
       "id": "dd8d",
       "name": "swalih",
       "email": "swalink555@gmail.com",
       "password": "12345678",
-      "terms": false
+      "terms": false,
+      "cart": []
     },
     {
       "id": "6d48",
       "name": "swalih",
       "email": "user@gmail.com",
       "password": "1234",
-      "terms": true
+      "terms": true,
+      "cart": []
     },
     {
       "id": "238b",
       "name": "FAQ",
       "email": "user2@gmail.com",
       "password": "1234",
-      "terms": true
+      "terms": true,
+      "cart": []
+    },
+    {
+      "id": "aef0",
+      "cart": []
     }
   ],
-  "cart": [],
   "products": [
     {
       "id": "iphone-17-pro",
@@ -40,13 +47,14 @@
       "currency": "INR",
       "stock": 14,
       "images": [
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-card-40-17pro-202509?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=WVVFRzUzVk1oblJhbW9PbGNSU25jaUtlSkZ1cHdCU1J4ZWZjamdoYzhpRkMxQXc4S3pBZE5lUDJlTzVYSUYydFMwV0hhcmdVdXZzZ1NwTlFUaEgwTDc0akx0V0lSSVRoL2tPb3ZabW5DM0k",
         "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17pro-digitalmat-gallery-1-202509_GEO_EMEA?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=ekJPc2lPUlRuRk50SkcyOVdnU1d0TjFla0N0Znl3UThxdjB3SW91ZDVJeFptNC9yejJUMWI2dmhrTGRMd2F4ZjhpVENtU1Jsa01tcGtZS0IwM01XVkVaMm9lVjZWaGFvQVRMeWxLakVNdXRpc2lSR1BSMzNQQm5UMU83ZFVxQmFYSVI4ZkRTLy83YU5OdEFVT1FiTW9R",
         "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17pro-digitalmat-gallery-3-202509?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=ekJPc2lPUlRuRk50SkcyOVdnU1d0TjFla0N0Znl3UThxdjB3SW91ZDVJeGNmQmJPaDM2aGx4aDFNbXhCczNyV28xUkhYejcxalRvY0FPQVpMcmoxMDlLQzdVZ2V3VnpqcXFKTGxlK1dFUXhxRHVRU1Y3V3BkbTR4MkxPZTk5REQ",
-        "",
-        "",
-        "",
-        "",
-        ""
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-compare-iphone-17-pro-202509?wid=400&hei=512&fmt=jpeg&qlt=90&.v=M0dlUVBobHVpY1h1dmlaR3RZekpEMi9sbCsxVVJmYjNiS29STjQrZEV5NnNlL1VpWDFHcHBMQXVUWWdWdkZZNEk4YjFEWjhuZXFwNUlmRWZZRFVkVmtQN0dKS3RDVnJRc1haUzhoeEN5eEpWcnBaYlhkL0dOd2g3cENJOVZNejQ",
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17pro-digitalmat-gallery-5-202509?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=ekJPc2lPUlRuRk50SkcyOVdnU1d0TjFla0N0Znl3UThxdjB3SW91ZDVJeG1hWkZ6UHNRSXhlQnZJMURpUmV1QW8xUkhYejcxalRvY0FPQVpMcmoxMDlLQzdVZ2V3VnpqcXFKTGxlK1dFUXpucGszV1kvUjNNUmdVQ1lGWXlTekY",
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17pro-digitalmat-gallery-4-202509?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=ekJPc2lPUlRuRk50SkcyOVdnU1d0TjFla0N0Znl3UThxdjB3SW91ZDVJeW44a2VheUNSOWt5dkdpV3ArUU1HZG8xUkhYejcxalRvY0FPQVpMcmoxMDlLQzdVZ2V3VnpqcXFKTGxlK1dFUXkvQ2svUmdCYndZbnB5SWh3WFZNNWk",
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17pro-digitalmat-gallery-2-202509?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=ekJPc2lPUlRuRk50SkcyOVdnU1d0TjFla0N0Znl3UThxdjB3SW91ZDVJempueExUTkVtdVNxK2VpSU1Ja0hLVm8xUkhYejcxalRvY0FPQVpMcmoxMDlLQzdVZ2V3VnpqcXFKTGxlK1dFUXl3WUo3NEhENThaODkzU2xiZzlIRjY",
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17pro-digitalmat-gallery-6-202509?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=ekJPc2lPUlRuRk50SkcyOVdnU1d0TjFla0N0Znl3UThxdjB3SW91ZDVJekUvTEM4WjJGZEN4em41Q2lvalVzaG8xUkhYejcxalRvY0FPQVpMcmoxMDlLQzdVZ2V3VnpqcXFKTGxlK1dFUXo4ZlI3QkpWSVN2MGtZNno5SVhENkg"
       ],
       "shortDescription": "iPhone 17 Pro — titanium frame and pro camera system.",
       "features": [
@@ -128,11 +136,11 @@
       "stock": 0,
       "images": [
         "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17pro-digitalmat-gallery-5-202509?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=ekJPc2lPUlRuRk50SkcyOVdnU1d0TjFla0N0Znl3UThxdjB3SW91ZDVJeG1hWkZ6UHNRSXhlQnZJMURpUmV1QW8xUkhYejcxalRvY0FPQVpMcmoxMDlLQzdVZ2V3VnpqcXFKTGxlK1dFUXpucGszV1kvUjNNUmdVQ1lGWXlTekY",
-        "/images/iphones/iphone17promax/gold-512.jpg",
-        "",
-        "",
-        "",
-        "",
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17promax-digitalmat-gallery-2-202509?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=WkVhZXB4WmFzZmdNeXA3cHg3WUZFU0tjazZmSzdrSHdxTW9VUlF0akdCdVNDb201c3lKa2NEYURnZ1VuSk5xQXpGbHdxTU5oSkkwKzZZOXF0cVNPL1V0RmgycTRGTHI3SUVxVFVFNFI5Qyt6aitNLzYzbUlaaklNYXhYUEpnVXU",
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17promax-digitalmat-gallery-1-202509_GEO_EMEA?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=WkVhZXB4WmFzZmdNeXA3cHg3WUZFU0tjazZmSzdrSHdxTW9VUlF0akdCdTZhTHJkRit4dmNvT3JoY0NOUVJTRitzMU1qbXEvNjlBN1VxbHRaS1dQS2NQOWxuYmZSN0NKOEpIS2RzTDlRVVFUd2h0eWVsVXNFSXNxYyt3ZEFEVStKTjNIVGtvY0IzalVQV0ZqbHBCUjZR",
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17promax-digitalmat-gallery-3-202509?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=WkVhZXB4WmFzZmdNeXA3cHg3WUZFU0tjazZmSzdrSHdxTW9VUlF0akdCc2hJek5jUXlGL2hrRE9PQW1MczdvOXpGbHdxTU5oSkkwKzZZOXF0cVNPL1V0RmgycTRGTHI3SUVxVFVFNFI5Qy9MaS85TmIwRFdiWE5HcWJteWMrRGQ",
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-pro-finish-select-202509-6-9inch-silver_AV3?wid=5120&hei=2880&fmt=webp&qlt=90&.v=NUNzdzNKR0FJbmhKWm5YamRHb05tUzkyK3hWak1ybHhtWDkwUXVINFc0RVRqUkJqUGFyN1pGMnlaV3JkWU9jdmdrZ1hLRVJweE1Ld0hrelZYQUxRVWZQWFVaUmg1QWFsTVJFWjd1RElva2hnM0hWZ2pCcFpSZTVSV1k3SjhURDRMaElvNnRvQmpNZTUweTNnQlFCT1B3&traceId=1",
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-pro-finish-select-202509-6-9inch-deepblue_AV3?wid=5120&hei=2880&fmt=webp&qlt=90&.v=NUNzdzNKR0FJbmhKWm5YamRHb05tUzkyK3hWak1ybHhtWDkwUXVINFc0RWhhOHJGRUNHdlh6a3VuZVVqdnNrNVJ2dnZ6eHdCQ0dUd3RuYU1ZcENUSHdDb1F2RTNvUEVHRkpGaGtOSVFHak5NTEhXRE11VU1QNVo2eDJsWlpuWHQ1V3E2amljcVUyYTdYMlk2dDNTTllR&traceId=1",
         ""
       ],
       "shortDescription": "iPhone 17 Pro Max — largest display and best battery.",
@@ -166,12 +174,12 @@
       "stock": 50,
       "images": [
         "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-card-40-17air-202509?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=WVVFRzUzVk1oblJhbW9PbGNSU25jci9mUU0zMkc5ekxlZHFEM05NWkp3NUMxQXc4S3pBZE5lUDJlTzVYSUYydFMwV0hhcmdVdXZzZ1NwTlFUaEgwTCtUZHJHS0dDSWYyeUtQd0tjOERiaFE",
-        "/images/iphones/iphoneair/sky-128.jpg",
-        "",
-        "",
-        "",
-        "",
-        ""
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-air-digitalmat-gallery-1-202509_GEO_EMEA?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=cjBEZlU5bVdKZEVBTk45K09QMzAwRzYrc3EwZ1VoVGgyY0J1bS9COCtuZ1lMQnk0NlU1Q0YrZ2hIbjFrUkVtaGQ5S3Q4dnBGQmd2K0NENXJLTFNwNzhmSGN3NTUxbDRHZDZXK1V3b1o4a1MzQ2RtWllHVXFBTG9GU1VuVXUrcFpGQlRRRytmTHd2bTlDU2RZMUtqVTRR",
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-air-digitalmat-gallery-2-202509?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=cjBEZlU5bVdKZEVBTk45K09QMzAwT1BCRHJhQ0hmOWpiYTg5dm5FQWI3dHZibThWRUlEV2tlZ2JSNmpmUlp1TlFuOTJXc2JVdks4czlZWHJTOHkzNkg4SnkwY0diclR3aWNnek5QTEFaZFJOWDUzbkRhQW1IMmtSeU8zS2hzSWE",
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-air-digitalmat-gallery-3-202509_GEO_EMEA?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=cjBEZlU5bVdKZEVBTk45K09QMzAwTjJ1T24yemhudm9NaWo1cUl6SVN6RVlMQnk0NlU1Q0YrZ2hIbjFrUkVtaGQ5S3Q4dnBGQmd2K0NENXJLTFNwNzhmSGN3NTUxbDRHZDZXK1V3b1o4a1FHTkhMY1JTVVlSYVMxTGw2ZWJDT3hka0xmckVNVTBkS20yTzkwa0dhU09n",
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-air-digitalmat-gallery-4-202509?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=cjBEZlU5bVdKZEVBTk45K09QMzAwQ29tZGFRcVl5Vm12RlEvdm1xNU1vdHZibThWRUlEV2tlZ2JSNmpmUlp1TlFuOTJXc2JVdks4czlZWHJTOHkzNkg4SnkwY0diclR3aWNnek5QTEFaZFQ0SUJEdG9iY1h3NUYwNDNqMUY3YXo",
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-air-digitalmat-gallery-5-202509?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=cjBEZlU5bVdKZEVBTk45K09QMzAwR015UmNzenFKUHB0bGtqQUxXNExEVnZibThWRUlEV2tlZ2JSNmpmUlp1TlFuOTJXc2JVdks4czlZWHJTOHkzNkg4SnkwY0diclR3aWNnek5QTEFaZFRUdFBEQ2lzRUQ0Yk4rVVZQOGJ6ZHA",
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-air-digitalmat-gallery-6-202509?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=cjBEZlU5bVdKZEVBTk45K09QMzAwQWlINEF4cWpiTXVBQzlOalN3V1o1WnZibThWRUlEV2tlZ2JSNmpmUlp1TlFuOTJXc2JVdks4czlZWHJTOHkzNkg4SnkwY0diclR3aWNnek5QTEFaZFFOVHhaMzM2dnpoZnlQV2FXblJuN3A"
       ],
       "shortDescription": "iPhone Air — lightweight design, great performance.",
       "specs": {
@@ -207,7 +215,7 @@
       "images": [
         "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone16-digitalmat-gallery-1-202409?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=Y2tBd1RqSzMrd3hScm1lN290ZENDS041dXh2MUpWOGFNK2V6eVg1VGV3OHlLZ0xXbFByV2Vvak9rWndaamlPU3cvMldkdDlIc0lud2tjcDJ3djFCUkV2dGpWUjV5VzZtaGp2QjBiUXR3RUFOM1EvNmN2VndPa21RenM3N2pucTg",
         "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone16-digitalmat-gallery-2-202409?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=Y2tBd1RqSzMrd3hScm1lN290ZENDR2Q3SE9aM2lHWDNyaVZ5ajdQOU9yMHlLZ0xXbFByV2Vvak9rWndaamlPU3cvMldkdDlIc0lud2tjcDJ3djFCUkV2dGpWUjV5VzZtaGp2QjBiUXR3RUN2NjFXVEJNV2dlU044aXFFTEo4cGc",
-        "/images/iphones/iphone16/white-128.jpg",
+        "",
         "",
         "",
         "",
@@ -284,10 +292,10 @@
       "stock": 40,
       "images": [
         "https://cdn.shopify.com/s/files/1/0376/5420/0459/files/0000s_0009_Phone-3a-Pro-grey.png?v=1753435871",
-        "/images/nothing/phone2/white-128.jpg",
-        "",
-        "",
-        "",
+        "https://cdn.shopify.com/s/files/1/0586/3270/0077/files/ArcPro1352x1352-Black-Glyphon.png?v=1740649967",
+        "https://image.mux.com/VHTOWvCj6YKiqpzhk02fqcl0001rgT01Mc02opZmop023HeWA/thumbnail.webp",
+        "https://image.mux.com/TQOA02PANo01M6d2MWJPwsDMnq2KW00gigO3P02fqyxGmrc/thumbnail.webp",
+        "https://cdn.sanity.io/images/gtd4w1cq/production/0565a4337e05847e87ea5a8e6f9192c553fe2b63-400x400.jpg?auto=format",
         "",
         ""
       ],
@@ -320,12 +328,12 @@
       "stock": 60,
       "images": [
         "https://cdn.shopify.com/s/files/1/0376/5420/0459/files/0000s_0004_Phone-3a-white.png?v=1753436094",
-        "/images/nothing/phone2a/green-64.jpg",
-        "",
-        "",
-        "",
-        "",
-        ""
+        "https://cdn.shopify.com/s/files/1/0586/3270/0077/files/Arc1352x1352-Black-Glyphon_4677e90c-2628-407c-b286-e6b96238dedf.png?v=1740649954",
+        "https://cdn.sanity.io/images/gtd4w1cq/production/becdad013a788bc6f8d8fbdc8a6314c3349409bb-1316x1645.jpg?auto=format",
+        "https://cdn.sanity.io/images/gtd4w1cq/production/0df691b675e706bd67f87ee850de3838462cd1bf-864x862.jpg?auto=format",
+        "https://cdn.sanity.io/images/gtd4w1cq/production/83d3ab4062686b5ad48285af7ea6f007293642d0-400x400.jpg?auto=format",
+        "https://cdn.sanity.io/images/gtd4w1cq/production/2e27c9b97e5643f36b5f3b36621961740be27653-3000x1877.jpg?auto=format",
+        "https://cdn.sanity.io/images/gtd4w1cq/production/0565a4337e05847e87ea5a8e6f9192c553fe2b63-400x400.jpg?auto=format"
       ],
       "shortDescription": "Nothing Phone 3a — budget-friendly with signature design.",
       "specs": {
@@ -356,7 +364,7 @@
       "stock": 20,
       "images": [
         "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSLfr7dY8I9aMS-7SSNvK0xtd8WZ-kCHCrr5IngrcsZJs50rI2yovBCbVsx6LdtfHHYfgBeppbNAkvpy968JqFSgLHQeTTUK8zDd5491mKCev6gQBgveo7I",
-        "/images/laptops/acer/nitro-v15/black-2.jpg",
+        "",
         "",
         "",
         "",
@@ -775,9 +783,9 @@
       "stock": 10,
       "images": [
         "https://www.apple.com/assets-www/en_WW/mac/01_product_tile/xlarge/mbp_14_16_b933a4e71_2x.jpg",
-        "",
-        "",
-        "",
+        "https://www.apple.com/v/macbook-pro/av/images/overview/performance/performance_mx_chip_startframe__bfgs77zni2sy_large_2x.jpg",
+        "https://www.apple.com/v/macbook-pro/av/images/overview/artificial-intelligence/ai_features_endframe__fr82kdy8eeem_large.jpg",
+        "https://www.apple.com/v/macbook-pro/av/images/overview/welcome/hero_endframe__e4ls9pihykya_xlarge_2x.jpg",
         "",
         ""
       ],
@@ -811,11 +819,11 @@
       "stock": 7,
       "images": [
         "https://www.apple.com/assets-www/en_WW/mac/01_product_tile/xlarge/mba_13_15_140e630d3_2x.jpg",
-        "",
-        "",
-        "",
-        "",
-        ""
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/mba13-m4-skyblue-gallery1-202503?wid=4000&hei=3074&fmt=jpeg&qlt=90&.v=dFJNbHJtN3hkZlFORmN2VUlkWnZyRXYwRGVrS3RUdEhkRUtkS2E1aGdYZmd1eUJ6eHZMSFFNMld6aTRncXNRUlJWYlIvRkkxemNIb09FY29ZRmVrUDV4ZVYvN2VacDZmMzVpdWVtV014N1RyMTdVV05yRXMxSlVPemtESDIwNVE",
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/mba13-m4-skyblue-gallery2-202503?wid=4000&hei=3074&fmt=jpeg&qlt=90&.v=dFJNbHJtN3hkZlFORmN2VUlkWnZySHB1eEZuT0djdFIvaGtSV0tRQ3lXcmd1eUJ6eHZMSFFNMld6aTRncXNRUlJWYlIvRkkxemNIb09FY29ZRmVrUDVRZFpWRGhqRDhIZHNORWNaTWxnaCtycDU0Zm9tS1NLYWZhaWJKS1VJSUo",
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/mba13-m4-skyblue-gallery3-202503?wid=4000&hei=3074&fmt=jpeg&qlt=90&.v=dFJNbHJtN3hkZlFORmN2VUlkWnZyTjlvU0tjcXRFSTRCQmxWYlhhckRTN2d1eUJ6eHZMSFFNMld6aTRncXNRUlJWYlIvRkkxemNIb09FY29ZRmVrUHpEdmdxeCtvQXIySWpQWVFFTEVIUit0cWcyZmNzMEx0dHVPQ21kOTEvcTQ",
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/mba13-m4-skyblue-gallery4-202503?wid=4000&hei=3074&fmt=jpeg&qlt=90&.v=dFJNbHJtN3hkZlFORmN2VUlkWnZyS090QVV3bTNqT2lCUW11ak84QUNXUGd1eUJ6eHZMSFFNMld6aTRncXNRUlJWYlIvRkkxemNIb09FY29ZRmVrUDk3b3A2MTZjVElvS05OR0xlT2MraklnbVJYM29hTEY2aG9Va0ptMTVFdnI",
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/mba13-m4-gallery7-202503?wid=4000&hei=3074&fmt=jpeg&qlt=90&.v=TkdkdTYvZmdKUlhJb2I0VXBWbFVFY3VoMUZNNDRVL2pzWmc0SVRMZjBwQXBFd2F2YlBVdmtrWUs2bExmOEpiQ2dsbGZlRHV0Q3JlbHJxWXRlWjZpMnA2UjRCeUZ1cmNrQmUvQ1hmTmlERzA"
       ],
       "shortDescription": "MacBook M4 series — balanced power and portability.",
       "specs": {

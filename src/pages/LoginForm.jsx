@@ -15,13 +15,13 @@ const Login = () => {
   });
   
   const { login } = useAuth();
-  const navigate = useNavigate(); // ✅ Use lowercase (convention)
+  const navigate = useNavigate(); 
 
   useEffect(() => {
-    const savedEmail = localStorage.getItem('rememberedEmail'); // ✅ Fixed key name
-    const savedPassword = localStorage.getItem('rememberedPassword'); // ✅ Fixed key name
+    const savedEmail = localStorage.getItem('rememberedEmail'); 
+    const savedPassword = localStorage.getItem('rememberedPassword'); 
 
-    // ✅ Fixed logic: Only set if values exist
+   
     if (savedEmail && savedPassword) {
       setFormData(prev => ({
         ...prev,
@@ -57,7 +57,7 @@ const Login = () => {
           localStorage.setItem('rememberedEmail', formData.email);
           localStorage.setItem('rememberedPassword', formData.password);
         } else {
-          // ✅ Fixed: Use removeItem instead of clear
+          
           localStorage.removeItem('rememberedEmail');
           localStorage.removeItem('rememberedPassword');
         }
@@ -71,7 +71,7 @@ const Login = () => {
           email: user.email 
         });
 
-        // alert(`Login successful! Welcome ${user.name}`);
+        
         toast.success(`Login successful! Welcome ${user.name}!`);
         navigate("/");
 

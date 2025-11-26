@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const IphoneAir = () => {
+  const Navigate = useNavigate();
   return (
     <section className="relative bg-black overflow-hidden">
       {/* Background with gradient overlay */}
@@ -35,10 +37,14 @@ const IphoneAir = () => {
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button className="bg-blue-500 text-white px-6 py-2 rounded-full font-normal text-base hover:bg-blue-600 transition-all duration-300">
+          <button 
+          onClick={() => Navigate("/apple")}
+          className="bg-blue-500 text-white px-6 py-2 rounded-full font-normal text-base hover:bg-blue-600 transition-all duration-300">
             Learn more
           </button>
-          <button className="text-blue-400 border text-base font-normal px-6 py-2 rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300">
+          <button 
+          onClick={() => Navigate("/product/iphone-air")}
+          className="text-blue-400 border text-base font-normal px-6 py-2 rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300">
             Buy
           </button>
         </div>

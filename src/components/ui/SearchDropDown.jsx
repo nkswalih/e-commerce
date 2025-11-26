@@ -10,9 +10,9 @@ const SearchDropdown = () => {
   const [quickLinks] = useState([
     { name: 'Find a store', path: '/store' },
     { name: 'Accessories', path: '/accessories' },
-    { name: 'Lap', path: '/airpods' },
-    { name: 'Apple Trade In', path: '/trade-in' },
-    { name: 'Apple Intelligence', path: '/intelligence' }
+    { name: 'Laptop', path: '/laptop' },
+    { name: 'Apple store', path: '/apple' },
+    { name: 'support', path: '/support' }
   ])
   const navigate = useNavigate()
 
@@ -60,7 +60,7 @@ const SearchDropdown = () => {
     <Popover className="relative">
       {({ open, close }) => (
         <>
-          <Popover.Button className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:text-gray-900 transition-colors">
+          <Popover.Button className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:text-gray-900 transition-colors hover:cursor-pointer">
             <MagnifyingGlassIcon className="size-4 stroke-gray-700"/>
           </Popover.Button>
 

@@ -16,7 +16,6 @@ import CartPage from './pages/Cart'
 import { ToastContainer } from 'react-toastify';
 import './styles/toast.css';
 import './index.css';
-import SearchPage from './pages/Search'
 import LaptopPage from './pages/Laptop'
 import CheckoutPage from './components/OrderPage/Checkout'
 import OrderConfirmation from './components/OrderPage/OrderConfirmation'
@@ -44,7 +43,6 @@ function App() {
           <Route path="/product/:productId" element={<ProductPage />} />
           <Route path="/store" element={<StorePage/>}/>
           <Route path="/cart" element={<CartPage/>}/>
-          <Route path="/search" element={<SearchPage/>}/>
           <Route path="/laptop" element={<LaptopPage/>}/>
           <Route path="/checkout" element={<CheckoutPage />} />
           <Route path="/order-confirmation/:orderId" element={<OrderConfirmation />} />
