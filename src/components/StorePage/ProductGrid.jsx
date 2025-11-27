@@ -64,16 +64,16 @@ const ProductGrid = ({ products }) => {
 
               {/* Hover Actions */}
               <div className="absolute top-3 right-3 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <button className="bg-white/90 hover:bg-white p-2 rounded-full shadow-sm transition-colors">
+                {/* <button className="bg-white/90 hover:bg-white p-2 rounded-full shadow-sm transition-colors">
                   <HeartIcon className="size-4 text-gray-700" />
-                </button>
+                </button> */}
                 <button className="bg-white/90 hover:bg-white p-2 rounded-full shadow-sm transition-colors">
                   <EyeIcon className="size-4 text-gray-700" />
                 </button>
               </div>
 
               {/* Quick Add to Cart */}
-              <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              {/* <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <button 
                 className="w-full bg-gray-900 text-white py-3 rounded-xl font-medium hover:bg-gray-800 transition-colors text-sm"
                 onClick={(e) => {
@@ -83,7 +83,7 @@ const ProductGrid = ({ products }) => {
                 }}>
                   Add to Bag
                 </button>
-              </div>
+              </div> */}
             </div>
 
             <div className="space-y-2">
@@ -103,7 +103,7 @@ const ProductGrid = ({ products }) => {
                 </span>
               </div>
 
-              {/* Color Options */}
+              {/* Color bar */}
               {product.variants?.colors && (
                 <div className="flex gap-1 mt-2">
                   {product.variants.colors.slice(0, 4).map((color, index) => (

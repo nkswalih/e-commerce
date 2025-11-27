@@ -34,6 +34,23 @@
     },
     {
       "id": "aef0",
+      "cart": [
+        {
+          "id": "iphone-17-pro-1TB-",
+          "productId": "iphone-17-pro",
+          "storage": "1TB",
+          "ram": "",
+          "quantity": 1,
+          "addedAt": "2025-11-27T04:04:25.457Z",
+          "productName": "iPhone 17 Pro",
+          "productPrice": 129999,
+          "productImage": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-card-40-17pro-202509?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=WVVFRzUzVk1oblJhbW9PbGNSU25jaUtlSkZ1cHdCU1J4ZWZjamdoYzhpRkMxQXc4S3pBZE5lUDJlTzVYSUYydFMwV0hhcmdVdXZzZ1NwTlFUaEgwTDc0akx0V0lSSVRoL2tPb3ZabW5DM0k",
+          "productBrand": "Apple"
+        }
+      ]
+    },
+    {
+      "id": "aef0",
       "cart": []
     }
   ],

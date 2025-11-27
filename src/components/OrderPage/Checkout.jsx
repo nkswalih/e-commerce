@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { toast } from "react-toastify";
 
 const CheckoutPage = () => {
   const navigate = useNavigate();
@@ -39,10 +40,41 @@ const CheckoutPage = () => {
     });
   };
 
+  //fetch product stock data
+  const fetchProduct = async (productId) => {
+    const result = await axios.get('http://localhost:3000/products');
+    return result.data;
+  }
+
+  //patch update product stock
+  const updateStock = async (productId) => {
+    return axios.patch(`http://localhost:3000/products/${productId}`,{stock: newStock });
+  }
+
   const handlePlaceOrder = async () => {
+    if(!cartItems.length){
+      toast.error("Cart is empty");
+      return;
+    }
     setLoading(true);
     
     try {
+
+      const orginalStocks = {};
+      for (const item of cartItems){
+        const product = await fetchProduct(item.id);
+        orginalStocks[item.id] = product.stock ?? 0;
+
+        if ((product.stock ?? 0) < item.quantity) {
+          toast.error(`Not enough stock for "${product.name || item.title || item.id}". Available: ${product.stock}, requested: ${item.quantity}`);
+          setLoading(false);
+          return;
+        }
+      }
+
+      
+      
+
       // Create order object
       const order = {
         id: 'ORD' + Date.now(),
@@ -69,7 +101,7 @@ const CheckoutPage = () => {
       
     } catch (error) {
       console.error('Error placing order:', error);
-      alert('Failed to place order. Please try again.');
+      toast.error('Failed to place order. Please try again.');
     } finally {
       setLoading(false);
     }

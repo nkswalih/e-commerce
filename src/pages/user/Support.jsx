@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { MagnifyingGlassIcon, PhoneIcon, ChatBubbleLeftRightIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../contexts/AuthContext'; // Import your auth context
-import SimpleFooter from '../components/SimpleFoot';
+import { useAuth } from '../../contexts/AuthContext'; // Import your auth context
+import SimpleFooter from '../../components/SimpleFoot';
 
 const EchooSupport = () => {
   const [supportData, setSupportData] = useState(null);

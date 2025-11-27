@@ -22,7 +22,7 @@ const CategoryFilter = ({ categories, activeCategory, setActiveCategory }) => {
                 : 'text-gray-600 hover:text-gray-900'
             }`}
           >
-            {/* Image Container - No borders, no boxes */}
+            
             <div className="relative mb-3 transition-all duration-300">
               <img
                 src={categoryImages[category.id] || categoryImages['all']}

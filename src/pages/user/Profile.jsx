@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../contexts/AuthContext";
+import { useAuth } from "../../contexts/AuthContext";
 import axios from "axios";
 import { ArrowRightOnRectangleIcon } from "@heroicons/react/24/outline";
-import ProfileSidebar from "../components/ProfileSection/ProfileSidebar";
-import OverviewSection from "../components/ProfileSection/OverviewSection";
-import OrdersSection from "../components/ProfileSection/OrdersSection";
-import WishlistSection from "../components/ProfileSection/WishlistSection";
-import CartSection from "../components/ProfileSection/CartSection";
+import ProfileSidebar from "../../components/ProfileSection/ProfileSidebar";
+import OverviewSection from "../../components/ProfileSection/OverviewSection";
+import OrdersSection from "../../components/ProfileSection/OrdersSection";
+import WishlistSection from "../../components/ProfileSection/WishlistSection";
+import CartSection from "../../components/ProfileSection/CartSection";
 
 const Profile = () => {
   const { user, logout } = useAuth();

@@ -7,7 +7,7 @@ import {
   MinusIcon,
   ShoppingBagIcon
 } from '@heroicons/react/24/outline';
-import Footer from '../components/Footer';
+import Footer from '../../components/Footer';
 
 const CartPage = () => {
   const [cartItems, setCartItems] = useState([]);

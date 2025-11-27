@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 import { useNavigate } from 'react-router-dom';
-import SimpleFooter from '../components/SimpleFoot';
+import SimpleFooter from '../../components/SimpleFoot';
+import OfferApple from '../../components/Header/offer2';
 
 const AppleProductsPage = () => {
   const [products, setProducts] = useState([]);
@@ -217,10 +218,10 @@ const AppleProductsPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b">
-        
+      <header className="bg-white">
+        <OfferApple/>
       </header>
 
       {/* Main Content */}

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 import { useNavigate } from 'react-router-dom';
+import OfferBanner from '../../components/Header/offer1';
 
 const AccessoriesPage = () => {
   const [products, setProducts] = useState([]);
@@ -235,8 +236,8 @@ const AccessoriesPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b">
-        
+      <header className="bg-white">
+        <OfferBanner/>
       </header>
 
       {/* Main Content */}

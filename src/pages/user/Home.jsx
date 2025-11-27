@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Footer from '../components/Footer';
-import IphoneAir from '../components/Hero Section/ProductHero2';
-import MainHero from '../components/Hero Section/Hero';
-import AppleMac from '../components/Hero Section/ProductHero3';
-import SimpleFooter from '../components/SimpleFoot';
+import Footer from '../../components/Footer';
+import IphoneAir from '../../components/Hero Section/ProductHero2';
+import MainHero from '../../components/Hero Section/Hero';
+import AppleMac from '../../components/Hero Section/ProductHero3';
+import SimpleFooter from '../../components/SimpleFoot';
+import HomeOffer from '../../components/Header/HomeOffer';
 
 const Home = () => {
 
 
   return (
     <div className="min-h-screen bg-white text-white">
-      <MainHero/>
+      <Home/>
+      <HomeOffer/>
 
       {/* Featured Products Section */}
     

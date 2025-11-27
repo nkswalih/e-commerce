@@ -1,9 +1,9 @@
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import SimpleFooter from "../components/SimpleFoot";
+import SimpleFooter from "../../components/SimpleFoot";
 import axios from "axios";
-import { useAuth } from "../contexts/AuthContext";
+import { useAuth } from "../../contexts/AuthContext";
 import { toast } from "react-toastify";
 
 const Register = () => {

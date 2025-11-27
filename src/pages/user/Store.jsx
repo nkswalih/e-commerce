@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import StoreHeader from '../components/StorePage/StoreHeader';
-import CategoryFilter from '../components/StorePage/CategoryFilter';
-import ProductGrid from '../components/StorePage/ProductGrid';
+import StoreHeader from '../../components/StorePage/StoreHeader';
+import CategoryFilter from '../../components/StorePage/CategoryFilter';
+import ProductGrid from '../../components/StorePage/ProductGrid';
 // import ProductList from '../components/StorePage/ProductList';
-import Footer from '../components/Footer';
+import Footer from '../../components/Footer';
+import OfferApple from '../../components/Header/offer2';
 
 
 const StorePage = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [activeCategory, setActiveCategory] = useState('all');
+  const [viewMode, setViewMode] = useState('grid');
   const [sortBy, setSortBy] = useState('featured');
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -67,6 +69,7 @@ const StorePage = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <OfferApple/>
       <StoreHeader
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}

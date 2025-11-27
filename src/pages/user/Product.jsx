@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import ProductImages from '../components/ProductPage/ProductImages';
-import ProductInfo from '../components/ProductPage/ProductInfo';
-import ProductActions from '../components/ProductPage/ProductActions';
-import SimpleFooter from '../components/SimpleFoot';
+import ProductImages from '../../components/ProductPage/ProductImages';
+import ProductInfo from '../../components/ProductPage/ProductInfo';
+import ProductActions from '../../components/ProductPage/ProductActions';
+import SimpleFooter from '../../components/SimpleFoot';
 
 const ProductPage = () => {
   const { productId } = useParams();
@@ -12,7 +12,6 @@ const ProductPage = () => {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [selectedOptions, setSelectedOptions] = useState({
-    color: '',
     storage: '',
     ram: ''
   });
@@ -31,7 +30,6 @@ const ProductPage = () => {
         setProduct(foundProduct);
         // Set default selections
         const defaults = {
-          color: foundProduct.variants?.colors?.[0] || '',
           storage: foundProduct.variants?.storage?.[0] || '',
           ram: foundProduct.variants?.ram?.[0] || ''
         };
