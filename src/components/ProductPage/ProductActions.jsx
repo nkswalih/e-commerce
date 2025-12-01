@@ -1,21 +1,31 @@
 import React, { useState } from 'react';
-import { ShoppingBagIcon, HeartIcon, ShareIcon } from '@heroicons/react/24/outline';
+import { ShoppingBagIcon, HeartIcon } from '@heroicons/react/24/outline';
 import { toast } from 'react-toastify';
+import axios from 'axios';
 
 const ProductActions = ({ product, selectedOptions, quantity, onQuantityChange }) => {
   const [addingToCart, setAddingToCart] = useState(false);
 
   const handleAddToBag = async () => {
     if (addingToCart || product.stock === 0) return;
-    const auth = localStorage.getItem('user');
-    if(!auth){
-       return toast.error("Please Sign in");
-    }
     
     setAddingToCart(true);
     
-    // Simple localStorage approach that always works
     try {
+      // Get current user from localStorage (the logged-in user)
+      const currentUserString = localStorage.getItem('currentUser');
+      
+      if (!currentUserString) {
+        toast.error("Please log in to add items to cart");
+        setAddingToCart(false);
+        return;
+      }
+      
+      const currentUser = JSON.parse(currentUserString);
+      const userId = currentUser.id;
+      
+      console.log('Found user:', userId, currentUser.name);
+
       const cartItem = {
         id: `${product.id}-${selectedOptions.storage}-${selectedOptions.ram}`,
         productId: product.id,
@@ -29,25 +39,44 @@ const ProductActions = ({ product, selectedOptions, quantity, onQuantityChange }
         productBrand: product.brand
       };
 
-      // Get current cart from localStorage
-      const currentCart = JSON.parse(localStorage.getItem('echoo-cart') || '[]');
+      // Get current user data from server
+      let userData;
+      try {
+        const userResponse = await axios.get(`http://localhost:3000/users/${userId}`);
+        userData = userResponse.data;
+      } catch (err) {
+        if (err.response?.status === 404) {
+          toast.error("User not found. Please log in again.");
+          setAddingToCart(false);
+          return;
+        } else {
+          throw err;
+        }
+      }
+
+      // Get current cart from server
+      const currentCart = userData.cart || [];
       
-      // Check if item exists
+      // Check if item exists in cart
       const existingIndex = currentCart.findIndex(item => item.id === cartItem.id);
       
       let updatedCart;
       if (existingIndex > -1) {
+        // Update quantity if item exists
         updatedCart = currentCart.map((item, index) =>
           index === existingIndex 
             ? { ...item, quantity: item.quantity + quantity }
             : item
         );
       } else {
+        // Add new item to cart
         updatedCart = [...currentCart, cartItem];
       }
 
-      // Save to localStorage
-      localStorage.setItem('echoo-cart', JSON.stringify(updatedCart));
+      // Update user's cart on server
+      await axios.patch(`http://localhost:3000/users/${userId}`, { 
+        cart: updatedCart 
+      });
       
       toast.success(`${quantity} ${product.name} added to cart!`, {
         position: "top-right",
@@ -57,7 +86,7 @@ const ProductActions = ({ product, selectedOptions, quantity, onQuantityChange }
         pauseOnHover: true,
         draggable: true,
         className: "rounded-xl",
-        });
+      });
       
     } catch (error) {
       console.error('Cart error:', error);

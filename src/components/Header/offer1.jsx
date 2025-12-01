@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 export default function OfferBanner() {
   return (
-    <div className=" bg-transparent">
+    <div className="bg-gray-50">
       {/* Apple-style Promo Bar */}
-      <div className="bg-gray-100 text-black bg-transparent">
+      <div className="bg-gray-100 text-black">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center py-2.5 text-sm">
             <p className="font-normal tracking-tight">

@@ -1,297 +1,218 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import {
-  TrashIcon,
-  PlusIcon,
-  MinusIcon,
-  ShoppingBagIcon
-} from '@heroicons/react/24/outline';
-import Footer from '../../components/Footer';
+import { TrashIcon, ShoppingBagIcon } from '@heroicons/react/24/outline';
 
 const CartPage = () => {
   const [cartItems, setCartItems] = useState([]);
-  const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [currentUser, setCurrentUser] = useState(null);
+  const navigate = useNavigate();
+  const API_URL = 'http://localhost:3000';
 
   useEffect(() => {
-    fetchCartData();
-    
+    fetchUserAndCart();
   }, []);
 
-  
-  const Navigate = useNavigate();
-
-  
-  const userId = localStorage.getItem('userId') ? Number(localStorage.getItem('userId')) : "aef0";
-
-  // --- helper: sync cart to server (patch if exists, post if not) ---
-  const syncCartToServer = async (updatedCart) => {
+  // Get current user and cart from JSON server
+  const fetchUserAndCart = async () => {
     try {
+      setLoading(true);
       
-      await axios.put(`http://localhost:3000/users/${userId}/cart`, { cart: updatedCart });
-    } catch (err) {
-      // if user not found, create user with id and cart
-      if (err.response && err.response.status === 404) {
-        try {
-          await axios.post('http://localhost:3000/users', { id: userId, cart: updatedCart });
-        } catch (postErr) {
-          console.error('Failed to create user on server:', postErr);
-        }
-      } else {
-        console.error('Failed to sync cart to server:', err);
+      // Get current user from localStorage
+      const currentUserString = localStorage.getItem('currentUser');
+      
+      if (!currentUserString) {
+        console.log("No user found in localStorage");
+        setLoading(false);
+        return;
       }
-    }
-  };
-
-  const fetchCartData = async () => {
-    try {
-      // Fetch products
-      const productsResponse = await axios.get('http://localhost:3000/products');
-      setProducts(productsResponse.data || []);
-
-      // Fetch user cart from server; fallback to localStorage
-      let serverCart = [];
-      try {
-        const userResponse = await axios.get(`http://localhost:3000/users/${userId}`);
-        serverCart = userResponse.data?.cart || [];
-      } catch (err) {
-        // if user not found, create empty user so later syncs won't 404
-        if (err.response && err.response.status === 404) {
-          try {
-            await axios.post('http://localhost:3000/users', { id: userId, cart: [] });
-            serverCart = [];
-          } catch (postErr) {
-            console.error('Error creating user fallback:', postErr);
-            serverCart = [];
-          }
-        } else {
-          console.error('Error fetching user:', err);
-        }
-      }
-
-      const localCart = JSON.parse(localStorage.getItem('echoo-cart') || '[]');
-
-      // Prefer server cart if it has items, otherwise use local cart
-      const finalCart = (serverCart && serverCart.length > 0) ? serverCart : (localCart || []);
-
-      setCartItems(finalCart);
-      // keep localStorage in sync
-      localStorage.setItem('echoo-cart', JSON.stringify(finalCart));
-
-      setLoading(false);
+      
+      const userFromStorage = JSON.parse(currentUserString);
+      const userId = userFromStorage.id;
+      
+      // Get fresh user data from server
+      const response = await axios.get(`${API_URL}/users/${userId}`);
+      const freshUserData = response.data;
+      
+      // Update localStorage with fresh data
+      localStorage.setItem('currentUser', JSON.stringify(freshUserData));
+      
+      setCurrentUser(freshUserData);
+      setCartItems(freshUserData.cart || []);
+      
     } catch (error) {
-      console.error('Error fetching data:', error);
+      console.error("Error fetching user cart:", error);
+      
+      // If server fails, use localStorage data
+      const currentUserString = localStorage.getItem('currentUser');
+      if (currentUserString) {
+        const userFromStorage = JSON.parse(currentUserString);
+        setCurrentUser(userFromStorage);
+        setCartItems(userFromStorage.cart || []);
+      }
+    } finally {
       setLoading(false);
     }
   };
 
-  const updateCartInStorage = (updatedCart) => {
-    localStorage.setItem('echoo-cart', JSON.stringify(updatedCart));
+  // Update cart in JSON server
+  const updateServerCart = async (newCart) => {
+    if (!currentUser) return;
+    
+    try {
+      // Optimistic UI update
+      setCartItems(newCart);
+      
+      // Update the user's cart in JSON server
+      await axios.patch(`${API_URL}/users/${currentUser.id}`, {
+        cart: newCart
+      });
+      
+      // Update local user data
+      const updatedUser = { ...currentUser, cart: newCart };
+      setCurrentUser(updatedUser);
+      localStorage.setItem('currentUser', JSON.stringify(updatedUser));
+      
+    } catch (error) {
+      console.error("Failed to update cart on server:", error);
+      // Revert optimistic update on error
+      fetchUserAndCart();
+    }
   };
 
-  const getProductById = (id) => {
-    return products.find(product => String(product.id) === String(id));
+  const handleQuantityChange = (itemId, change) => {
+    const updatedCart = cartItems.map(item => {
+      if (item.id === itemId) {
+        const newQty = item.quantity + change;
+        if (newQty >= 1) {
+          return { ...item, quantity: newQty };
+        }
+      }
+      return item;
+    });
+    
+    const finalCart = updatedCart.filter(item => item.quantity >= 1);
+    updateServerCart(finalCart);
   };
 
-  const updateQuantity = async (itemId, newQuantity) => {
-    if (newQuantity < 1) return;
-
-    const updatedCart = cartItems.map(item =>
-      item.id === itemId ? { ...item, quantity: newQuantity } : item
-    );
-
-    setCartItems(updatedCart);
-    updateCartInStorage(updatedCart);
-    // sync in background (await so errors can be logged)
-    await syncCartToServer(updatedCart);
-  };
-
-  const removeFromCart = async (itemId) => {
+  const handleRemoveItem = (itemId) => {
     const updatedCart = cartItems.filter(item => item.id !== itemId);
-    setCartItems(updatedCart);
-    updateCartInStorage(updatedCart);
-    await syncCartToServer(updatedCart);
+    updateServerCart(updatedCart);
   };
 
-  const formatPrice = (price) => {
-    return new Intl.NumberFormat('en-IN', {
-      style: 'currency',
-      currency: 'INR',
-      maximumFractionDigits: 0
+  const handleClearCart = () => {
+    updateServerCart([]);
+  };
+
+  // Calculate totals
+  const subtotal = cartItems.reduce((sum, item) => sum + (item.productPrice * item.quantity), 0);
+  const shipping = subtotal > 50000 ? 0 : 99;
+  const total = subtotal + shipping;
+
+  const formatPrice = (price) => 
+    new Intl.NumberFormat('en-IN', { 
+      style: 'currency', 
+      currency: 'INR', 
+      maximumFractionDigits: 0 
     }).format(price);
-  };
-
-  const calculateSubtotal = () => {
-    return cartItems.reduce((total, item) => {
-      const product = getProductById(item.productId ?? item.id);
-      const price = product?.price ?? item.productPrice ?? 0;
-      const qty = item.quantity ?? 1;
-      return total + price * qty;
-    }, 0);
-  };
-
-  const calculateTotal = () => {
-    const subtotal = calculateSubtotal();
-    const shipping = subtotal > 50000 ? 0 : 99; // Free shipping over ₹50,000
-    return subtotal + shipping;
-  };
-
-  const clearCart = async () => {
-    setCartItems([]);
-    updateCartInStorage([]);
-    await syncCartToServer([]);
-  };
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-white flex items-center justify-center">
-        <div className="text-gray-600">Loading cart...</div>
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900 mx-auto mb-4"></div>
+          <p>Loading cart...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!currentUser) {
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center p-4 max-w-md mx-auto">
+        <ShoppingBagIcon className="h-20 w-20 text-gray-300 mb-6" />
+        <h2 className="text-2xl font-bold mb-3 text-center">Please Log In</h2>
+        <p className="text-gray-600 text-center mb-6">
+          You need to be logged in to view your cart.
+        </p>
+        <Link to="/login" className="bg-black text-white px-6 py-3 rounded-xl font-medium">
+          Go to Login
+        </Link>
       </div>
     );
   }
 
   if (cartItems.length === 0) {
     return (
-      <div className="min-h-screen bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="text-center">
-            <ShoppingBagIcon className="mx-auto h-16 w-16 text-gray-400 mb-4" />
-            <h2 className="text-2xl font-dm-sans font-bold text-gray-900 mb-4">
-              Your cart is empty
-            </h2>
-            <p className="text-gray-600 mb-8">Start shopping to add items to your cart</p>
-            <Link
-              to="/store"
-              className="bg-gray-900 text-white px-8 py-3 rounded-xl font-medium hover:bg-gray-800 transition-colors"
-            >
-              Continue Shopping
-            </Link>
-          </div>
-        </div>
+      <div className="min-h-screen flex flex-col items-center justify-center p-4">
+        <ShoppingBagIcon className="h-24 w-24 text-gray-200 mx-auto mb-6" />
+        <h2 className="text-2xl font-bold mb-3">Your Cart is Empty</h2>
+        <p className="text-gray-600 mb-2">Hello, {currentUser.name}!</p>
+        <p className="text-gray-500 mb-8">Your cart is currently empty.</p>
+        <Link 
+          to="/store" 
+          className="bg-black text-white px-8 py-3 rounded-xl font-medium hover:bg-gray-800 transition-colors"
+        >
+          Continue Shopping
+        </Link>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-white">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header */}
-        <div className="flex justify-between items-center mb-8">
-          <div>
-            <h1 className="text-3xl font-dm-sans font-bold text-gray-900">Shopping Cart</h1>
-            <p className="text-gray-600 mt-2">{cartItems.length} items in your cart</p>
-          </div>
-          <button onClick={clearCart} className="text-sm text-red-600 hover:text-red-700 font-medium">
+    <div className="min-h-screen bg-white py-8 px-4 max-w-6xl mx-auto">
+      <div className="mb-8">
+        <div className="flex justify-between items-center mb-6">
+          <h1 className="text-3xl font-bold">Shopping Cart</h1>
+          <button 
+            onClick={handleClearCart}
+            className="text-red-500 hover:text-red-700 text-sm font-medium"
+          >
             Clear Cart
           </button>
         </div>
+      </div>
 
-        <div className="flex flex-col lg:flex-row gap-8">
-          {/* Cart Items */}
-          <div className="lg:w-2/3">
-            <div className="space-y-6">
-              {cartItems.map((item) => {
-                const product = getProductById(item.productId);
-
-                return (
-                  <div key={item.id} className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-sm transition-all">
-                    <div className="flex gap-6">
-                      {/* Product Image */}
-                      <div className="w-24 h-24 bg-gray-50 rounded-xl flex items-center justify-center p-2">
-                        <img src={item.productImage || product?.images?.[0]} alt={item.productName} className="w-full h-full object-contain" />
-                      </div>
-
-                      {/* Product Details */}
-                      <div className="flex-1">
-                        <div className="flex justify-between items-start">
-                          <div>
-                            <Link to={`/product/${item.productId}`} className="font-medium text-gray-900 hover:text-gray-700 transition-colors">
-                              {item.productName}
-                            </Link>
-                            <p className="text-sm text-gray-500 mt-1">{item.productBrand}</p>
-
-                            {/* Variants */}
-                            <div className="flex gap-4 mt-2 text-sm text-gray-600">
-                              {item.color && item.color !== '' && <span>Color: {item.color}</span>}
-                              {item.storage && item.storage !== '' && <span>Storage: {item.storage}</span>}
-                              {item.ram && item.ram !== '' && <span>RAM: {item.ram}</span>}
-                            </div>
-
-                            <p className="text-lg font-dm-sans font-bold text-gray-900 mt-2">{formatPrice(item.productPrice)}</p>
-                          </div>
-
-                          {/* Remove Button */}
-                          <button onClick={() => removeFromCart(item.id)} className="text-gray-400 hover:text-red-500 transition-colors">
-                            <TrashIcon className="w-5 h-5" />
-                          </button>
-                        </div>
-
-                        {/* Quantity Controls */}
-                        <div className="flex items-center justify-between mt-4">
-                          <div className="flex items-center gap-3">
-                            <span className="text-sm text-gray-600">Quantity:</span>
-                            <div className="flex items-center gap-2">
-                              <button onClick={() => updateQuantity(item.id, (item.quantity ?? 1) - 1)} className="w-8 h-8 border border-gray-300 rounded-lg flex items-center justify-center hover:bg-gray-50 transition-colors">
-                                <MinusIcon className="w-4 h-4" />
-                              </button>
-                              <span className="w-8 text-center font-medium">{item.quantity}</span>
-                              <button onClick={() => updateQuantity(item.id, (item.quantity ?? 1) + 1)} className="w-8 h-8 border border-gray-300 rounded-lg flex items-center justify-center hover:bg-gray-50 transition-colors">
-                                <PlusIcon className="w-4 h-4" />
-                              </button>
-                            </div>
-                          </div>
-
-                          <div className="text-right">
-                            <p className="text-lg font-dm-sans font-bold text-gray-900">{formatPrice((item.productPrice ?? 0) * (item.quantity ?? 1))}</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+      <div className="flex flex-col lg:flex-row gap-8">
+        {/* Cart Items List */}
+        <div className="lg:w-2/3 space-y-4">
+          {cartItems.map((item) => (
+            <div key={item.id} className="border border-gray-100 rounded-2xl p-4 flex gap-4">
+              <div className="w-24 h-24 bg-gray-50 rounded-xl p-2 flex-shrink-0">
+                <img src={item.productImage} alt={item.productName} className="w-full h-full object-contain" />
+              </div>
+              <div className="flex-1">
+                <div className="flex justify-between items-start">
+                  <div>
+                    <h3 className="font-semibold">{item.productName}</h3>
+                    <p className="text-sm text-gray-500">{item.storage} | {item.ram}</p>
+                    <p className="font-bold mt-1">{formatPrice(item.productPrice)}</p>
                   </div>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Order Summary */}
-          <div className="lg:w-1/3">
-            <div className="bg-gray-50 rounded-2xl p-6 sticky top-8">
-              <h3 className="text-lg font-dm-sans font-bold text-gray-900 mb-6">Order Summary</h3>
-
-              <div className="space-y-4">
-                <div className="flex justify-between text-sm">
-                  <span className="text-gray-600">Subtotal</span>
-                  <span className="font-medium text-gray-900">{formatPrice(calculateSubtotal())}</span>
+                  <button onClick={() => handleRemoveItem(item.id)} className="text-gray-400 hover:text-red-500">
+                    <TrashIcon className="w-5 h-5" />
+                  </button>
                 </div>
-
-                <div className="flex justify-between text-sm">
-                  <span className="text-gray-600">Shipping</span>
-                  <span className="font-medium text-gray-900">{calculateSubtotal() > 50000 ? 'Free' : formatPrice(99)}</span>
+                <div className="flex items-center gap-3 mt-4">
+                  <button onClick={() => handleQuantityChange(item.id, -1)} className="w-8 h-8 border rounded-lg flex items-center justify-center">-</button>
+                  <span className="w-8 text-center">{item.quantity}</span>
+                  <button onClick={() => handleQuantityChange(item.id, 1)} className="w-8 h-8 border rounded-lg flex items-center justify-center">+</button>
                 </div>
-
-                <div className="border-t border-gray-200 pt-4">
-                  <div className="flex justify-between text-lg font-dm-sans font-bold">
-                    <span className="text-gray-900">Total</span>
-                    <span className="text-gray-900">{formatPrice(calculateTotal())}</span>
-                  </div>
-                  <p className="text-xs text-gray-500 mt-2">
-                    {calculateSubtotal() > 50000
-                      ? 'You qualify for free shipping!'
-                      : 'Add ₹' + (50000 - calculateSubtotal()).toLocaleString('en-IN') + ' more for free shipping'
-                    }
-                  </p>
-                </div>
-
-                <button onClick={() => Navigate('/checkout')} className="w-full bg-gray-900 text-white py-4 px-6 rounded-xl font-medium hover:bg-gray-800 transition-colors mt-6">
-                  Proceed to Checkout
-                </button>
-
-                <Link to="/store" className="w-full border border-gray-300 text-gray-900 py-4 px-6 rounded-xl font-medium hover:bg-gray-50 transition-colors flex items-center justify-center">
-                  Continue Shopping
-                </Link>
               </div>
             </div>
+          ))}
+        </div>
+
+        {/* Summary */}
+        <div className="lg:w-1/3">
+          <div className="bg-gray-50 p-6 rounded-2xl sticky top-4">
+            <h3 className="font-bold text-lg mb-4">Summary</h3>
+            <div className="space-y-3 text-sm">
+              <div className="flex justify-between"><span>Subtotal</span><span>{formatPrice(subtotal)}</span></div>
+              <div className="flex justify-between"><span>Shipping</span><span>{shipping === 0 ? 'Free' : formatPrice(shipping)}</span></div>
+              <div className="border-t pt-3 flex justify-between font-bold text-base"><span>Total</span><span>{formatPrice(total)}</span></div>
+            </div>
+            <button onClick={() => navigate('/checkout')} className="w-full bg-black text-white py-4 rounded-xl mt-6 font-medium">Checkout</button>
           </div>
         </div>
       </div>

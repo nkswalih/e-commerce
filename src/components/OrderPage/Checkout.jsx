@@ -1,11 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { toast } from "react-toastify";
+import { toast } from 'react-toastify';
 
 const CheckoutPage = () => {
-  const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
+  const [cartItems, setCartItems] = useState([]);
+  const [loadingCart, setLoadingCart] = useState(true);
+  const [currentUser, setCurrentUser] = useState(null);
+  const [notification, setNotification] = useState({ show: false, message: '', type: '' });
+  
+  const navigate = useNavigate();
+  const API_URL = 'http://localhost:3000';
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -18,8 +25,70 @@ const CheckoutPage = () => {
     paymentMethod: 'card'
   });
 
-  const cartItems = JSON.parse(localStorage.getItem('echoo-cart') || '[]');
-  const products = []; // You'll need to fetch products or pass them as props
+  // Get current user from localStorage
+  useEffect(() => {
+    const getUserFromStorage = () => {
+      const userString = localStorage.getItem('currentUser');
+      if (userString) {
+        try {
+          const user = JSON.parse(userString);
+          setCurrentUser(user);
+          return user;
+        } catch (e) {
+          console.error('Error parsing currentUser:', e);
+          return null;
+        }
+      }
+      return null;
+    };
+
+    const user = getUserFromStorage();
+    if (user) {
+      fetchCartItems(user.id);
+    } else {
+      showNotification('Please log in to checkout', 'error');
+      setLoadingCart(false);
+    }
+  }, []);
+
+  // Show notification helper
+  const showNotification = (message, type = 'error') => {
+    setNotification({ show: true, message, type });
+    setTimeout(() => setNotification({ show: false, message: '', type: '' }), 5000);
+  };
+
+  // Fetch cart items from server using current user ID
+  const fetchCartItems = async (userId) => {
+    try {
+      setLoadingCart(true);
+      const response = await axios.get(`${API_URL}/users/${userId}`);
+      
+      // Set cart items from user's cart
+      const userCart = response.data?.cart || [];
+      setCartItems(userCart);
+      
+      // Auto-fill user data if available
+      if (response.data) {
+        setFormData(prev => ({
+          ...prev,
+          firstName: response.data.name?.split(' ')[0] || '',
+          lastName: response.data.name?.split(' ')[1] || '',
+          email: response.data.email || ''
+        }));
+      }
+      
+    } catch (error) {
+      console.error('Error fetching cart:', error);
+      if(error.response?.status === 404) {
+        showNotification('User not found. Please log in again.', 'error');
+        setCartItems([]);
+      } else {
+        showNotification('Failed to load cart items', 'error');
+      }
+    } finally {
+      setLoadingCart(false);
+    }
+  };
 
   const calculateSubtotal = () => {
     return cartItems.reduce((total, item) => {
@@ -40,79 +109,216 @@ const CheckoutPage = () => {
     });
   };
 
-  //fetch product stock data
-  const fetchProduct = async (productId) => {
-    const result = await axios.get('http://localhost:3000/products');
-    return result.data;
-  }
-
-  //patch update product stock
-  const updateStock = async (productId) => {
-    return axios.patch(`http://localhost:3000/products/${productId}`,{stock: newStock });
-  }
-
-  const handlePlaceOrder = async () => {
-    if(!cartItems.length){
-      toast.error("Cart is empty");
-      return;
+  // Fetch product data to check real-time stock
+const fetchProduct = async (productId) => {
+  try {
+    const response = await axios.get(`${API_URL}/products/${productId}`);
+    if (!response.data) {
+      throw new Error(`Product ${productId} not found`);
     }
-    setLoading(true);
-    
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching product:', error);
+    if (error.response?.status === 404) {
+      throw new Error(`Product ${productId} not found in database`);
+    }
+    throw error;
+  }
+};
+
+  // Update product stock
+  const updateStock = async (productId, newStock) => {
     try {
-
-      const orginalStocks = {};
-      for (const item of cartItems){
-        const product = await fetchProduct(item.id);
-        orginalStocks[item.id] = product.stock ?? 0;
-
-        if ((product.stock ?? 0) < item.quantity) {
-          toast.error(`Not enough stock for "${product.name || item.title || item.id}". Available: ${product.stock}, requested: ${item.quantity}`);
-          setLoading(false);
-          return;
-        }
-      }
-
-      
-      
-
-      // Create order object
-      const order = {
-        id: 'ORD' + Date.now(),
-        date: new Date().toISOString(),
-        items: cartItems,
-        total: calculateTotal(),
-        subtotal: calculateSubtotal(),
-        shipping: calculateSubtotal() > 50000 ? 0 : 99,
-        status: 'confirmed',
-        customerInfo: formData,
-        paymentMethod: formData.paymentMethod
-      };
-
-      // Save order to localStorage (replace with API call in real app)
-      const existingOrders = JSON.parse(localStorage.getItem('echoo-orders') || '[]');
-      const updatedOrders = [order, ...existingOrders];
-      localStorage.setItem('echoo-orders', JSON.stringify(updatedOrders));
-
-      // Clear cart
-      localStorage.setItem('echoo-cart', JSON.stringify([]));
-
-      // Navigate to order confirmation
-      navigate(`/order-confirmation/${order.id}`);
-      
+      await axios.patch(`${API_URL}/products/${productId}`, {
+        stock: newStock 
+      });
     } catch (error) {
-      console.error('Error placing order:', error);
-      toast.error('Failed to place order. Please try again.');
-    } finally {
-      setLoading(false);
+      console.error('Error updating stock:', error);
+      throw error;
     }
   };
+
+  // Clear cart on server (Empty the user's cart array)
+  const clearCart = async () => {
+    if (!currentUser) return;
+    
+    try {
+      // Update user's cart to empty array
+      await axios.patch(`${API_URL}/users/${currentUser.id}`, {
+        cart: []
+      });
+      
+      // Update localStorage user data
+      const updatedUser = { ...currentUser, cart: [] };
+      localStorage.setItem('currentUser', JSON.stringify(updatedUser));
+      setCurrentUser(updatedUser);
+      
+      setCartItems([]);
+    } catch (error) {
+      console.error('Error clearing cart:', error);
+      throw error;
+    }
+  };
+
+  const handlePlaceOrder = async () => {
+  if (!currentUser) {
+    showNotification("Please log in to place an order", "error");
+    return;
+  }
+
+  // Validate form
+  if (!formData.firstName || !formData.lastName || !formData.email || 
+      !formData.phone || !formData.address || !formData.city || 
+      !formData.state || !formData.pincode) {
+    showNotification("Please fill in all fields", "error");
+    return;
+  }
+
+  if (!cartItems.length) {
+    showNotification("Cart is empty", "error");
+    return;
+  }
+
+  setLoading(true);
+
+  try {
+    const originalStocks = {};
+    
+    // 1. Check stock availability for all items
+    for (const item of cartItems) {
+      // FIX: Try both productId and id fields
+      const productId = item.productId || (item.id && item.id.split('-')[0]);
+      
+      if (!productId) {
+        showNotification(`Invalid product in cart: ${item.productName}`, "error");
+        setLoading(false);
+        return;
+      }
+      
+      const product = await fetchProduct(productId);
+      originalStocks[product.id] = product.stock ?? 0;
+
+      if ((product.stock ?? 0) < item.quantity) {
+        showNotification(`Not enough stock for "${product.name}". Available: ${product.stock}, requested: ${item.quantity}`, "error");
+        setLoading(false);
+        return;
+      }
+    }
+
+    // 2. Update stock for all items
+    for (const item of cartItems) {
+      // FIX: Try both productId and id fields
+      const productId = item.productId || (item.id && item.id.split('-')[0]);
+      const newStock = originalStocks[productId] - item.quantity;
+      await updateStock(productId, newStock);
+    }
+
+    // 3. Create order object
+    const order = {
+      id: 'ORD' + Date.now(),
+      userId: currentUser.id,
+      userName: currentUser.name,
+      userEmail: currentUser.email,
+      date: new Date().toISOString(),
+      items: cartItems.map(item => ({
+        ...item,
+        // Ensure productId is properly included
+        productId: item.productId || (item.id && item.id.split('-')[0]),
+        itemTotal: item.productPrice * item.quantity
+      })),
+      subtotal: calculateSubtotal(),
+      shipping: calculateSubtotal() > 50000 ? 0 : 99,
+      total: calculateTotal(),
+      status: 'confirmed',
+      customerInfo: {
+        ...formData,
+        name: `${formData.firstName} ${formData.lastName}`
+      },
+      paymentMethod: formData.paymentMethod
+    };
+
+    // 4. Save order to server
+    await axios.post(`${API_URL}/orders`, order);
+
+    // 5. Also add order to user's orders array
+    try {
+      const userResponse = await axios.get(`${API_URL}/users/${currentUser.id}`);
+      const user = userResponse.data;
+      const updatedUserOrders = [...(user.order || []), order];
+      
+      await axios.patch(`${API_URL}/users/${currentUser.id}`, {
+        order: updatedUserOrders
+      });
+    } catch (error) {
+      console.error('Error updating user orders:', error);
+      // Continue even if updating user orders fails
+    }
+
+    // 6. Clear cart on server
+    await clearCart();
+
+    showNotification('Order placed successfully!', 'success');
+
+    // 7. Show success and redirect
+    setTimeout(() => {
+      toast.success(`Order placed successfully!\nOrder ID: ${order.id}\nTotal: ₹${order.total.toLocaleString('en-IN')}`);
+      navigate('/cart'); // Or redirect to orders page
+    }, 1000);
+
+  } catch (error) {
+    console.error('Error placing order:', error);
+    // More specific error message
+    if (error.response) {
+      if (error.response.status === 404) {
+        showNotification('Product not found. Please refresh and try again.', 'error');
+      } else if (error.response.status === 400) {
+        showNotification('Bad request. Please check your data.', 'error');
+      } else {
+        showNotification('Failed to place order. Please try again.', 'error');
+      }
+    } else {
+      showNotification('Network error. Please check your connection.', 'error');
+    }
+  } finally {
+    setLoading(false);
+  }
+};
+
+  if (loadingCart) {
+    return (
+      <div className="min-h-screen bg-white flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900 mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading checkout...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!currentUser) {
+    return (
+      <div className="min-h-screen bg-white flex items-center justify-center">
+        <div className="text-center">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Please Log In</h2>
+          <p className="text-gray-600 mb-6">You need to be logged in to checkout.</p>
+          <button
+            onClick={() => navigate('/login')}
+            className="bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800"
+          >
+            Go to Login
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   if (cartItems.length === 0) {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Your cart is empty</h2>
-          <button 
+          <p className="text-gray-600 mb-6">Hello, {currentUser.name}!</p>
+          <button
             onClick={() => navigate('/store')}
             className="bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800"
           >
@@ -125,19 +331,43 @@ const CheckoutPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 py-8">
+      {/* Notification */}
+      {notification.show && (
+        <div className={`fixed top-4 right-4 z-50 px-6 py-3 rounded-lg shadow-lg ${
+          notification.type === 'success' ? 'bg-green-500' : 'bg-red-500'
+        } text-white`}>
+          {notification.message}
+        </div>
+      )}
+
       <div className="max-w-4xl mx-auto px-4">
         <h1 className="text-3xl font-bold text-gray-900 mb-8">Checkout</h1>
+        
+        {/* User Info */}
+        <div className="bg-blue-50 border border-blue-100 rounded-xl p-4 mb-6">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-sm text-blue-800 font-medium">
+                Checking out as: <span className="font-bold">{currentUser.name}</span>
+              </p>
+              <p className="text-xs text-blue-600 mt-1">
+                User ID: {currentUser.id} • {currentUser.email}
+              </p>
+              <p className="text-xs text-blue-600 mt-1">
+                Cart Items: {cartItems.length} • Total Items: {cartItems.reduce((sum, item) => sum + item.quantity, 0)}
+              </p>
+            </div>
+          </div>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Shipping Information */}
           <div className="bg-white rounded-2xl p-6 shadow-sm">
             <h2 className="text-xl font-semibold mb-6">Shipping Information</h2>
-            
+
             <div className="grid grid-cols-2 gap-4 mb-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  First Name
-                </label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
                 <input
                   type="text"
                   name="firstName"
@@ -148,9 +378,7 @@ const CheckoutPage = () => {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Last Name
-                </label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
                 <input
                   type="text"
                   name="lastName"
@@ -163,9 +391,7 @@ const CheckoutPage = () => {
             </div>
 
             <div className="mb-4">
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Email
-              </label>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
               <input
                 type="email"
                 name="email"
@@ -177,9 +403,7 @@ const CheckoutPage = () => {
             </div>
 
             <div className="mb-4">
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Phone
-              </label>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Phone</label>
               <input
                 type="tel"
                 name="phone"
@@ -191,9 +415,7 @@ const CheckoutPage = () => {
             </div>
 
             <div className="mb-4">
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Address
-              </label>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Address</label>
               <textarea
                 name="address"
                 value={formData.address}
@@ -206,9 +428,7 @@ const CheckoutPage = () => {
 
             <div className="grid grid-cols-3 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  City
-                </label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">City</label>
                 <input
                   type="text"
                   name="city"
@@ -219,9 +439,7 @@ const CheckoutPage = () => {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  State
-                </label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">State</label>
                 <input
                   type="text"
                   name="state"
@@ -232,9 +450,7 @@ const CheckoutPage = () => {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  PIN Code
-                </label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">PIN Code</label>
                 <input
                   type="text"
                   name="pincode"
@@ -252,21 +468,27 @@ const CheckoutPage = () => {
             {/* Order Summary */}
             <div className="bg-white rounded-2xl p-6 shadow-sm">
               <h2 className="text-xl font-semibold mb-4">Order Summary</h2>
-              
-              <div className="space-y-4 mb-6">
+
+              <div className="space-y-4 mb-6 max-h-64 overflow-y-auto">
                 {cartItems.map((item) => (
                   <div key={item.id} className="flex justify-between items-center">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
-                        <img 
-                          src={item.productImage} 
+                        <img
+                          src={item.productImage}
                           alt={item.productName}
                           className="w-10 h-10 object-contain"
+                          onError={(e) => {
+                            e.target.onerror = null;
+                            e.target.src = "https://via.placeholder.com/40?text=No+Image";
+                          }}
                         />
                       </div>
                       <div>
                         <p className="font-medium text-sm">{item.productName}</p>
-                        <p className="text-gray-500 text-sm">Qty: {item.quantity}</p>
+                        <p className="text-gray-500 text-sm">
+                          {item.storage} | {item.ram} • Qty: {item.quantity}
+                        </p>
                       </div>
                     </div>
                     <p className="font-semibold">
@@ -295,7 +517,7 @@ const CheckoutPage = () => {
             {/* Payment Method */}
             <div className="bg-white rounded-2xl p-6 shadow-sm">
               <h2 className="text-xl font-semibold mb-4">Payment Method</h2>
-              
+
               <div className="space-y-3">
                 <label className="flex items-center gap-3 p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50">
                   <input
@@ -308,7 +530,7 @@ const CheckoutPage = () => {
                   />
                   <span>Credit/Debit Card</span>
                 </label>
-                
+
                 <label className="flex items-center gap-3 p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50">
                   <input
                     type="radio"
@@ -320,7 +542,7 @@ const CheckoutPage = () => {
                   />
                   <span>UPI</span>
                 </label>
-                
+
                 <label className="flex items-center gap-3 p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50">
                   <input
                     type="radio"
@@ -341,7 +563,7 @@ const CheckoutPage = () => {
               disabled={loading}
               className="w-full bg-gray-900 text-white py-4 rounded-xl font-semibold hover:bg-gray-800 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
             >
-              {loading ? 'Placing Order...' : 'Place Order'}
+              {loading ? 'Placing Order...' : `Place Order - ₹${calculateTotal().toLocaleString('en-IN')}`}
             </button>
           </div>
         </div>

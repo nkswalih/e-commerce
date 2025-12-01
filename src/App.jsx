@@ -22,37 +22,60 @@ import OrderConfirmation from './components/OrderPage/OrderConfirmation'
 import AccessoriesPage from './pages/user/Accessories'
 import EchooSupport from './pages/user/Support'
 
+// Admin imports
+import AdminLayout from './pages/admin/AdminLayout'
+import Dashboard from './pages/admin/Dashboard'
+import AdminUsers from './pages/admin/AdminUsers'
+import AdminProducts from './pages/admin/AdminProducts'
+import AdminSettings from './pages/admin/AdminSettings'
+import UserLayout from './pages/user/UserLayout'
+
 function App() {
   return (
       <BrowserRouter>
       <div>
-      
-      <Navbar/>
-      
+
+      {/* User Side */}
+
         <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/home" element={<Home/>}/>
-          <Route path="/sign_up" element={<Register/>}/>
-          <Route path="/sign_in" element={<Login/>}/>
-          <Route path="/terms_conditions" element={<Terms/>}/>
-          <Route path="/store" element={<Store/>}/>
-          <Route path="/apple" element={<Apple/>}/>
-          <Route path="/lap" element={<Laptop/>}/>
-          <Route path="/test" element={<Test/>}/>
-          <Route path="/profile" element={<Profile/>}/>
-          <Route path="/product/:productId" element={<ProductPage />} />
-          <Route path="/store" element={<StorePage/>}/>
-          <Route path="/cart" element={<CartPage/>}/>
-          <Route path="/laptop" element={<LaptopPage/>}/>
-          <Route path="/checkout" element={<CheckoutPage />} />
-          <Route path="/order-confirmation/:orderId" element={<OrderConfirmation />} />
-          <Route path="/accessories" element={<AccessoriesPage />} />
-          <Route path="/support" element={<EchooSupport />} />
+          <Route path="/" element={<UserLayout />}>
+            <Route index element={<Home/>}/>
+            <Route path="/home" element={<Home/>}/>
+            <Route path="/sign_up" element={<Register/>}/>
+            <Route path="/sign_in" element={<Login/>}/>
+            <Route path="/terms_conditions" element={<Terms/>}/>
+            <Route path="/store" element={<Store/>}/>
+            <Route path="/apple" element={<Apple/>}/>
+            <Route path="/lap" element={<Laptop/>}/>
+            <Route path="/test" element={<Test/>}/>
+            <Route path="/profile" element={<Profile/>}/>
+            <Route path="/product/:productId" element={<ProductPage />} />
+            <Route path="/store" element={<StorePage/>}/>
+            <Route path="/cart" element={<CartPage/>}/>
+            <Route path="/laptop" element={<LaptopPage/>}/>
+            <Route path="/checkout" element={<CheckoutPage />} />
+            <Route path="/order-confirmation/:orderId" element={<OrderConfirmation />} />
+            <Route path="/accessories" element={<AccessoriesPage />} />
+            <Route path="/support" element={<EchooSupport />} />
+          </Route>
+
+        {/* Admin Side */}
+
+        
+          <Route path="/admin/*" element={<AdminLayout />}>
+            <Route index element={<Dashboard />} />
+            <Route path="users" element={<AdminUsers />} />
+            <Route path="products" element={<AdminProducts />} />
+            <Route path="settings" element={<AdminSettings />} />
+          </Route>
+
         </Routes>
 
+      
+
         <ToastContainer
-          position="top-right"
-          autoClose={3000}
+          position="top-center"
+          autoClose={2000}
           hideProgressBar={false}
           newestOnTop={false}
           closeOnClick

@@ -50,6 +50,8 @@ const Login = () => {
 
       // Finding user with matched email and password
       const user = users.find(u => u.email === formData.email && u.password === formData.password);
+      
+      
 
       if (user) {
         // Store data into localStorage if remember me checked
@@ -89,14 +91,14 @@ const Login = () => {
 
   return (
     <div className="min-h-screen bg-neutral-100">
-      <div className="flex flex-row items-center justify-center pt-25 py-26 sm:px-6 lg:px-8">
+      <div className="flex flex-row items-center justify-center pt-24 py-28 sm:px-6 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-md">
           <div className="flex justify-center">
           </div>
           <img
             alt="EchOo."
             src="/src/assets/images/Echoo-transparent.png"
-            className="h-13 w-auto absolute"
+            className="h-10 w-auto absolute"
           />
           <h2 className="mt-8 text-center text-4xl font-dm-sans font-bold tracking-tight text-black">
             Sign in to EchOo store.

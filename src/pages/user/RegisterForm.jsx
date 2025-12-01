@@ -50,6 +50,8 @@ const Register = () => {
         email: formData.email,
         password: formData.password,
         terms: formData.terms,
+        cart:[],
+        order:[]
       });
 
       // ✅ Fixed: Pass correct user data (name instead of email, no password)
@@ -70,14 +72,14 @@ const Register = () => {
 
   return (
     <div className="min-h-screen bg-neutral-100">
-      <div className="flex flex-row justify-center items-center pt-4 py-15 sm:px-6 lg:px-8">
+      <div className="flex flex-row justify-center items-center pt-4 py-20 sm:px-6 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-md">
           <div className="flex justify-center">
           </div>
           <img
             alt="EchOo."
             src="/src/assets/images/Echoo-transparent.png"
-            className="h-13 w-auto absolute"
+            className="h-10 w-auto absolute"
           />
           <h2 className="mt-8 text-center text-3xl font-dm-sans font-bold tracking-tight text-black">
             Create Your Echoo Account.

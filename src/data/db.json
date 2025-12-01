@@ -6,7 +6,45 @@
       "email": "Ladgamer777@gmail.com",
       "password": "777777777777",
       "terms": false,
-      "cart": []
+      "cart": [
+        {
+          "id": "macbook-m5-13-256GB-8GB",
+          "productId": "macbook-m5-13",
+          "storage": "256GB",
+          "ram": "8GB",
+          "quantity": 1,
+          "addedAt": "2025-11-29T11:23:02.423Z",
+          "productName": "MacBook M5 13-inch",
+          "productPrice": 129999,
+          "productImage": "https://www.apple.com/assets-www/en_WW/mac/01_product_tile/xlarge/mbp_14_16_b933a4e71_2x.jpg",
+          "productBrand": "Apple"
+        },
+        {
+          "id": "iphone-17-128GB-",
+          "productId": "iphone-17",
+          "storage": "128GB",
+          "ram": "",
+          "quantity": 2,
+          "addedAt": "2025-12-01T04:27:54.515Z",
+          "productName": "iPhone 17",
+          "productPrice": 79999,
+          "productImage": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-digitalmat-gallery-3-202509_GEO_EMEA?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=SVhTK013TmU5bXcxZm9yb0hnWkxGU0JYMGNRelI2WXAyb0IycFNGSFF5QXlNUWtzZldTWFRVcW9XNGZ1blhXOWVkZGptNUJaWitJZ3gyOURkSTlZQ3VCc3FjamJwVXJjd2U3WEc3Smc2MXpkZWxUbVcrZTZlY2ZZSjRZQ2QyaW1mbW94YnYxc1YvNXZ4emJGL0IxNFp3",
+          "productBrand": "Apple"
+        },
+        {
+          "id": "iphone-17-pro-256GB-",
+          "productId": "iphone-17-pro",
+          "storage": "256GB",
+          "ram": "",
+          "quantity": 1,
+          "addedAt": "2025-12-01T05:04:22.271Z",
+          "productName": "iPhone 17 Pro",
+          "productPrice": 129999,
+          "productImage": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-card-40-17pro-202509?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=WVVFRzUzVk1oblJhbW9PbGNSU25jaUtlSkZ1cHdCU1J4ZWZjamdoYzhpRkMxQXc4S3pBZE5lUDJlTzVYSUYydFMwV0hhcmdVdXZzZ1NwTlFUaEgwTDc0akx0V0lSSVRoL2tPb3ZabW5DM0k",
+          "productBrand": "Apple"
+        }
+      ],
+      "order": []
     },
     {
       "id": "dd8d",
@@ -14,7 +52,8 @@
       "email": "swalink555@gmail.com",
       "password": "12345678",
       "terms": false,
-      "cart": []
+      "cart": [],
+      "order": []
     },
     {
       "id": "6d48",
@@ -22,7 +61,113 @@
       "email": "user@gmail.com",
       "password": "1234",
       "terms": true,
-      "cart": []
+      "cart": [
+        {
+          "id": "iphone-air-64GB-",
+          "productId": "iphone-air",
+          "storage": "64GB",
+          "ram": "",
+          "quantity": 1,
+          "addedAt": "2025-12-01T06:16:11.377Z",
+          "productName": "iPhone Air",
+          "productPrice": 49999,
+          "productImage": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-card-40-17air-202509?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=WVVFRzUzVk1oblJhbW9PbGNSU25jci9mUU0zMkc5ekxlZHFEM05NWkp3NUMxQXc4S3pBZE5lUDJlTzVYSUYydFMwV0hhcmdVdXZzZ1NwTlFUaEgwTCtUZHJHS0dDSWYyeUtQd0tjOERiaFE",
+          "productBrand": "Apple"
+        }
+      ],
+      "order": [
+        {
+          "id": "ORD1764569516870",
+          "userId": "6d48",
+          "userName": "swalih",
+          "userEmail": "user@gmail.com",
+          "date": "2025-12-01T06:11:56.870Z",
+          "items": [
+            {
+              "id": "iphone-17-pro-256GB-",
+              "productId": "iphone-17-pro",
+              "storage": "256GB",
+              "ram": "",
+              "quantity": 1,
+              "addedAt": "2025-12-01T05:23:04.498Z",
+              "productName": "iPhone 17 Pro",
+              "productPrice": 129999,
+              "productImage": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-card-40-17pro-202509?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=WVVFRzUzVk1oblJhbW9PbGNSU25jaUtlSkZ1cHdCU1J4ZWZjamdoYzhpRkMxQXc4S3pBZE5lUDJlTzVYSUYydFMwV0hhcmdVdXZzZ1NwTlFUaEgwTDc0akx0V0lSSVRoL2tPb3ZabW5DM0k",
+              "productBrand": "Apple",
+              "itemTotal": 129999
+            },
+            {
+              "id": "iphone-17-128GB-",
+              "productId": "iphone-17",
+              "storage": "128GB",
+              "ram": "",
+              "quantity": 1,
+              "addedAt": "2025-12-01T05:58:20.163Z",
+              "productName": "iPhone 17",
+              "productPrice": 79999,
+              "productImage": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-digitalmat-gallery-3-202509_GEO_EMEA?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=SVhTK013TmU5bXcxZm9yb0hnWkxGU0JYMGNRelI2WXAyb0IycFNGSFF5QXlNUWtzZldTWFRVcW9XNGZ1blhXOWVkZGptNUJaWitJZ3gyOURkSTlZQ3VCc3FjamJwVXJjd2U3WEc3Smc2MXpkZWxUbVcrZTZlY2ZZSjRZQ2QyaW1mbW94YnYxc1YvNXZ4emJGL0IxNFp3",
+              "productBrand": "Apple",
+              "itemTotal": 79999
+            }
+          ],
+          "subtotal": 209998,
+          "shipping": 0,
+          "total": 209998,
+          "status": "confirmed",
+          "customerInfo": {
+            "firstName": "swalih",
+            "lastName": "Swalih",
+            "email": "user@gmail.com",
+            "phone": "999999",
+            "address": "Perunthallur",
+            "city": "Tirur",
+            "state": "Kerala",
+            "pincode": "676102",
+            "paymentMethod": "card",
+            "name": "swalih Swalih"
+          },
+          "paymentMethod": "card"
+        },
+        {
+          "id": "ORD1764569641511",
+          "userId": "6d48",
+          "userName": "swalih",
+          "userEmail": "user@gmail.com",
+          "date": "2025-12-01T06:14:01.511Z",
+          "items": [
+            {
+              "id": "iphone-17-128GB-",
+              "productId": "iphone-17",
+              "storage": "128GB",
+              "ram": "",
+              "quantity": 1,
+              "addedAt": "2025-12-01T06:12:40.779Z",
+              "productName": "iPhone 17",
+              "productPrice": 79999,
+              "productImage": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-digitalmat-gallery-3-202509_GEO_EMEA?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=SVhTK013TmU5bXcxZm9yb0hnWkxGU0JYMGNRelI2WXAyb0IycFNGSFF5QXlNUWtzZldTWFRVcW9XNGZ1blhXOWVkZGptNUJaWitJZ3gyOURkSTlZQ3VCc3FjamJwVXJjd2U3WEc3Smc2MXpkZWxUbVcrZTZlY2ZZSjRZQ2QyaW1mbW94YnYxc1YvNXZ4emJGL0IxNFp3",
+              "productBrand": "Apple",
+              "itemTotal": 79999
+            }
+          ],
+          "subtotal": 79999,
+          "shipping": 0,
+          "total": 79999,
+          "status": "confirmed",
+          "customerInfo": {
+            "firstName": "swalih",
+            "lastName": "Swalih",
+            "email": "user@gmail.com",
+            "phone": "999999",
+            "address": "Perunthallur",
+            "city": "Tirur",
+            "state": "Kerala",
+            "pincode": "676102",
+            "paymentMethod": "card",
+            "name": "swalih Swalih"
+          },
+          "paymentMethod": "card"
+        }
+      ]
     },
     {
       "id": "238b",
@@ -30,28 +175,211 @@
       "email": "user2@gmail.com",
       "password": "1234",
       "terms": true,
-      "cart": []
+      "cart": [],
+      "order": []
     },
     {
-      "id": "aef0",
+      "id": "0d73",
+      "name": "denjo",
+      "email": "denjo@123",
+      "password": "147",
+      "terms": true,
+      "cart": [],
+      "order": []
+    },
+    {
+      "id": "8405",
+      "name": "andu",
+      "email": "andu@123",
+      "password": "000",
+      "terms": true,
       "cart": [
         {
-          "id": "iphone-17-pro-1TB-",
+          "id": "macbook-m4-14-512GB-16GB",
+          "productId": "macbook-m4-14",
+          "storage": "512GB",
+          "ram": "16GB",
+          "quantity": 1,
+          "addedAt": "2025-12-01T06:19:52.135Z",
+          "productName": "MacBook M4 14-inch",
+          "productPrice": 149999,
+          "productImage": "https://www.apple.com/assets-www/en_WW/mac/01_product_tile/xlarge/mba_13_15_140e630d3_2x.jpg",
+          "productBrand": "Apple"
+        }
+      ],
+      "order": [
+        {
+          "id": "ORD1764569855798",
+          "userId": "8405",
+          "userName": "andu",
+          "userEmail": "andu@123",
+          "date": "2025-12-01T06:17:35.798Z",
+          "items": [
+            {
+              "id": "nothing-phone-3a-Pro-128GB-",
+              "productId": "nothing-phone-3a-Pro",
+              "storage": "128GB",
+              "ram": "",
+              "quantity": 1,
+              "addedAt": "2025-12-01T06:17:03.794Z",
+              "productName": "Nothing Phone 3a Pro",
+              "productPrice": 32999,
+              "productImage": "https://cdn.shopify.com/s/files/1/0376/5420/0459/files/0000s_0009_Phone-3a-Pro-grey.png?v=1753435871",
+              "productBrand": "Nothing",
+              "itemTotal": 32999
+            }
+          ],
+          "subtotal": 32999,
+          "shipping": 99,
+          "total": 33098,
+          "status": "confirmed",
+          "customerInfo": {
+            "firstName": "andu",
+            "lastName": "Swalih",
+            "email": "andu@123",
+            "phone": "999999",
+            "address": "Perunthallur",
+            "city": "Tirur",
+            "state": "Kerala",
+            "pincode": "676102",
+            "paymentMethod": "card",
+            "name": "andu Swalih"
+          },
+          "paymentMethod": "card"
+        }
+      ]
+    }
+  ],
+  "orders": [
+    {
+      "id": "ORD1764569516870",
+      "userId": "6d48",
+      "userName": "swalih",
+      "userEmail": "user@gmail.com",
+      "date": "2025-12-01T06:11:56.870Z",
+      "items": [
+        {
+          "id": "iphone-17-pro-256GB-",
           "productId": "iphone-17-pro",
-          "storage": "1TB",
+          "storage": "256GB",
           "ram": "",
           "quantity": 1,
-          "addedAt": "2025-11-27T04:04:25.457Z",
+          "addedAt": "2025-12-01T05:23:04.498Z",
           "productName": "iPhone 17 Pro",
           "productPrice": 129999,
           "productImage": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-card-40-17pro-202509?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=WVVFRzUzVk1oblJhbW9PbGNSU25jaUtlSkZ1cHdCU1J4ZWZjamdoYzhpRkMxQXc4S3pBZE5lUDJlTzVYSUYydFMwV0hhcmdVdXZzZ1NwTlFUaEgwTDc0akx0V0lSSVRoL2tPb3ZabW5DM0k",
-          "productBrand": "Apple"
+          "productBrand": "Apple",
+          "itemTotal": 129999
+        },
+        {
+          "id": "iphone-17-128GB-",
+          "productId": "iphone-17",
+          "storage": "128GB",
+          "ram": "",
+          "quantity": 1,
+          "addedAt": "2025-12-01T05:58:20.163Z",
+          "productName": "iPhone 17",
+          "productPrice": 79999,
+          "productImage": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-digitalmat-gallery-3-202509_GEO_EMEA?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=SVhTK013TmU5bXcxZm9yb0hnWkxGU0JYMGNRelI2WXAyb0IycFNGSFF5QXlNUWtzZldTWFRVcW9XNGZ1blhXOWVkZGptNUJaWitJZ3gyOURkSTlZQ3VCc3FjamJwVXJjd2U3WEc3Smc2MXpkZWxUbVcrZTZlY2ZZSjRZQ2QyaW1mbW94YnYxc1YvNXZ4emJGL0IxNFp3",
+          "productBrand": "Apple",
+          "itemTotal": 79999
         }
-      ]
+      ],
+      "subtotal": 209998,
+      "shipping": 0,
+      "total": 209998,
+      "status": "confirmed",
+      "customerInfo": {
+        "firstName": "swalih",
+        "lastName": "Swalih",
+        "email": "user@gmail.com",
+        "phone": "999999",
+        "address": "Perunthallur",
+        "city": "Tirur",
+        "state": "Kerala",
+        "pincode": "676102",
+        "paymentMethod": "card",
+        "name": "swalih Swalih"
+      },
+      "paymentMethod": "card"
     },
     {
-      "id": "aef0",
-      "cart": []
+      "id": "ORD1764569641511",
+      "userId": "6d48",
+      "userName": "swalih",
+      "userEmail": "user@gmail.com",
+      "date": "2025-12-01T06:14:01.511Z",
+      "items": [
+        {
+          "id": "iphone-17-128GB-",
+          "productId": "iphone-17",
+          "storage": "128GB",
+          "ram": "",
+          "quantity": 1,
+          "addedAt": "2025-12-01T06:12:40.779Z",
+          "productName": "iPhone 17",
+          "productPrice": 79999,
+          "productImage": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-digitalmat-gallery-3-202509_GEO_EMEA?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=SVhTK013TmU5bXcxZm9yb0hnWkxGU0JYMGNRelI2WXAyb0IycFNGSFF5QXlNUWtzZldTWFRVcW9XNGZ1blhXOWVkZGptNUJaWitJZ3gyOURkSTlZQ3VCc3FjamJwVXJjd2U3WEc3Smc2MXpkZWxUbVcrZTZlY2ZZSjRZQ2QyaW1mbW94YnYxc1YvNXZ4emJGL0IxNFp3",
+          "productBrand": "Apple",
+          "itemTotal": 79999
+        }
+      ],
+      "subtotal": 79999,
+      "shipping": 0,
+      "total": 79999,
+      "status": "confirmed",
+      "customerInfo": {
+        "firstName": "swalih",
+        "lastName": "Swalih",
+        "email": "user@gmail.com",
+        "phone": "999999",
+        "address": "Perunthallur",
+        "city": "Tirur",
+        "state": "Kerala",
+        "pincode": "676102",
+        "paymentMethod": "card",
+        "name": "swalih Swalih"
+      },
+      "paymentMethod": "card"
+    },
+    {
+      "id": "ORD1764569855798",
+      "userId": "8405",
+      "userName": "andu",
+      "userEmail": "andu@123",
+      "date": "2025-12-01T06:17:35.798Z",
+      "items": [
+        {
+          "id": "nothing-phone-3a-Pro-128GB-",
+          "productId": "nothing-phone-3a-Pro",
+          "storage": "128GB",
+          "ram": "",
+          "quantity": 1,
+          "addedAt": "2025-12-01T06:17:03.794Z",
+          "productName": "Nothing Phone 3a Pro",
+          "productPrice": 32999,
+          "productImage": "https://cdn.shopify.com/s/files/1/0376/5420/0459/files/0000s_0009_Phone-3a-Pro-grey.png?v=1753435871",
+          "productBrand": "Nothing",
+          "itemTotal": 32999
+        }
+      ],
+      "subtotal": 32999,
+      "shipping": 99,
+      "total": 33098,
+      "status": "confirmed",
+      "customerInfo": {
+        "firstName": "andu",
+        "lastName": "Swalih",
+        "email": "andu@123",
+        "phone": "999999",
+        "address": "Perunthallur",
+        "city": "Tirur",
+        "state": "Kerala",
+        "pincode": "676102",
+        "paymentMethod": "card",
+        "name": "andu Swalih"
+      },
+      "paymentMethod": "card"
     }
   ],
   "products": [
@@ -62,7 +390,7 @@
       "brand": "Apple",
       "price": 129999,
       "currency": "INR",
-      "stock": 14,
+      "stock": 0,
       "images": [
         "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-card-40-17pro-202509?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=WVVFRzUzVk1oblJhbW9PbGNSU25jaUtlSkZ1cHdCU1J4ZWZjamdoYzhpRkMxQXc4S3pBZE5lUDJlTzVYSUYydFMwV0hhcmdVdXZzZ1NwTlFUaEgwTDc0akx0V0lSSVRoL2tPb3ZabW5DM0k",
         "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17pro-digitalmat-gallery-1-202509_GEO_EMEA?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=ekJPc2lPUlRuRk50SkcyOVdnU1d0TjFla0N0Znl3UThxdjB3SW91ZDVJeFptNC9yejJUMWI2dmhrTGRMd2F4ZjhpVENtU1Jsa01tcGtZS0IwM01XVkVaMm9lVjZWaGFvQVRMeWxLakVNdXRpc2lSR1BSMzNQQm5UMU83ZFVxQmFYSVI4ZkRTLy83YU5OdEFVT1FiTW9R",
@@ -109,7 +437,7 @@
       "brand": "Apple",
       "price": 79999,
       "currency": "INR",
-      "stock": 22,
+      "stock": 5,
       "images": [
         "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-digitalmat-gallery-3-202509_GEO_EMEA?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=SVhTK013TmU5bXcxZm9yb0hnWkxGU0JYMGNRelI2WXAyb0IycFNGSFF5QXlNUWtzZldTWFRVcW9XNGZ1blhXOWVkZGptNUJaWitJZ3gyOURkSTlZQ3VCc3FjamJwVXJjd2U3WEc3Smc2MXpkZWxUbVcrZTZlY2ZZSjRZQ2QyaW1mbW94YnYxc1YvNXZ4emJGL0IxNFp3",
         "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-finish-unselect-gallery-1-202509_GEO_EMEA?wid=5120&hei=2880&fmt=webp&qlt=90&.v=WGdCRlQ0YVlqbTdXTEkxRnVQb0oxdFgrSXpWVEhWaW9YTGlWRHFoSHU0OGVVRGcwVkxmNk9rdGtMbGV1WEU3aHNCckZqMTMrS3dIUWFPL2dFWXJDTmhNQnJMcnc4RkxJd3ZMc3hKZVVFWHUxNjR2WDVZSE9wdmlwTk5JUnpsUEZyYW1LQys4QTB0dktyalpuNkJlVVN3&traceId=1",
@@ -306,7 +634,7 @@
       "brand": "Nothing",
       "price": 32999,
       "currency": "INR",
-      "stock": 40,
+      "stock": 39,
       "images": [
         "https://cdn.shopify.com/s/files/1/0376/5420/0459/files/0000s_0009_Phone-3a-Pro-grey.png?v=1753435871",
         "https://cdn.shopify.com/s/files/1/0586/3270/0077/files/ArcPro1352x1352-Black-Glyphon.png?v=1740649967",
@@ -797,7 +1125,7 @@
       "brand": "Apple",
       "price": 129999,
       "currency": "INR",
-      "stock": 10,
+      "stock": 8,
       "images": [
         "https://www.apple.com/assets-www/en_WW/mac/01_product_tile/xlarge/mbp_14_16_b933a4e71_2x.jpg",
         "https://www.apple.com/v/macbook-pro/av/images/overview/performance/performance_mx_chip_startframe__bfgs77zni2sy_large_2x.jpg",

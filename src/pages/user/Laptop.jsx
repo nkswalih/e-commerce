@@ -74,7 +74,7 @@ const LaptopPage = () => {
     !product?.name.toLowerCase().includes('gaming')
   ) || [];
 
-  // Navigation handlers
+  // Navigation handlers slide
   const nextSlide = (products, currentIndex, setIndex) => {
     if (currentIndex < Math.ceil(products.length / itemsPerView) - 1) {
       setIndex(currentIndex + 1);
@@ -222,7 +222,7 @@ const LaptopPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-white">
         <OfferBanner/>

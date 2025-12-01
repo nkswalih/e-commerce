@@ -10,7 +10,7 @@ export default function OfferApple() {
           <div className="flex items-center justify-center py-2.5 text-sm">
             <p className="font-normal tracking-tight">
               Get up to ₹5000 instant cashback on iPhone with eligible cards. Plus up to 6 months of No Cost EMI.
-              <Link to={'/store'} className="inline-flex items-center ml-1 hover:underline text-blue-500">
+              <Link to={'/apple'} className="inline-flex items-center ml-1 hover:underline text-blue-500">
                 Shop now <ChevronRight className="w-3.5 h-3.5 ml-0.5" />
               </Link>
             </p>
