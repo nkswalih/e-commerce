@@ -51,12 +51,13 @@ const Register = () => {
         password: formData.password,
         terms: formData.terms,
         cart:[],
-        order:[]
+        order:[],
+        wishlist:[]
       });
 
-      // ✅ Fixed: Pass correct user data (name instead of email, no password)
+
       login({
-        name: formData.name,  // Changed from formData.email
+        name: formData.name, 
         email: formData.email,
       });
 

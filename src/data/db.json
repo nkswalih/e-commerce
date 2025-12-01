@@ -44,7 +44,8 @@
           "productBrand": "Apple"
         }
       ],
-      "order": []
+      "order": [],
+      "wishlist": []
     },
     {
       "id": "dd8d",
@@ -53,7 +54,8 @@
       "password": "12345678",
       "terms": false,
       "cart": [],
-      "order": []
+      "order": [],
+      "wishlist": []
     },
     {
       "id": "6d48",
@@ -167,7 +169,8 @@
           },
           "paymentMethod": "card"
         }
-      ]
+      ],
+      "wishlist": []
     },
     {
       "id": "238b",
@@ -176,7 +179,8 @@
       "password": "1234",
       "terms": true,
       "cart": [],
-      "order": []
+      "order": [],
+      "wishlist": []
     },
     {
       "id": "0d73",
@@ -185,7 +189,8 @@
       "password": "147",
       "terms": true,
       "cart": [],
-      "order": []
+      "order": [],
+      "wishlist": []
     },
     {
       "id": "8405",
@@ -193,20 +198,7 @@
       "email": "andu@123",
       "password": "000",
       "terms": true,
-      "cart": [
-        {
-          "id": "macbook-m4-14-512GB-16GB",
-          "productId": "macbook-m4-14",
-          "storage": "512GB",
-          "ram": "16GB",
-          "quantity": 1,
-          "addedAt": "2025-12-01T06:19:52.135Z",
-          "productName": "MacBook M4 14-inch",
-          "productPrice": 149999,
-          "productImage": "https://www.apple.com/assets-www/en_WW/mac/01_product_tile/xlarge/mba_13_15_140e630d3_2x.jpg",
-          "productBrand": "Apple"
-        }
-      ],
+      "cart": [],
       "order": [
         {
           "id": "ORD1764569855798",
@@ -246,8 +238,113 @@
             "name": "andu Swalih"
           },
           "paymentMethod": "card"
+        },
+        {
+          "id": "ORD1764572335376",
+          "userId": "8405",
+          "userName": "andu",
+          "userEmail": "andu@123",
+          "date": "2025-12-01T06:58:55.376Z",
+          "items": [
+            {
+              "id": "nothing-phone-3a-Pro-128GB-",
+              "productId": "nothing-phone-3a-Pro",
+              "storage": "128GB",
+              "ram": "",
+              "quantity": 1,
+              "addedAt": "2025-12-01T06:51:33.168Z",
+              "productName": "Nothing Phone 3a Pro",
+              "productPrice": 32999,
+              "productImage": "https://cdn.shopify.com/s/files/1/0376/5420/0459/files/0000s_0009_Phone-3a-Pro-grey.png?v=1753435871",
+              "productBrand": "Nothing",
+              "itemTotal": 32999
+            },
+            {
+              "id": "access-screen-protector-iphone--",
+              "productId": "access-screen-protector-iphone",
+              "storage": "",
+              "ram": "",
+              "quantity": 1,
+              "addedAt": "2025-12-01T06:58:43.900Z",
+              "productName": "Logitech Lift Vertical Ergonomic Mouse",
+              "productPrice": 5495,
+              "productImage": "https://m.media-amazon.com/images/I/61OkuiCWbDL._SX679_.jpg",
+              "productBrand": "Logitech",
+              "itemTotal": 5495
+            }
+          ],
+          "subtotal": 38494,
+          "shipping": 99,
+          "total": 38593,
+          "status": "confirmed",
+          "customerInfo": {
+            "firstName": "andu",
+            "lastName": "Swalih",
+            "email": "andu@123",
+            "phone": "999999",
+            "address": "Perunthallur",
+            "city": "Tirur",
+            "state": "Kerala",
+            "pincode": "676102",
+            "paymentMethod": "card",
+            "name": "andu Swalih"
+          },
+          "paymentMethod": "card"
+        },
+        {
+          "id": "ORD1764578809206",
+          "userId": "8405",
+          "userName": "andu",
+          "userEmail": "andu@123",
+          "date": "2025-12-01T08:46:49.206Z",
+          "items": [
+            {
+              "id": "acer-nitro-v16-lite-2025-1TB-16GB",
+              "productId": "acer-nitro-v16-lite-2025",
+              "storage": "1TB",
+              "ram": "16GB",
+              "quantity": 1,
+              "addedAt": "2025-12-01T08:25:47.151Z",
+              "productName": "Acer Nitro V16 Lite",
+              "productPrice": 89999,
+              "productImage": "https://static-ecapac.acer.com/media/catalog/product/n/i/nitro_base_image_i5_un.366si.006.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=500&width=500&canvas=500:500",
+              "productBrand": "Acer",
+              "itemTotal": 89999
+            },
+            {
+              "id": "acer-nitro-v16-2025-1TB-16GB",
+              "productId": "acer-nitro-v16-2025",
+              "storage": "1TB",
+              "ram": "16GB",
+              "quantity": 1,
+              "addedAt": "2025-12-01T08:46:11.962Z",
+              "productName": "Acer Nitro V16 (2025)",
+              "productPrice": 89999,
+              "productImage": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQzKkDkta9raFHZk1l6fF0qD7XJ0i3O5-M-7EUIxue81CRJyDUJ3oXHQdmCpc_eiU8lGXf_xcJj2Nu8fgnvxJZqs3tfJuzbRSzWXkzO5kfqVMQuMmnMDam0eQ",
+              "productBrand": "Acer",
+              "itemTotal": 89999
+            }
+          ],
+          "subtotal": 179998,
+          "shipping": 0,
+          "total": 179998,
+          "status": "confirmed",
+          "customerInfo": {
+            "firstName": "andu",
+            "lastName": "k",
+            "email": "andu@123",
+            "phone": "999999",
+            "address": "Perunthallur",
+            "city": "Tirur",
+            "state": "Kerala",
+            "pincode": "676102",
+            "paymentMethod": "upi",
+            "name": "andu k"
+          },
+          "paymentMethod": "upi"
         }
-      ]
+      ],
+      "wishlist": []
     }
   ],
   "orders": [
@@ -380,6 +477,110 @@
         "name": "andu Swalih"
       },
       "paymentMethod": "card"
+    },
+    {
+      "id": "ORD1764572335376",
+      "userId": "8405",
+      "userName": "andu",
+      "userEmail": "andu@123",
+      "date": "2025-12-01T06:58:55.376Z",
+      "items": [
+        {
+          "id": "nothing-phone-3a-Pro-128GB-",
+          "productId": "nothing-phone-3a-Pro",
+          "storage": "128GB",
+          "ram": "",
+          "quantity": 1,
+          "addedAt": "2025-12-01T06:51:33.168Z",
+          "productName": "Nothing Phone 3a Pro",
+          "productPrice": 32999,
+          "productImage": "https://cdn.shopify.com/s/files/1/0376/5420/0459/files/0000s_0009_Phone-3a-Pro-grey.png?v=1753435871",
+          "productBrand": "Nothing",
+          "itemTotal": 32999
+        },
+        {
+          "id": "access-screen-protector-iphone--",
+          "productId": "access-screen-protector-iphone",
+          "storage": "",
+          "ram": "",
+          "quantity": 1,
+          "addedAt": "2025-12-01T06:58:43.900Z",
+          "productName": "Logitech Lift Vertical Ergonomic Mouse",
+          "productPrice": 5495,
+          "productImage": "https://m.media-amazon.com/images/I/61OkuiCWbDL._SX679_.jpg",
+          "productBrand": "Logitech",
+          "itemTotal": 5495
+        }
+      ],
+      "subtotal": 38494,
+      "shipping": 99,
+      "total": 38593,
+      "status": "confirmed",
+      "customerInfo": {
+        "firstName": "andu",
+        "lastName": "Swalih",
+        "email": "andu@123",
+        "phone": "999999",
+        "address": "Perunthallur",
+        "city": "Tirur",
+        "state": "Kerala",
+        "pincode": "676102",
+        "paymentMethod": "card",
+        "name": "andu Swalih"
+      },
+      "paymentMethod": "card"
+    },
+    {
+      "id": "ORD1764578809206",
+      "userId": "8405",
+      "userName": "andu",
+      "userEmail": "andu@123",
+      "date": "2025-12-01T08:46:49.206Z",
+      "items": [
+        {
+          "id": "acer-nitro-v16-lite-2025-1TB-16GB",
+          "productId": "acer-nitro-v16-lite-2025",
+          "storage": "1TB",
+          "ram": "16GB",
+          "quantity": 1,
+          "addedAt": "2025-12-01T08:25:47.151Z",
+          "productName": "Acer Nitro V16 Lite",
+          "productPrice": 89999,
+          "productImage": "https://static-ecapac.acer.com/media/catalog/product/n/i/nitro_base_image_i5_un.366si.006.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=500&width=500&canvas=500:500",
+          "productBrand": "Acer",
+          "itemTotal": 89999
+        },
+        {
+          "id": "acer-nitro-v16-2025-1TB-16GB",
+          "productId": "acer-nitro-v16-2025",
+          "storage": "1TB",
+          "ram": "16GB",
+          "quantity": 1,
+          "addedAt": "2025-12-01T08:46:11.962Z",
+          "productName": "Acer Nitro V16 (2025)",
+          "productPrice": 89999,
+          "productImage": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQzKkDkta9raFHZk1l6fF0qD7XJ0i3O5-M-7EUIxue81CRJyDUJ3oXHQdmCpc_eiU8lGXf_xcJj2Nu8fgnvxJZqs3tfJuzbRSzWXkzO5kfqVMQuMmnMDam0eQ",
+          "productBrand": "Acer",
+          "itemTotal": 89999
+        }
+      ],
+      "subtotal": 179998,
+      "shipping": 0,
+      "total": 179998,
+      "status": "confirmed",
+      "customerInfo": {
+        "firstName": "andu",
+        "lastName": "k",
+        "email": "andu@123",
+        "phone": "999999",
+        "address": "Perunthallur",
+        "city": "Tirur",
+        "state": "Kerala",
+        "pincode": "676102",
+        "paymentMethod": "upi",
+        "name": "andu k"
+      },
+      "paymentMethod": "upi"
     }
   ],
   "products": [
@@ -634,7 +835,7 @@
       "brand": "Nothing",
       "price": 32999,
       "currency": "INR",
-      "stock": 39,
+      "stock": 38,
       "images": [
         "https://cdn.shopify.com/s/files/1/0376/5420/0459/files/0000s_0009_Phone-3a-Pro-grey.png?v=1753435871",
         "https://cdn.shopify.com/s/files/1/0586/3270/0077/files/ArcPro1352x1352-Black-Glyphon.png?v=1740649967",
@@ -743,7 +944,7 @@
       "brand": "Acer",
       "price": 89999,
       "currency": "INR",
-      "stock": 12,
+      "stock": 11,
       "images": [
         "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQzKkDkta9raFHZk1l6fF0qD7XJ0i3O5-M-7EUIxue81CRJyDUJ3oXHQdmCpc_eiU8lGXf_xcJj2Nu8fgnvxJZqs3tfJuzbRSzWXkzO5kfqVMQuMmnMDam0eQ",
         "",
@@ -778,7 +979,7 @@
       "brand": "Acer",
       "price": 89999,
       "currency": "INR",
-      "stock": 12,
+      "stock": 11,
       "images": [
         "https://static-ecapac.acer.com/media/catalog/product/n/i/nitro_base_image_i5_un.366si.006.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=500&width=500&canvas=500:500",
         "",
@@ -1279,7 +1480,7 @@
       "brand": "Logitech",
       "price": 5495,
       "currency": "INR",
-      "stock": 300,
+      "stock": 299,
       "images": [
         "https://m.media-amazon.com/images/I/61OkuiCWbDL._SX679_.jpg"
       ],

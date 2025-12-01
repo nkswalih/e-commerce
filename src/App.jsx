@@ -48,7 +48,14 @@ function App() {
             <Route path="/apple" element={<Apple/>}/>
             <Route path="/lap" element={<Laptop/>}/>
             <Route path="/test" element={<Test/>}/>
+
             <Route path="/profile" element={<Profile/>}/>
+            <Route path="/profile/overview" element={<Profile />} />
+            <Route path="/profile/orders" element={<Profile />} />
+            <Route path="/profile/wishlist" element={<Profile />} />
+            <Route path="/profile/cart" element={<Profile />} />
+
+
             <Route path="/product/:productId" element={<ProductPage />} />
             <Route path="/store" element={<StorePage/>}/>
             <Route path="/cart" element={<CartPage/>}/>

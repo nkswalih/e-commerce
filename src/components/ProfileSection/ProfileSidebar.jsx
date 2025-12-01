@@ -9,24 +9,27 @@ import {
 const ProfileSidebar = ({ 
   user, 
   activeSection, 
-  setActiveSection, 
-  cartItems, 
-  wishlistItems, 
-  orders 
+  setActiveSection
 }) => {
+  const cartItems = user?.cart || [];
+  const wishlistItems = user?.wishlist || [];
+  const orders = user?.order || [];
+
   const menuItems = [
     { id: "overview", label: "Overview", icon: UserCircleIcon },
-    { id: "orders", label: "My Orders", icon: ShoppingBagIcon },
-    { id: "wishlist", label: "Wishlist", icon: HeartIcon },
-    { id: "cart", label: "My Cart", icon: ShoppingBagIcon },
+    { id: "orders", label: "My Orders", icon: ShoppingBagIcon, count: orders.length },
+    { id: "wishlist", label: "Wishlist", icon: HeartIcon, count: wishlistItems.length },
+    { id: "cart", label: "My Cart", icon: ShoppingBagIcon, count: cartItems.length },
   ];
 
   return (
     <div className="lg:w-80">
       <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-6">
         <div className="flex items-center gap-4 mb-6">
-          <div className="bg-gray-100 rounded-full p-3">
-            <UserCircleIcon className="size-12 text-gray-400" />
+          <div className="w-16 h-16 bg-gray-100 bg-gradient-to-tl from-gray-600 to-gray-400 rounded-full flex items-center justify-center">
+            <span className="text-2xl font-bold text-white">
+              {user?.name?.charAt(0) || "U"}
+            </span>
           </div>
           <div>
             <h2 className="font-dm-sans font-semibold text-gray-900">
@@ -53,11 +56,22 @@ const ProfileSidebar = ({
                 <item.icon className="size-5" />
                 <span className="font-normal">{item.label}</span>
               </div>
-              <ChevronRightIcon
-                className={`size-4 ${
-                  activeSection === item.id ? "text-white" : "text-gray-400"
-                }`}
-              />
+              <div className="flex items-center gap-2">
+                {item.count > 0 && (
+                  <span className={`text-xs px-2 py-1 rounded-full ${
+                    activeSection === item.id 
+                      ? "bg-white text-gray-900" 
+                      : "bg-gray-100 text-gray-600"
+                  }`}>
+                    {item.count}
+                  </span>
+                )}
+                <ChevronRightIcon
+                  className={`size-4 ${
+                    activeSection === item.id ? "text-white" : "text-gray-400"
+                  }`}
+                />
+              </div>
             </button>
           ))}
         </div>
