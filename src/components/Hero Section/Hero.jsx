@@ -17,7 +17,8 @@ const MainHero = () => {
             poster="/images/hero-poster.jpg"
           >
             <source src="src/assets/videos/xlarge_2x.mp4" type="video/mp4" />
-            <source src="/videos/tech-hero.webm" type="video/webm" />
+            {/* <source src="src/assets/videos/vid_3_xlarge_2x.mp4" type="video/mp4" /> */}
+            
             {/* Fallback image */}
             <img src="/images/hero-fallback.jpg" alt="Tech Innovation" className="w-full h-full object-cover" />
           </video>
@@ -29,7 +30,7 @@ const MainHero = () => {
           <h1 className="text-5xl md:text-8xl font-medium font-sans italic mb-2 tracking-tight">
             Ech<span className="font-bold font-serif">O</span>o.
           </h1>
-          <p className="text-xl md:text-2xl font-semibold text-shadow-white mb-4 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl font-sf-pro-regular font-bold text-shadow-white mb-4 max-w-3xl mx-auto leading-relaxed">
             Where Innovation Meets Elegance
           </p>
 
@@ -44,7 +45,7 @@ const MainHero = () => {
             </div>
           </div>
         </div>
-      <div className="absolute inset-x-0 bottom-0 h-30 bg-gradient-to-t from-white to-transparent"></div>
+      <div className="absolute inset-x-0 bottom-0 h-30 bg-gradient-to-bl from-white to-transparent"></div>
       </section>
     </div>
   )

@@ -1,4 +1,5 @@
 import React from "react";
+import SimpleFooter from "../../components/SimpleFoot";
 
 const Terms = () => {
   return (
@@ -295,39 +296,7 @@ const Terms = () => {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-gray-200 mt-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center mb-4 md:mb-0">
-              <img
-                alt="EchOo."
-                src="/src/assets/images/Echoo-transparent.png"
-                className="h-6 w-auto"
-              />
-              <span className="ml-2 text-lg font-light text-gray-600">
-                EchOo.
-              </span>
-            </div>
-            <div className="flex space-x-6 text-sm text-gray-600">
-              <a href="/privacy" className="hover:text-gray-900">
-                Privacy Policy
-              </a>
-              <a href="/terms" className="hover:text-gray-900">
-                Terms & Conditions
-              </a>
-              <a href="/contact" className="hover:text-gray-900">
-                Contact
-              </a>
-            </div>
-          </div>
-          <div className="mt-4 text-center md:text-left">
-            <p className="text-xs text-gray-500">
-              © {new Date().getFullYear()} EchOo. All rights reserved. Apple and
-              other product names are trademarks of their respective owners.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <SimpleFooter/>
     </div>
   );
 };

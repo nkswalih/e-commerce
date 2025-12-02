@@ -33,7 +33,7 @@ export default function Navbar() {
     }`;
 
   return (
-    <div className="bg-white/70 sticky top-0 z-50 shadow-sm border-b border-gray-100/15 backdrop-blur-sm">
+    <div className="bg-white/70 sticky top-0 z-50 shadow-sm border-b border-gray-100/15 lg:backdrop-blur-sm">
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-11 items-center justify-between">
           <div className="flex justify-center items-center gap-10">
@@ -105,7 +105,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div
-          className="lg:hidden fixed inset-0 z-50 bg-black bg-opacity-25"
+          className="lg:hidden fixed inset-0 z-50 bg-opacity-25"
           onClick={() => setMobileMenuOpen(false)}
         >
           <div

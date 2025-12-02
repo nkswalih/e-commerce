@@ -26,16 +26,16 @@ const AppleMac = () => {
       {/* Content */}
       <div className="relative z-10 text-center text-black max-w-4xl mx-auto px-6 pt-7 pb-96">
         {/* Main Heading */}
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold pt-10 mb-2 tracking-tight">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-sf-pro-medium pt-10 mb-2 tracking-tight">
           MacBook Pro
         </h1>
 
         {/* Subheading */}
         <div className="mb-6">
-          <p className="text-xl md:text-2xl lg:text-2xl font-light tracking-wide">
+          <p className="text-xl md:text-2xl lg:text-2xl font-sf-pro-regular font-medium tracking-wide">
             MacBook Pro 14″ 
           </p>
-          <p className="text-xl md:text-2xl lg:text-2xl font-light tracking-wide">
+          <p className="text-xl md:text-2xl lg:text-2xl font-sf-pro-regular font-medium tracking-wide">
             now supercharged by M5.
           </p>
         </div>
@@ -44,12 +44,12 @@ const AppleMac = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <button 
           onClick={() => Navigate("/apple")}
-          className="bg-blue-500 text-white px-6 py-2 rounded-full font-normal text-base hover:bg-blue-600 transition-all duration-300">
+          className="bg-blue-500 text-white px-6 py-2 rounded-full font-sf-pro-regular font-medium text-base hover:bg-blue-600 transition-all duration-300">
             Learn more
           </button>
           <button 
           onClick={() => Navigate("/product/macbook-m5-13")}
-          className="text-blue-400 border text-base font-normal px-6 py-2 rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300">
+          className="text-blue-400 border border-blue-400 text-base font-sf-pro-regular font-medium px-6 py-2 rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300">
             Buy
           </button>
         </div>

@@ -16,7 +16,6 @@ const navigation = [
   { name: 'Users', href: '/admin/users', icon: Users },
   { name: 'Products', href: '/admin/products', icon: ShoppingBag },
   { name: 'Orders', href: '/admin/orders', icon: Package },
-  { name: 'Settings', href: '/admin/settings', icon: Settings },
 ]
 
 const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
@@ -34,14 +33,14 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
 
       {/* Sidebar */}
       <div className={`
-        fixed inset-y-4 left-4 z-30 w-72 m-6 bg-white rounded-3xl transform 
+        fixed inset-y-4 left-4 z-30 w-72 m-4 bg-white rounded-3xl transform 
         ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}
         lg:translate-x-0 lg:static lg:inset-0 transition-all duration-300 ease-in-out
-        border border-gray-200
+        border 
       `}>
         
         {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-gray-100 ">
+        <div className="flex items-center justify-between p-6 border-b ">
           <div className="flex items-center space-x-3">
             <img
                 alt="EchOo."
@@ -103,7 +102,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
         </nav>
 
         {/* User info at bottom */}
-        <div className="absolute bottom-6 left-6 right-6 ">
+        {/* <div className="absolute bottom-6 left-6 right-6 ">
           <div className="bg-gray-50 rounded-2xl p-4 border border-gray-200">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-gradient-to-br from-gray-600 to-gray-800 rounded-xl flex items-center justify-center shadow">
@@ -115,7 +114,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* Mobile menu button */}

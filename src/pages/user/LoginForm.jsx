@@ -9,34 +9,33 @@ import { toast } from "react-toastify";
 
 const Login = () => {
   const [formData, setFormData] = useState({
-    email: '',
-    password: '',
-    rememberMe: false
+    email: "",
+    password: "",
+    rememberMe: false,
   });
-  
+
   const { login } = useAuth();
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const savedEmail = localStorage.getItem('rememberedEmail'); 
-    const savedPassword = localStorage.getItem('rememberedPassword'); 
+    const savedEmail = localStorage.getItem("rememberedEmail");
+    const savedPassword = localStorage.getItem("rememberedPassword");
 
-   
     if (savedEmail && savedPassword) {
-      setFormData(prev => ({
+      setFormData((prev) => ({
         ...prev,
         email: savedEmail,
         password: savedPassword,
-        rememberMe: true
+        rememberMe: true,
       }));
     }
   }, []);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: type === 'checkbox' ? checked : value
+      [name]: type === "checkbox" ? checked : value,
     }));
   };
 
@@ -49,52 +48,61 @@ const Login = () => {
       const users = response.data;
 
       // Finding user with matched email and password
-      const user = users.find(u => u.email === formData.email && u.password === formData.password);
-      
-      
+      const user = users.find(
+        (u) => u.email === formData.email && u.password === formData.password
+      );
 
       if (user) {
+        // Check if user is active
+        if (user.status !== "Active") {
+          toast.error("Account is not active");
+          return;
+        }
+
         // Store data into localStorage if remember me checked
         if (formData.rememberMe) {
-          localStorage.setItem('rememberedEmail', formData.email);
-          localStorage.setItem('rememberedPassword', formData.password);
+          localStorage.setItem("rememberedEmail", formData.email);
+          localStorage.setItem("rememberedPassword", formData.password);
         } else {
-          
-          localStorage.removeItem('rememberedEmail');
-          localStorage.removeItem('rememberedPassword');
+          localStorage.removeItem("rememberedEmail");
+          localStorage.removeItem("rememberedPassword");
         }
 
         // Store current session
-        localStorage.setItem('currentUser', JSON.stringify(user));
+        localStorage.setItem("currentUser", JSON.stringify(user));
 
-        
+        // Login with FULL user data including role
         login({
+          id: user.id,
           name: user.name,
-          email: user.email 
+          email: user.email,
+          role: user.role, // Add role here
+          status: user.status,
         });
 
-        
         toast.success(`Login successful! Welcome ${user.name}!`);
-        navigate("/");
 
+        // Redirect based on role
+        if (user.role === "admin") {
+          navigate("/admin");
+        } else {
+          navigate("/");
+        }
       } else {
         toast.error("Invalid email or password");
       }
-
     } catch (error) {
       console.log("Login error:", error);
-      toast.error('Login Failed. Please try again.');
+      toast.error("Login Failed. Please try again.");
     }
   };
-
   const isSubmitDisable = !formData.email || !formData.password;
 
   return (
     <div className="min-h-screen bg-neutral-100">
       <div className="flex flex-row items-center justify-center pt-24 py-28 sm:px-6 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-md">
-          <div className="flex justify-center">
-          </div>
+          <div className="flex justify-center"></div>
           <img
             alt="EchOo."
             src="/src/assets/images/Echoo-transparent.png"

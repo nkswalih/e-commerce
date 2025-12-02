@@ -6,45 +6,63 @@
       "email": "Ladgamer777@gmail.com",
       "password": "777777777777",
       "terms": false,
-      "cart": [
+      "role": "Admin",
+      "status": "Active",
+      "cart": [],
+      "order": [
         {
-          "id": "macbook-m5-13-256GB-8GB",
-          "productId": "macbook-m5-13",
-          "storage": "256GB",
-          "ram": "8GB",
-          "quantity": 1,
-          "addedAt": "2025-11-29T11:23:02.423Z",
-          "productName": "MacBook M5 13-inch",
-          "productPrice": 129999,
-          "productImage": "https://www.apple.com/assets-www/en_WW/mac/01_product_tile/xlarge/mbp_14_16_b933a4e71_2x.jpg",
-          "productBrand": "Apple"
-        },
-        {
-          "id": "iphone-17-128GB-",
-          "productId": "iphone-17",
-          "storage": "128GB",
-          "ram": "",
-          "quantity": 2,
-          "addedAt": "2025-12-01T04:27:54.515Z",
-          "productName": "iPhone 17",
-          "productPrice": 79999,
-          "productImage": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-digitalmat-gallery-3-202509_GEO_EMEA?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=SVhTK013TmU5bXcxZm9yb0hnWkxGU0JYMGNRelI2WXAyb0IycFNGSFF5QXlNUWtzZldTWFRVcW9XNGZ1blhXOWVkZGptNUJaWitJZ3gyOURkSTlZQ3VCc3FjamJwVXJjd2U3WEc3Smc2MXpkZWxUbVcrZTZlY2ZZSjRZQ2QyaW1mbW94YnYxc1YvNXZ4emJGL0IxNFp3",
-          "productBrand": "Apple"
-        },
-        {
-          "id": "iphone-17-pro-256GB-",
-          "productId": "iphone-17-pro",
-          "storage": "256GB",
-          "ram": "",
-          "quantity": 1,
-          "addedAt": "2025-12-01T05:04:22.271Z",
-          "productName": "iPhone 17 Pro",
-          "productPrice": 129999,
-          "productImage": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-card-40-17pro-202509?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=WVVFRzUzVk1oblJhbW9PbGNSU25jaUtlSkZ1cHdCU1J4ZWZjamdoYzhpRkMxQXc4S3pBZE5lUDJlTzVYSUYydFMwV0hhcmdVdXZzZ1NwTlFUaEgwTDc0akx0V0lSSVRoL2tPb3ZabW5DM0k",
-          "productBrand": "Apple"
+          "id": "ORD1764666771972",
+          "userId": "aef0",
+          "userName": "sasa",
+          "userEmail": "Ladgamer777@gmail.com",
+          "date": "2025-12-02T09:12:51.972Z",
+          "items": [
+            {
+              "id": "iphone-17-pro-256GB-",
+              "productId": "iphone-17-pro",
+              "storage": "256GB",
+              "ram": "",
+              "quantity": 1,
+              "addedAt": "2025-12-01T05:04:22.271Z",
+              "productName": "iPhone 17 Pro",
+              "productPrice": 129999,
+              "productImage": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-card-40-17pro-202509?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=WVVFRzUzVk1oblJhbW9PbGNSU25jaUtlSkZ1cHdCU1J4ZWZjamdoYzhpRkMxQXc4S3pBZE5lUDJlTzVYSUYydFMwV0hhcmdVdXZzZ1NwTlFUaEgwTDc0akx0V0lSSVRoL2tPb3ZabW5DM0k",
+              "productBrand": "Apple",
+              "itemTotal": 129999
+            },
+            {
+              "id": "iphone-air-64GB-",
+              "productId": "iphone-air",
+              "storage": "64GB",
+              "ram": "",
+              "quantity": 1,
+              "addedAt": "2025-12-02T09:11:16.575Z",
+              "productName": "iPhone Air",
+              "productPrice": 139999,
+              "productImage": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-card-40-17air-202509?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=WVVFRzUzVk1oblJhbW9PbGNSU25jci9mUU0zMkc5ekxlZHFEM05NWkp3NUMxQXc4S3pBZE5lUDJlTzVYSUYydFMwV0hhcmdVdXZzZ1NwTlFUaEgwTCtUZHJHS0dDSWYyeUtQd0tjOERiaFE",
+              "productBrand": "Apple",
+              "itemTotal": 139999
+            }
+          ],
+          "subtotal": 269998,
+          "shipping": 0,
+          "total": 269998,
+          "status": "pending",
+          "customerInfo": {
+            "firstName": "sasa",
+            "lastName": "h",
+            "email": "Ladgamer777@gmail.com",
+            "phone": "08547368811",
+            "address": "Perunthallur",
+            "city": "kozhikode",
+            "state": "Kerala",
+            "pincode": "65223",
+            "paymentMethod": "card",
+            "name": "sasa h"
+          },
+          "paymentMethod": "card"
         }
       ],
-      "order": [],
       "wishlist": []
     },
     {
@@ -53,6 +71,8 @@
       "email": "swalink555@gmail.com",
       "password": "12345678",
       "terms": false,
+      "role": "Admin",
+      "status": "Active",
       "cart": [],
       "order": [],
       "wishlist": []
@@ -63,6 +83,8 @@
       "email": "user@gmail.com",
       "password": "1234",
       "terms": true,
+      "role": "User",
+      "status": "Active",
       "cart": [
         {
           "id": "iphone-air-64GB-",
@@ -154,7 +176,7 @@
           "subtotal": 79999,
           "shipping": 0,
           "total": 79999,
-          "status": "confirmed",
+          "status": "shipped",
           "customerInfo": {
             "firstName": "swalih",
             "lastName": "Swalih",
@@ -178,6 +200,8 @@
       "email": "user2@gmail.com",
       "password": "1234",
       "terms": true,
+      "role": "User",
+      "status": "Active",
       "cart": [],
       "order": [],
       "wishlist": []
@@ -188,6 +212,8 @@
       "email": "denjo@123",
       "password": "147",
       "terms": true,
+      "role": "User",
+      "status": "Active",
       "cart": [],
       "order": [],
       "wishlist": []
@@ -198,6 +224,8 @@
       "email": "andu@123",
       "password": "000",
       "terms": true,
+      "role": "User",
+      "status": "Active",
       "cart": [],
       "order": [
         {
@@ -345,6 +373,84 @@
         }
       ],
       "wishlist": []
+    },
+    {
+      "id": "dfbc",
+      "name": "Muhammed Rizal N P",
+      "email": "risal@gmail.com",
+      "password": "risal@gmail.com",
+      "terms": true,
+      "role": "User",
+      "status": "Active",
+      "cart": [],
+      "wishlist": [],
+      "order": [
+        {
+          "id": "ORD1764652873231",
+          "userId": "dfbc",
+          "userName": "Muhammed Rizal N P",
+          "userEmail": "risal@gmail.com",
+          "date": "2025-12-02T05:21:13.231Z",
+          "items": [
+            {
+              "id": "iphone-17-pro-256GB-",
+              "productId": "iphone-17-pro",
+              "storage": "256GB",
+              "ram": "",
+              "quantity": 2,
+              "addedAt": "2025-12-02T05:19:41.712Z",
+              "productName": "iPhone 17 Pro",
+              "productPrice": 129999,
+              "productImage": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-card-40-17pro-202509?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=WVVFRzUzVk1oblJhbW9PbGNSU25jaUtlSkZ1cHdCU1J4ZWZjamdoYzhpRkMxQXc4S3pBZE5lUDJlTzVYSUYydFMwV0hhcmdVdXZzZ1NwTlFUaEgwTDc0akx0V0lSSVRoL2tPb3ZabW5DM0k",
+              "productBrand": "Apple",
+              "itemTotal": 259998
+            },
+            {
+              "id": "iphone-17-pro-max-512GB-",
+              "productId": "iphone-17-pro-max",
+              "storage": "512GB",
+              "ram": "",
+              "quantity": 8,
+              "addedAt": "2025-12-02T05:20:33.323Z",
+              "productName": "iPhone 17 Pro Max",
+              "productPrice": 149999,
+              "productImage": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17pro-digitalmat-gallery-5-202509?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=ekJPc2lPUlRuRk50SkcyOVdnU1d0TjFla0N0Znl3UThxdjB3SW91ZDVJeG1hWkZ6UHNRSXhlQnZJMURpUmV1QW8xUkhYejcxalRvY0FPQVpMcmoxMDlLQzdVZ2V3VnpqcXFKTGxlK1dFUXpucGszV1kvUjNNUmdVQ1lGWXlTekY",
+              "productBrand": "Apple",
+              "itemTotal": 1199992
+            }
+          ],
+          "subtotal": 1459990,
+          "shipping": 0,
+          "total": 1459990,
+          "status": "cancelled",
+          "customerInfo": {
+            "firstName": "Muhammed",
+            "lastName": "Rizal",
+            "email": "risal@gmail.com",
+            "phone": "+918547368811",
+            "address": "Perunthallur",
+            "city": "Tirur",
+            "state": "Kerala",
+            "pincode": "676102",
+            "paymentMethod": "cod",
+            "name": "Muhammed Rizal"
+          },
+          "paymentMethod": "cod",
+          "cancelledAt": "2025-12-02T15:27:25.884Z"
+        }
+      ]
+    },
+    {
+      "id": "e23c",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "12345678",
+      "terms": true,
+      "role": "User",
+      "status": "Active",
+      "cart": [],
+      "wishlist": [],
+      "order": []
     }
   ],
   "orders": [
@@ -424,7 +530,7 @@
       "subtotal": 79999,
       "shipping": 0,
       "total": 79999,
-      "status": "confirmed",
+      "status": "shipped",
       "customerInfo": {
         "firstName": "swalih",
         "lastName": "Swalih",
@@ -515,7 +621,7 @@
       "subtotal": 38494,
       "shipping": 99,
       "total": 38593,
-      "status": "confirmed",
+      "status": "shipped",
       "customerInfo": {
         "firstName": "andu",
         "lastName": "Swalih",
@@ -581,6 +687,110 @@
         "name": "andu k"
       },
       "paymentMethod": "upi"
+    },
+    {
+      "id": "ORD1764652873231",
+      "userId": "dfbc",
+      "userName": "Muhammed Rizal N P",
+      "userEmail": "risal@gmail.com",
+      "date": "2025-12-02T05:21:13.231Z",
+      "items": [
+        {
+          "id": "iphone-17-pro-256GB-",
+          "productId": "iphone-17-pro",
+          "storage": "256GB",
+          "ram": "",
+          "quantity": 2,
+          "addedAt": "2025-12-02T05:19:41.712Z",
+          "productName": "iPhone 17 Pro",
+          "productPrice": 129999,
+          "productImage": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-card-40-17pro-202509?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=WVVFRzUzVk1oblJhbW9PbGNSU25jaUtlSkZ1cHdCU1J4ZWZjamdoYzhpRkMxQXc4S3pBZE5lUDJlTzVYSUYydFMwV0hhcmdVdXZzZ1NwTlFUaEgwTDc0akx0V0lSSVRoL2tPb3ZabW5DM0k",
+          "productBrand": "Apple",
+          "itemTotal": 259998
+        },
+        {
+          "id": "iphone-17-pro-max-512GB-",
+          "productId": "iphone-17-pro-max",
+          "storage": "512GB",
+          "ram": "",
+          "quantity": 8,
+          "addedAt": "2025-12-02T05:20:33.323Z",
+          "productName": "iPhone 17 Pro Max",
+          "productPrice": 149999,
+          "productImage": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17pro-digitalmat-gallery-5-202509?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=ekJPc2lPUlRuRk50SkcyOVdnU1d0TjFla0N0Znl3UThxdjB3SW91ZDVJeG1hWkZ6UHNRSXhlQnZJMURpUmV1QW8xUkhYejcxalRvY0FPQVpMcmoxMDlLQzdVZ2V3VnpqcXFKTGxlK1dFUXpucGszV1kvUjNNUmdVQ1lGWXlTekY",
+          "productBrand": "Apple",
+          "itemTotal": 1199992
+        }
+      ],
+      "subtotal": 1459990,
+      "shipping": 0,
+      "total": 1459990,
+      "status": "cancelled",
+      "customerInfo": {
+        "firstName": "Muhammed",
+        "lastName": "Rizal",
+        "email": "risal@gmail.com",
+        "phone": "+918547368811",
+        "address": "Perunthallur",
+        "city": "Tirur",
+        "state": "Kerala",
+        "pincode": "676102",
+        "paymentMethod": "cod"
+      },
+      "paymentMethod": "cod",
+      "cancelledAt": "2025-12-02T15:27:25.867Z"
+    },
+    {
+      "id": "ORD1764666771972",
+      "userId": "aef0",
+      "userName": "sasa",
+      "userEmail": "Ladgamer777@gmail.com",
+      "date": "2025-12-02T09:12:51.972Z",
+      "items": [
+        {
+          "id": "iphone-17-pro-256GB-",
+          "productId": "iphone-17-pro",
+          "storage": "256GB",
+          "ram": "",
+          "quantity": 1,
+          "addedAt": "2025-12-01T05:04:22.271Z",
+          "productName": "iPhone 17 Pro",
+          "productPrice": 129999,
+          "productImage": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-card-40-17pro-202509?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=WVVFRzUzVk1oblJhbW9PbGNSU25jaUtlSkZ1cHdCU1J4ZWZjamdoYzhpRkMxQXc4S3pBZE5lUDJlTzVYSUYydFMwV0hhcmdVdXZzZ1NwTlFUaEgwTDc0akx0V0lSSVRoL2tPb3ZabW5DM0k",
+          "productBrand": "Apple",
+          "itemTotal": 129999
+        },
+        {
+          "id": "iphone-air-64GB-",
+          "productId": "iphone-air",
+          "storage": "64GB",
+          "ram": "",
+          "quantity": 1,
+          "addedAt": "2025-12-02T09:11:16.575Z",
+          "productName": "iPhone Air",
+          "productPrice": 139999,
+          "productImage": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-card-40-17air-202509?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=WVVFRzUzVk1oblJhbW9PbGNSU25jci9mUU0zMkc5ekxlZHFEM05NWkp3NUMxQXc4S3pBZE5lUDJlTzVYSUYydFMwV0hhcmdVdXZzZ1NwTlFUaEgwTCtUZHJHS0dDSWYyeUtQd0tjOERiaFE",
+          "productBrand": "Apple",
+          "itemTotal": 139999
+        }
+      ],
+      "subtotal": 269998,
+      "shipping": 0,
+      "total": 269998,
+      "status": "pending",
+      "customerInfo": {
+        "firstName": "sasa",
+        "lastName": "h",
+        "email": "Ladgamer777@gmail.com",
+        "phone": "08547368811",
+        "address": "Perunthallur",
+        "city": "kozhikode",
+        "state": "Kerala",
+        "pincode": "65223",
+        "paymentMethod": "card",
+        "name": "sasa h"
+      },
+      "paymentMethod": "card"
     }
   ],
   "products": [
@@ -591,7 +801,7 @@
       "brand": "Apple",
       "price": 129999,
       "currency": "INR",
-      "stock": 0,
+      "stock": 17,
       "images": [
         "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-card-40-17pro-202509?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=WVVFRzUzVk1oblJhbW9PbGNSU25jaUtlSkZ1cHdCU1J4ZWZjamdoYzhpRkMxQXc4S3pBZE5lUDJlTzVYSUYydFMwV0hhcmdVdXZzZ1NwTlFUaEgwTDc0akx0V0lSSVRoL2tPb3ZabW5DM0k",
         "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17pro-digitalmat-gallery-1-202509_GEO_EMEA?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=ekJPc2lPUlRuRk50SkcyOVdnU1d0TjFla0N0Znl3UThxdjB3SW91ZDVJeFptNC9yejJUMWI2dmhrTGRMd2F4ZjhpVENtU1Jsa01tcGtZS0IwM01XVkVaMm9lVjZWaGFvQVRMeWxLakVNdXRpc2lSR1BSMzNQQm5UMU83ZFVxQmFYSVI4ZkRTLy83YU5OdEFVT1FiTW9R",
@@ -645,8 +855,7 @@
         "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-digitalmat-gallery-2-202509?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=SVhTK013TmU5bXcxZm9yb0hnWkxGZHp0bzhwRTZxYVNNMnVRTXVpMUZES0U5aWg1WE9Xd3BOSWtnNzkvSWZLd0ZGMGUwb1Y3aUJoOFNtZnEvQXJFMEJYVzFZSG9ORXhsSkhTN0hjejcrL012STE2N3lLaGN2TEw1SWFFVXhJdG8",
         "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-digitalmat-gallery-4-202509?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=SVhTK013TmU5bXcxZm9yb0hnWkxGV01QRDErVGRSejdiZElhV1JWdUVLeUU5aWg1WE9Xd3BOSWtnNzkvSWZLd0ZGMGUwb1Y3aUJoOFNtZnEvQXJFMEJYVzFZSG9ORXhsSkhTN0hjejcrL1ArTXlFTTV6c1Ayd1o2ZkVhV1JhK0U",
         "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-digitalmat-gallery-5-202509?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=SVhTK013TmU5bXcxZm9yb0hnWkxGUjZZYjZUb0RCWElvSXlYUWhuREtTeUU5aWg1WE9Xd3BOSWtnNzkvSWZLd0ZGMGUwb1Y3aUJoOFNtZnEvQXJFMEJYVzFZSG9ORXhsSkhTN0hjejcrL012STE2N3lLaGN2TEw1SWFFVXhJdG8",
-        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-digitalmat-gallery-6-202509?wid=728&hei=666&fmt=jpeg&qlt=90&.v=SVhTK013TmU5bXcxZm9yb0hnWkxGYnFKc2ptWjJYakpPRXdPVUNzTGpNT0U5aWg1WE9Xd3BOSWtnNzkvSWZLd1l1V3dXQmdJWnFRbkcraVFaYnkzVFk1WkdmSmlSUHRjbjg3K3JzSXZQSU81aWdqNHVwcUtlVHFoZ0JJaFYvWUs",
-        ""
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-digitalmat-gallery-6-202509?wid=728&hei=666&fmt=jpeg&qlt=90&.v=SVhTK013TmU5bXcxZm9yb0hnWkxGYnFKc2ptWjJYakpPRXdPVUNzTGpNT0U5aWg1WE9Xd3BOSWtnNzkvSWZLd1l1V3dXQmdJWnFRbkcraVFaYnkzVFk1WkdmSmlSUHRjbjg3K3JzSXZQSU81aWdqNHVwcUtlVHFoZ0JJaFYvWUs"
       ],
       "shortDescription": "iPhone 17 with upgraded performance and battery.",
       "specs": {
@@ -670,7 +879,8 @@
           "Black"
         ]
       },
-      "status": "new"
+      "status": "new",
+      "features": []
     },
     {
       "id": "iphone-17-pro-max",
@@ -686,8 +896,7 @@
         "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17promax-digitalmat-gallery-1-202509_GEO_EMEA?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=WkVhZXB4WmFzZmdNeXA3cHg3WUZFU0tjazZmSzdrSHdxTW9VUlF0akdCdTZhTHJkRit4dmNvT3JoY0NOUVJTRitzMU1qbXEvNjlBN1VxbHRaS1dQS2NQOWxuYmZSN0NKOEpIS2RzTDlRVVFUd2h0eWVsVXNFSXNxYyt3ZEFEVStKTjNIVGtvY0IzalVQV0ZqbHBCUjZR",
         "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17promax-digitalmat-gallery-3-202509?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=WkVhZXB4WmFzZmdNeXA3cHg3WUZFU0tjazZmSzdrSHdxTW9VUlF0akdCc2hJek5jUXlGL2hrRE9PQW1MczdvOXpGbHdxTU5oSkkwKzZZOXF0cVNPL1V0RmgycTRGTHI3SUVxVFVFNFI5Qy9MaS85TmIwRFdiWE5HcWJteWMrRGQ",
         "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-pro-finish-select-202509-6-9inch-silver_AV3?wid=5120&hei=2880&fmt=webp&qlt=90&.v=NUNzdzNKR0FJbmhKWm5YamRHb05tUzkyK3hWak1ybHhtWDkwUXVINFc0RVRqUkJqUGFyN1pGMnlaV3JkWU9jdmdrZ1hLRVJweE1Ld0hrelZYQUxRVWZQWFVaUmg1QWFsTVJFWjd1RElva2hnM0hWZ2pCcFpSZTVSV1k3SjhURDRMaElvNnRvQmpNZTUweTNnQlFCT1B3&traceId=1",
-        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-pro-finish-select-202509-6-9inch-deepblue_AV3?wid=5120&hei=2880&fmt=webp&qlt=90&.v=NUNzdzNKR0FJbmhKWm5YamRHb05tUzkyK3hWak1ybHhtWDkwUXVINFc0RWhhOHJGRUNHdlh6a3VuZVVqdnNrNVJ2dnZ6eHdCQ0dUd3RuYU1ZcENUSHdDb1F2RTNvUEVHRkpGaGtOSVFHak5NTEhXRE11VU1QNVo2eDJsWlpuWHQ1V3E2amljcVUyYTdYMlk2dDNTTllR&traceId=1",
-        ""
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-pro-finish-select-202509-6-9inch-deepblue_AV3?wid=5120&hei=2880&fmt=webp&qlt=90&.v=NUNzdzNKR0FJbmhKWm5YamRHb05tUzkyK3hWak1ybHhtWDkwUXVINFc0RWhhOHJGRUNHdlh6a3VuZVVqdnNrNVJ2dnZ6eHdCQ0dUd3RuYU1ZcENUSHdDb1F2RTNvUEVHRkpGaGtOSVFHak5NTEhXRE11VU1QNVo2eDJsWlpuWHQ1V3E2amljcVUyYTdYMlk2dDNTTllR&traceId=1"
       ],
       "shortDescription": "iPhone 17 Pro Max — largest display and best battery.",
       "specs": {
@@ -708,16 +917,17 @@
           "Deep Blue"
         ]
       },
-      "status": "new"
+      "status": "new",
+      "features": []
     },
     {
       "id": "iphone-air",
       "name": "iPhone Air",
       "category": "Smartphone",
       "brand": "Apple",
-      "price": 49999,
+      "price": 139999,
       "currency": "INR",
-      "stock": 50,
+      "stock": 49,
       "images": [
         "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-card-40-17air-202509?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=WVVFRzUzVk1oblJhbW9PbGNSU25jci9mUU0zMkc5ekxlZHFEM05NWkp3NUMxQXc4S3pBZE5lUDJlTzVYSUYydFMwV0hhcmdVdXZzZ1NwTlFUaEgwTCtUZHJHS0dDSWYyeUtQd0tjOERiaFE",
         "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-air-digitalmat-gallery-1-202509_GEO_EMEA?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=cjBEZlU5bVdKZEVBTk45K09QMzAwRzYrc3EwZ1VoVGgyY0J1bS9COCtuZ1lMQnk0NlU1Q0YrZ2hIbjFrUkVtaGQ5S3Q4dnBGQmd2K0NENXJLTFNwNzhmSGN3NTUxbDRHZDZXK1V3b1o4a1MzQ2RtWllHVXFBTG9GU1VuVXUrcFpGQlRRRytmTHd2bTlDU2RZMUtqVTRR",
@@ -748,7 +958,8 @@
           "Black"
         ]
       },
-      "status": "new"
+      "status": "new",
+      "features": []
     },
     {
       "id": "iphone-16",
@@ -760,13 +971,7 @@
       "stock": 9,
       "images": [
         "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone16-digitalmat-gallery-1-202409?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=Y2tBd1RqSzMrd3hScm1lN290ZENDS041dXh2MUpWOGFNK2V6eVg1VGV3OHlLZ0xXbFByV2Vvak9rWndaamlPU3cvMldkdDlIc0lud2tjcDJ3djFCUkV2dGpWUjV5VzZtaGp2QjBiUXR3RUFOM1EvNmN2VndPa21RenM3N2pucTg",
-        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone16-digitalmat-gallery-2-202409?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=Y2tBd1RqSzMrd3hScm1lN290ZENDR2Q3SE9aM2lHWDNyaVZ5ajdQOU9yMHlLZ0xXbFByV2Vvak9rWndaamlPU3cvMldkdDlIc0lud2tjcDJ3djFCUkV2dGpWUjV5VzZtaGp2QjBiUXR3RUN2NjFXVEJNV2dlU044aXFFTEo4cGc",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone16-digitalmat-gallery-2-202409?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=Y2tBd1RqSzMrd3hScm1lN290ZENDR2Q3SE9aM2lHWDNyaVZ5ajdQOU9yMHlLZ0xXbFByV2Vvak9rWndaamlPU3cvMldkdDlIc0lud2tjcDJ3djFCUkV2dGpWUjV5VzZtaGp2QjBiUXR3RUN2NjFXVEJNV2dlU044aXFFTEo4cGc"
       ],
       "shortDescription": "iPhone 16 with advanced camera and A18 chip.",
       "specs": {
@@ -789,7 +994,9 @@
           "White",
           "Black"
         ]
-      }
+      },
+      "features": [],
+      "status": "active"
     },
     {
       "id": "nothing-phone-3",
@@ -802,12 +1009,7 @@
       "images": [
         "https://cdn.shopify.com/s/files/1/0376/5420/0459/files/0000s_0011_Phone-3-white.png?v=1753434595",
         "https://nothingtech-in.myshopify.com/cdn/shop/files/phone-3.jpg?v=1752562421",
-        "https://m.media-amazon.com/images/I/51jc50L+tAL._SY300_SX300_QL70_FMwebp_.jpg",
-        "",
-        "",
-        "",
-        "",
-        ""
+        "https://m.media-amazon.com/images/I/51jc50L+tAL._SY300_SX300_QL70_FMwebp_.jpg"
       ],
       "shortDescription": "Nothing Phone 3 — improved camera & performance.",
       "specs": {
@@ -826,7 +1028,8 @@
           "Silver"
         ]
       },
-      "status": "new"
+      "status": "new",
+      "features": []
     },
     {
       "id": "nothing-phone-3a-Pro",
@@ -841,9 +1044,7 @@
         "https://cdn.shopify.com/s/files/1/0586/3270/0077/files/ArcPro1352x1352-Black-Glyphon.png?v=1740649967",
         "https://image.mux.com/VHTOWvCj6YKiqpzhk02fqcl0001rgT01Mc02opZmop023HeWA/thumbnail.webp",
         "https://image.mux.com/TQOA02PANo01M6d2MWJPwsDMnq2KW00gigO3P02fqyxGmrc/thumbnail.webp",
-        "https://cdn.sanity.io/images/gtd4w1cq/production/0565a4337e05847e87ea5a8e6f9192c553fe2b63-400x400.jpg?auto=format",
-        "",
-        ""
+        "https://cdn.sanity.io/images/gtd4w1cq/production/0565a4337e05847e87ea5a8e6f9192c553fe2b63-400x400.jpg?auto=format"
       ],
       "shortDescription": "Nothing Phone 3a Pro — clean design & smooth UI.",
       "specs": {
@@ -862,7 +1063,8 @@
           "White"
         ]
       },
-      "status": "new"
+      "status": "new",
+      "features": []
     },
     {
       "id": "nothing-phone-3a",
@@ -898,7 +1100,8 @@
           "White"
         ]
       },
-      "status": "new"
+      "status": "new",
+      "features": []
     },
     {
       "id": "acer-nitro-v15-2025",
@@ -970,7 +1173,8 @@
           "1TB"
         ]
       },
-      "status": "new"
+      "status": "active",
+      "features": []
     },
     {
       "id": "acer-nitro-v16-lite-2025",
@@ -1075,7 +1279,8 @@
           "1TB"
         ]
       },
-      "status": "new"
+      "status": "active",
+      "features": []
     },
     {
       "id": "asus-tuf-f16",
@@ -1145,7 +1350,9 @@
         "storage": [
           "512GB"
         ]
-      }
+      },
+      "features": [],
+      "status": "out-of-stock"
     },
     {
       "id": "asus-tuf-gaming-pro",
@@ -1596,7 +1803,64 @@
           "Black",
           "Brown"
         ]
-      }
+      },
+      "features": [],
+      "status": "active"
+    },
+    {
+      "id": "i-phone-13-pro-1764653541567",
+      "name": "I Phone 13 pro",
+      "category": "Smartphone",
+      "brand": "Apple",
+      "price": 49999,
+      "currency": "INR",
+      "stock": 20,
+      "images": [
+        "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-card-40-17pro-202509?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=WVVFRzUzVk1oblJhbW9PbGNSU25jaUtlSkZ1cHdCU1J4ZWZjamdoYzhpRkMxQXc4S3pBZE5lUDJlTzVYSUYydFMwV0hhcmdVdXZzZ1NwTlFUaEgwTDc0akx0V0lSSVRoL2tPb3ZabW5DM0k"
+      ],
+      "shortDescription": "Budget Friendly ",
+      "features": [],
+      "specs": {
+        "display": "",
+        "chip": "",
+        "mainCamera": "",
+        "material": "",
+        "os": ""
+      },
+      "variants": {
+        "storage": [],
+        "colors": []
+      },
+      "status": "active"
+    },
+    {
+      "id": "dejo-phones-1764682195617",
+      "name": "dejo phones",
+      "category": "Smartphone",
+      "brand": "Denjo-c",
+      "price": 4000,
+      "currency": "INR",
+      "stock": 0,
+      "images": [
+        "https://images.ctfassets.net/wcfotm6rrl7u/5VLFmZ4njs2AeWYiieM0l4/a5c587a77bbd5c419a2b7615c3b0aec6/HMD_Devices_Range-Devices-Hero-IN.png?w=1920&fm=webp&q=80",
+        "https://m-cdn.phonearena.com/images/article/102312-wide-two_1200/The-best-Android-phones-in-2025.jpg"
+      ],
+      "shortDescription": "qwdqwdqw",
+      "features": [
+        "adfadf"
+      ],
+      "specs": {
+        "display": "",
+        "chip": "",
+        "mainCamera": "",
+        "material": "",
+        "os": ""
+      },
+      "variants": {
+        "storage": [],
+        "colors": []
+      },
+      "status": "new"
     }
   ],
   "support-data": {

@@ -18,14 +18,14 @@ const HeroButtons = () => {
         ></div>
         <button
           onClick={handleShop}
-          className="relative bg-white text-black px-8 py-3 rounded-full font-medium text-sm sm:text-base hover:bg-gray-50 transition-all duration-300 active:scale-95"
+          className="relative bg-white text-black px-8 py-3 rounded-full font-sf-pro-regular font-medium text-sm sm:text-base hover:bg-gray-50 transition-all duration-300 active:scale-95"
         >
           Shop Latest
         </button>
       </div>
       <button
         onClick={handleExplore}
-        className="px-8 py-3 rounded-full font-medium text-sm sm:text-base border-2 border-white/80 text-white hover:bg-white/10 transition-all duration-300 active:scale-95"
+        className="px-8 py-3 rounded-full font-sf-pro-regular font-medium text-sm sm:text-base border-2 border-white/80 text-white hover:bg-white/10 transition-all duration-300 active:scale-95"
       >
         Explore Products
       </button>

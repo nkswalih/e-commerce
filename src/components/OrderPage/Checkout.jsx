@@ -184,7 +184,7 @@ const fetchProduct = async (productId) => {
   try {
     const originalStocks = {};
     
-    // 1. Check stock availability for all items
+    // Check stock availability for all items
     for (const item of cartItems) {
       // FIX: Try both productId and id fields
       const productId = item.productId || (item.id && item.id.split('-')[0]);
@@ -205,7 +205,7 @@ const fetchProduct = async (productId) => {
       }
     }
 
-    // 2. Update stock for all items
+    // Update stock for all items
     for (const item of cartItems) {
       // FIX: Try both productId and id fields
       const productId = item.productId || (item.id && item.id.split('-')[0]);
@@ -213,7 +213,7 @@ const fetchProduct = async (productId) => {
       await updateStock(productId, newStock);
     }
 
-    // 3. Create order object
+    //Create order object
     const order = {
       id: 'ORD' + Date.now(),
       userId: currentUser.id,
@@ -229,7 +229,7 @@ const fetchProduct = async (productId) => {
       subtotal: calculateSubtotal(),
       shipping: calculateSubtotal() > 50000 ? 0 : 99,
       total: calculateTotal(),
-      status: 'confirmed',
+      status: 'pending',
       customerInfo: {
         ...formData,
         name: `${formData.firstName} ${formData.lastName}`
@@ -237,10 +237,10 @@ const fetchProduct = async (productId) => {
       paymentMethod: formData.paymentMethod
     };
 
-    // 4. Save order to server
+    // Save order to server
     await axios.post(`${API_URL}/orders`, order);
 
-    // 5. Also add order to user's orders array
+    //  Also add order to user's orders array
     try {
       const userResponse = await axios.get(`${API_URL}/users/${currentUser.id}`);
       const user = userResponse.data;
@@ -254,12 +254,12 @@ const fetchProduct = async (productId) => {
       // Continue even if updating user orders fails
     }
 
-    // 6. Clear cart on server
+    // Clear cart on server
     await clearCart();
 
     showNotification('Order placed successfully!', 'success');
 
-    // 7. Show success and redirect
+    //Show success and redirect
     setTimeout(() => {
       toast.success(`Order placed successfully!\nOrder ID: ${order.id}\nTotal: ₹${order.total.toLocaleString('en-IN')}`);
       navigate('/cart'); // Or redirect to orders page
@@ -343,22 +343,6 @@ const fetchProduct = async (productId) => {
       <div className="max-w-4xl mx-auto px-4">
         <h1 className="text-3xl font-bold text-gray-900 mb-8">Checkout</h1>
         
-        {/* User Info */}
-        <div className="bg-blue-50 border border-blue-100 rounded-xl p-4 mb-6">
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-sm text-blue-800 font-medium">
-                Checking out as: <span className="font-bold">{currentUser.name}</span>
-              </p>
-              <p className="text-xs text-blue-600 mt-1">
-                User ID: {currentUser.id} • {currentUser.email}
-              </p>
-              <p className="text-xs text-blue-600 mt-1">
-                Cart Items: {cartItems.length} • Total Items: {cartItems.reduce((sum, item) => sum + item.quantity, 0)}
-              </p>
-            </div>
-          </div>
-        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Shipping Information */}
@@ -473,7 +457,7 @@ const fetchProduct = async (productId) => {
                 {cartItems.map((item) => (
                   <div key={item.id} className="flex justify-between items-center">
                     <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
+                      <div className="w-12 h-12 bg-white  rounded-lg flex items-center justify-center">
                         <img
                           src={item.productImage}
                           alt={item.productName}

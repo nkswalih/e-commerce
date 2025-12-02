@@ -42,7 +42,7 @@ const Navigate = useNavigate();
           </button>
           <button 
           onClick={() => Navigate("/product/iphone-air")}
-          className="text-blue-400 border text-base font-normal px-6 py-2 rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300">
+          className="text-blue-400 border border-blue-400 text-base font-normal px-6 py-2 rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300">
             Buy
           </button>
         </div>

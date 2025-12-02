@@ -136,7 +136,7 @@ const CartPage = () => {
         <p className="text-gray-600 text-center mb-6">
           You need to be logged in to view your cart.
         </p>
-        <Link to="/login" className="bg-black text-white px-6 py-3 rounded-xl font-medium">
+        <Link to="/sign_in" className="bg-black text-white px-6 py-3 rounded-xl font-medium">
           Go to Login
         </Link>
       </div>

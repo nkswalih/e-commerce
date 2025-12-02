@@ -9,17 +9,25 @@ export const AuthProvider = ({children}) => {
     const login = (userData) => {
         setIsAuthenticated(true);
         setUser(userData);
-        // Store in localStorage for persistence
         localStorage.setItem('isAuthenticated', 'true');
         localStorage.setItem('user', JSON.stringify(userData));
     };
 
     const logout = () => {
-        setIsAuthenticated(false); // 
+        setIsAuthenticated(false);
         setUser(null);
-        localStorage.removeItem('isAuthenticated'); // 
+        localStorage.removeItem('isAuthenticated');
         localStorage.removeItem('user');
     }
+
+    // Add helper functions to check roles
+    const isAdmin = () => {
+        return user?.role === 'Admin';
+    };
+
+    const isUser = () => {
+        return user?.role === 'User';
+    };
 
     useEffect(() => {
         const storedAuth = localStorage.getItem('isAuthenticated');
@@ -36,13 +44,14 @@ export const AuthProvider = ({children}) => {
             isAuthenticated,  
             user, 
             login, 
-            logout 
+            logout,
+            isAdmin,
+            isUser
         }}>
             {children}
         </AuthContext.Provider>
     )
 }
-
 
 export const useAuth = () => {
     const context = useContext(AuthContext);

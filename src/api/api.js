@@ -1,3 +1,4 @@
+// api/api.js
 import axios from "axios";
 
 const API_BASE = "http://localhost:3000";
@@ -9,8 +10,12 @@ export const api = {
 
   create: (endpoint, data) => axios.post(`${API_BASE}/${endpoint}`, data),
 
-  update: (endpoint, id, data) =>
+  update: (endpoint, id, data) => 
     axios.put(`${API_BASE}/${endpoint}/${id}`, data),
+
+  // Add PATCH method for partial updates
+  patch: (endpoint, id, data) => 
+    axios.patch(`${API_BASE}/${endpoint}/${id}`, data),
 
   remove: (endpoint, id) => axios.delete(`${API_BASE}/${endpoint}/${id}`)
 };

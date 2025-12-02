@@ -50,9 +50,11 @@ const Register = () => {
         email: formData.email,
         password: formData.password,
         terms: formData.terms,
+        role:"User",
+        status:"Active",
         cart:[],
+        wishlist:[],
         order:[],
-        wishlist:[]
       });
 
 

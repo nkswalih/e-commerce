@@ -44,7 +44,7 @@ const Profile = () => {
     } else {
       setLoading(false);
       // Redirect to login if no user
-      navigate('/login');
+      navigate('/sign_in');
     }
   }, []);
 
@@ -106,7 +106,7 @@ const Profile = () => {
             You need to be logged in to view your profile.
           </p>
           <button
-            onClick={() => navigate("/login")}
+            onClick={() => navigate("/sign_in")}
             className="w-full bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800"
           >
             Go to Login
