@@ -1,6 +1,7 @@
 import { ShieldUserIcon, BellIcon, SearchIcon, LogOutIcon, XIcon } from 'lucide-react'
 import { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useAuth } from '../../contexts/AuthContext'
 
 const Header = ({ setSidebarOpen }) => {
   const [userMenuOpen, setUserMenuOpen] = useState(false)
@@ -10,6 +11,9 @@ const Header = ({ setSidebarOpen }) => {
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
   const searchRef = useRef(null)
+
+  const { user } = useAuth();
+
   // Close dropdowns when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -288,7 +292,7 @@ const Header = ({ setSidebarOpen }) => {
             {userMenuOpen && (
               <div className="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-lg border border-gray-200 z-50">
                 <div className="p-4 border-b border-gray-200">
-                  <p className="font-semibold text-gray-900">Admin</p>
+                  <p className="font-semibold text-gray-900">{user?.name}</p>
                   <p className="text-sm text-gray-500">Administrator</p>
                 </div>
                 <button

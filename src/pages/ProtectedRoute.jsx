@@ -1,29 +1,44 @@
 import React from 'react';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { toast } from 'react-toastify';
 
 const ProtectedRoute = ({ children, requiredRole = null }) => {
-  const { isAuthenticated, user, isAdmin } = useAuth();
+  const { isAuthenticated, user, authLoading } = useAuth();
+  const location = useLocation();
+
+  //WAIT until auth is fully loaded from localStorage
+  
+  if (authLoading) {
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>
+        <span className="ml-2 text-gray-700">Checking authentication...</span>
+      </div>
+    );
+  }
+
+  // Not authenticated? → send back to login
 
   if (!isAuthenticated) {
-    return <Navigate to="/sign_in" />;
+    return <Navigate to="/sign_in" state={{ from: location }} replace />;
   }
 
-  // If specific role is required
+  //If this route needs a specific role
   if (requiredRole) {
+    // --- Admin only pages ---
     if (requiredRole === 'Admin' && user?.role !== 'Admin') {
-      // If user tries to access admin page
       toast.error("Access denied! Admin privileges required.");
-      return <Navigate to="/" />;
+      return <Navigate to="/" replace />;
     }
-    
+
+    // --- User only pages ---
     if (requiredRole === 'User' && user?.role !== 'User') {
-      // If admin tries to access user-only page (optional)
-      return <Navigate to="/admin" />;
+      return <Navigate to="/admin" replace />;
     }
   }
 
+  // 4. Access granted
   return children;
 };
 

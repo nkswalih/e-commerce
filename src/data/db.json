@@ -85,20 +85,7 @@
       "terms": true,
       "role": "User",
       "status": "Active",
-      "cart": [
-        {
-          "id": "iphone-air-64GB-",
-          "productId": "iphone-air",
-          "storage": "64GB",
-          "ram": "",
-          "quantity": 1,
-          "addedAt": "2025-12-01T06:16:11.377Z",
-          "productName": "iPhone Air",
-          "productPrice": 49999,
-          "productImage": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-card-40-17air-202509?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=WVVFRzUzVk1oblJhbW9PbGNSU25jci9mUU0zMkc5ekxlZHFEM05NWkp3NUMxQXc4S3pBZE5lUDJlTzVYSUYydFMwV0hhcmdVdXZzZ1NwTlFUaEgwTCtUZHJHS0dDSWYyeUtQd0tjOERiaFE",
-          "productBrand": "Apple"
-        }
-      ],
+      "cart": [],
       "order": [
         {
           "id": "ORD1764569516870",
@@ -176,7 +163,7 @@
           "subtotal": 79999,
           "shipping": 0,
           "total": 79999,
-          "status": "shipped",
+          "status": "completed",
           "customerInfo": {
             "firstName": "swalih",
             "lastName": "Swalih",
@@ -190,6 +177,71 @@
             "name": "swalih Swalih"
           },
           "paymentMethod": "card"
+        },
+        {
+          "id": "ORD1764743328347",
+          "userId": "6d48",
+          "userName": "swalih",
+          "userEmail": "user@gmail.com",
+          "date": "2025-12-03T06:28:48.347Z",
+          "items": [
+            {
+              "id": "iphone-air-64GB-",
+              "productId": "iphone-air",
+              "storage": "64GB",
+              "ram": "",
+              "quantity": 1,
+              "addedAt": "2025-12-01T06:16:11.377Z",
+              "productName": "iPhone Air",
+              "productPrice": 49999,
+              "productImage": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-card-40-17air-202509?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=WVVFRzUzVk1oblJhbW9PbGNSU25jci9mUU0zMkc5ekxlZHFEM05NWkp3NUMxQXc4S3pBZE5lUDJlTzVYSUYydFMwV0hhcmdVdXZzZ1NwTlFUaEgwTCtUZHJHS0dDSWYyeUtQd0tjOERiaFE",
+              "productBrand": "Apple",
+              "itemTotal": 49999
+            },
+            {
+              "id": "access-screen-protector-iphone--",
+              "productId": "access-screen-protector-iphone",
+              "storage": "",
+              "ram": "",
+              "quantity": 1,
+              "addedAt": "2025-12-03T06:27:31.399Z",
+              "productName": "Logitech Lift Vertical Ergonomic Mouse",
+              "productPrice": 5495,
+              "productImage": "https://m.media-amazon.com/images/I/61OkuiCWbDL._SX679_.jpg",
+              "productBrand": "Logitech",
+              "itemTotal": 5495
+            },
+            {
+              "id": "cmf-phone-2-pro-5g-1764735261914--256gb",
+              "productId": "cmf-phone-2-pro-5g-1764735261914",
+              "storage": "",
+              "ram": "256gb",
+              "quantity": 1,
+              "addedAt": "2025-12-03T06:27:40.464Z",
+              "productName": "CMF Phone 2 Pro 5G",
+              "productPrice": 19499,
+              "productImage": "https://cdn.shopify.com/s/files/1/0586/3270/0077/files/0000s_0054_CMF-Phone-2-Pro-Orange.png?v=1753757344",
+              "productBrand": "Nothing",
+              "itemTotal": 19499
+            }
+          ],
+          "subtotal": 74993,
+          "shipping": 0,
+          "total": 74993,
+          "status": "confirmed",
+          "customerInfo": {
+            "firstName": "Mohammed ",
+            "lastName": "Swalih",
+            "email": "user@gmail.com",
+            "phone": "86575352",
+            "address": "anapadi",
+            "city": "tirur",
+            "state": "kerala",
+            "pincode": "676108",
+            "paymentMethod": "upi",
+            "name": "Mohammed  Swalih"
+          },
+          "paymentMethod": "upi"
         }
       ],
       "wishlist": []
@@ -356,7 +408,7 @@
           "subtotal": 179998,
           "shipping": 0,
           "total": 179998,
-          "status": "confirmed",
+          "status": "cancelled",
           "customerInfo": {
             "firstName": "andu",
             "lastName": "k",
@@ -422,7 +474,7 @@
           "subtotal": 1459990,
           "shipping": 0,
           "total": 1459990,
-          "status": "cancelled",
+          "status": "completed",
           "customerInfo": {
             "firstName": "Muhammed",
             "lastName": "Rizal",
@@ -437,6 +489,84 @@
           },
           "paymentMethod": "cod",
           "cancelledAt": "2025-12-02T15:27:25.884Z"
+        },
+        {
+          "id": "ORD1764696312214",
+          "userId": "dfbc",
+          "userName": "Muhammed Rizal N P",
+          "userEmail": "risal@gmail.com",
+          "date": "2025-12-02T17:25:12.214Z",
+          "items": [
+            {
+              "id": "iphone-air-64GB-",
+              "productId": "iphone-air",
+              "storage": "64GB",
+              "ram": "",
+              "quantity": 1,
+              "addedAt": "2025-12-02T17:24:38.159Z",
+              "productName": "iPhone Air",
+              "productPrice": 139999,
+              "productImage": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-card-40-17air-202509?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=WVVFRzUzVk1oblJhbW9PbGNSU25jci9mUU0zMkc5ekxlZHFEM05NWkp3NUMxQXc4S3pBZE5lUDJlTzVYSUYydFMwV0hhcmdVdXZzZ1NwTlFUaEgwTCtUZHJHS0dDSWYyeUtQd0tjOERiaFE",
+              "productBrand": "Apple",
+              "itemTotal": 139999
+            }
+          ],
+          "subtotal": 139999,
+          "shipping": 0,
+          "total": 139999,
+          "status": "completed",
+          "customerInfo": {
+            "firstName": "Muhammed",
+            "lastName": "Rizal",
+            "email": "risal@gmail.com",
+            "phone": "342354235",
+            "address": "kozhikode",
+            "city": "kozhikode",
+            "state": "kozhikode",
+            "pincode": "87632",
+            "paymentMethod": "card",
+            "name": "Muhammed Rizal"
+          },
+          "paymentMethod": "card"
+        },
+        {
+          "id": "ORD1764737069566",
+          "userId": "dfbc",
+          "userName": "Muhammed Rizal N P",
+          "userEmail": "risal@gmail.com",
+          "date": "2025-12-03T04:44:29.566Z",
+          "items": [
+            {
+              "id": "nothing-ear-2024-1764736811616--",
+              "productId": "nothing-ear-2024-1764736811616",
+              "storage": "",
+              "ram": "",
+              "quantity": 1,
+              "addedAt": "2025-12-03T04:44:17.767Z",
+              "productName": "Nothing Ear 2024",
+              "productPrice": 8499,
+              "productImage": "https://cdn.shopify.com/s/files/1/0586/3270/0077/files/0000s_0024_Ear-black.png?v=1753757359&width=600&height=600&crop=center",
+              "productBrand": "Nothing",
+              "itemTotal": 8499
+            }
+          ],
+          "subtotal": 8499,
+          "shipping": 99,
+          "total": 8598,
+          "status": "completed",
+          "customerInfo": {
+            "firstName": "Muhammed",
+            "lastName": "Rizal",
+            "email": "risal@gmail.com",
+            "phone": "342354235",
+            "address": "kozhikode",
+            "city": "kozhikode",
+            "state": "kozhikode",
+            "pincode": "87632",
+            "paymentMethod": "card",
+            "name": "Muhammed Rizal"
+          },
+          "paymentMethod": "card"
         }
       ]
     },
@@ -446,7 +576,7 @@
       "email": "admin@gmail.com",
       "password": "12345678",
       "terms": true,
-      "role": "User",
+      "role": "Admin",
       "status": "Active",
       "cart": [],
       "wishlist": [],
@@ -530,7 +660,7 @@
       "subtotal": 79999,
       "shipping": 0,
       "total": 79999,
-      "status": "shipped",
+      "status": "completed",
       "customerInfo": {
         "firstName": "swalih",
         "lastName": "Swalih",
@@ -673,7 +803,7 @@
       "subtotal": 179998,
       "shipping": 0,
       "total": 179998,
-      "status": "confirmed",
+      "status": "cancelled",
       "customerInfo": {
         "firstName": "andu",
         "lastName": "k",
@@ -725,7 +855,7 @@
       "subtotal": 1459990,
       "shipping": 0,
       "total": 1459990,
-      "status": "cancelled",
+      "status": "completed",
       "customerInfo": {
         "firstName": "Muhammed",
         "lastName": "Rizal",
@@ -791,6 +921,149 @@
         "name": "sasa h"
       },
       "paymentMethod": "card"
+    },
+    {
+      "id": "ORD1764696312214",
+      "userId": "dfbc",
+      "userName": "Muhammed Rizal N P",
+      "userEmail": "risal@gmail.com",
+      "date": "2025-12-02T17:25:12.214Z",
+      "items": [
+        {
+          "id": "iphone-air-64GB-",
+          "productId": "iphone-air",
+          "storage": "64GB",
+          "ram": "",
+          "quantity": 1,
+          "addedAt": "2025-12-02T17:24:38.159Z",
+          "productName": "iPhone Air",
+          "productPrice": 139999,
+          "productImage": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-card-40-17air-202509?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=WVVFRzUzVk1oblJhbW9PbGNSU25jci9mUU0zMkc5ekxlZHFEM05NWkp3NUMxQXc4S3pBZE5lUDJlTzVYSUYydFMwV0hhcmdVdXZzZ1NwTlFUaEgwTCtUZHJHS0dDSWYyeUtQd0tjOERiaFE",
+          "productBrand": "Apple",
+          "itemTotal": 139999
+        }
+      ],
+      "subtotal": 139999,
+      "shipping": 0,
+      "total": 139999,
+      "status": "completed",
+      "customerInfo": {
+        "firstName": "Muhammed",
+        "lastName": "Rizal",
+        "email": "risal@gmail.com",
+        "phone": "342354235",
+        "address": "kozhikode",
+        "city": "kozhikode",
+        "state": "kozhikode",
+        "pincode": "87632",
+        "paymentMethod": "card",
+        "name": "Muhammed Rizal"
+      },
+      "paymentMethod": "card"
+    },
+    {
+      "id": "ORD1764737069566",
+      "userId": "dfbc",
+      "userName": "Muhammed Rizal N P",
+      "userEmail": "risal@gmail.com",
+      "date": "2025-12-03T04:44:29.566Z",
+      "items": [
+        {
+          "id": "nothing-ear-2024-1764736811616--",
+          "productId": "nothing-ear-2024-1764736811616",
+          "storage": "",
+          "ram": "",
+          "quantity": 1,
+          "addedAt": "2025-12-03T04:44:17.767Z",
+          "productName": "Nothing Ear 2024",
+          "productPrice": 8499,
+          "productImage": "https://cdn.shopify.com/s/files/1/0586/3270/0077/files/0000s_0024_Ear-black.png?v=1753757359&width=600&height=600&crop=center",
+          "productBrand": "Nothing",
+          "itemTotal": 8499
+        }
+      ],
+      "subtotal": 8499,
+      "shipping": 99,
+      "total": 8598,
+      "status": "completed",
+      "customerInfo": {
+        "firstName": "Muhammed",
+        "lastName": "Rizal",
+        "email": "risal@gmail.com",
+        "phone": "342354235",
+        "address": "kozhikode",
+        "city": "kozhikode",
+        "state": "kozhikode",
+        "pincode": "87632",
+        "paymentMethod": "card",
+        "name": "Muhammed Rizal"
+      },
+      "paymentMethod": "card"
+    },
+    {
+      "id": "ORD1764743328347",
+      "userId": "6d48",
+      "userName": "swalih",
+      "userEmail": "user@gmail.com",
+      "date": "2025-12-03T06:28:48.347Z",
+      "items": [
+        {
+          "id": "iphone-air-64GB-",
+          "productId": "iphone-air",
+          "storage": "64GB",
+          "ram": "",
+          "quantity": 1,
+          "addedAt": "2025-12-01T06:16:11.377Z",
+          "productName": "iPhone Air",
+          "productPrice": 49999,
+          "productImage": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-card-40-17air-202509?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=WVVFRzUzVk1oblJhbW9PbGNSU25jci9mUU0zMkc5ekxlZHFEM05NWkp3NUMxQXc4S3pBZE5lUDJlTzVYSUYydFMwV0hhcmdVdXZzZ1NwTlFUaEgwTCtUZHJHS0dDSWYyeUtQd0tjOERiaFE",
+          "productBrand": "Apple",
+          "itemTotal": 49999
+        },
+        {
+          "id": "access-screen-protector-iphone--",
+          "productId": "access-screen-protector-iphone",
+          "storage": "",
+          "ram": "",
+          "quantity": 1,
+          "addedAt": "2025-12-03T06:27:31.399Z",
+          "productName": "Logitech Lift Vertical Ergonomic Mouse",
+          "productPrice": 5495,
+          "productImage": "https://m.media-amazon.com/images/I/61OkuiCWbDL._SX679_.jpg",
+          "productBrand": "Logitech",
+          "itemTotal": 5495
+        },
+        {
+          "id": "cmf-phone-2-pro-5g-1764735261914--256gb",
+          "productId": "cmf-phone-2-pro-5g-1764735261914",
+          "storage": "",
+          "ram": "256gb",
+          "quantity": 1,
+          "addedAt": "2025-12-03T06:27:40.464Z",
+          "productName": "CMF Phone 2 Pro 5G",
+          "productPrice": 19499,
+          "productImage": "https://cdn.shopify.com/s/files/1/0586/3270/0077/files/0000s_0054_CMF-Phone-2-Pro-Orange.png?v=1753757344",
+          "productBrand": "Nothing",
+          "itemTotal": 19499
+        }
+      ],
+      "subtotal": 74993,
+      "shipping": 0,
+      "total": 74993,
+      "status": "confirmed",
+      "customerInfo": {
+        "firstName": "Mohammed ",
+        "lastName": "Swalih",
+        "email": "user@gmail.com",
+        "phone": "86575352",
+        "address": "anapadi",
+        "city": "tirur",
+        "state": "kerala",
+        "pincode": "676108",
+        "paymentMethod": "upi",
+        "name": "Mohammed  Swalih"
+      },
+      "paymentMethod": "upi"
     }
   ],
   "products": [
@@ -927,7 +1200,7 @@
       "brand": "Apple",
       "price": 139999,
       "currency": "INR",
-      "stock": 49,
+      "stock": 47,
       "images": [
         "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-card-40-17air-202509?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=WVVFRzUzVk1oblJhbW9PbGNSU25jci9mUU0zMkc5ekxlZHFEM05NWkp3NUMxQXc4S3pBZE5lUDJlTzVYSUYydFMwV0hhcmdVdXZzZ1NwTlFUaEgwTCtUZHJHS0dDSWYyeUtQd0tjOERiaFE",
         "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-air-digitalmat-gallery-1-202509_GEO_EMEA?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=cjBEZlU5bVdKZEVBTk45K09QMzAwRzYrc3EwZ1VoVGgyY0J1bS9COCtuZ1lMQnk0NlU1Q0YrZ2hIbjFrUkVtaGQ5S3Q4dnBGQmd2K0NENXJLTFNwNzhmSGN3NTUxbDRHZDZXK1V3b1o4a1MzQ2RtWllHVXFBTG9GU1VuVXUrcFpGQlRRRytmTHd2bTlDU2RZMUtqVTRR",
@@ -1687,7 +1960,7 @@
       "brand": "Logitech",
       "price": 5495,
       "currency": "INR",
-      "stock": 299,
+      "stock": 298,
       "images": [
         "https://m.media-amazon.com/images/I/61OkuiCWbDL._SX679_.jpg"
       ],
@@ -1840,7 +2113,7 @@
       "brand": "Denjo-c",
       "price": 4000,
       "currency": "INR",
-      "stock": 0,
+      "stock": 12,
       "images": [
         "https://images.ctfassets.net/wcfotm6rrl7u/5VLFmZ4njs2AeWYiieM0l4/a5c587a77bbd5c419a2b7615c3b0aec6/HMD_Devices_Range-Devices-Hero-IN.png?w=1920&fm=webp&q=80",
         "https://m-cdn.phonearena.com/images/article/102312-wide-two_1200/The-best-Android-phones-in-2025.jpg"
@@ -1861,6 +2134,91 @@
         "colors": []
       },
       "status": "new"
+    },
+    {
+      "id": "cmf-phone-2-pro-5g-1764735261914",
+      "name": "CMF Phone 2 Pro 5G",
+      "category": "Smartphone",
+      "brand": "Nothing",
+      "price": 19499,
+      "currency": "INR",
+      "stock": 49,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0586/3270/0077/files/0000s_0054_CMF-Phone-2-Pro-Orange.png?v=1753757344",
+        "https://cdn.sanity.io/images/gtd4w1cq/production/d912a26d1622781591597856f2728b766bec581e-396x396.jpg?auto=format",
+        "https://cdn.sanity.io/images/gtd4w1cq/production/1dbd932a65358f800341af043d738db12cc25cdd-396x396.jpg?auto=format",
+        "https://cdn.sanity.io/images/gtd4w1cq/production/9526ead0e41a55f585c17049fbc66cc18b657f7e-400x400.jpg?auto=format",
+        "https://image.mux.com/QWqJSSiPMTJi300CwCcsX00ig9njTcZfRaTZt5hj9XyOc/thumbnail.webp",
+        "https://image.mux.com/JVrtnOouKgUp02LMtb00601RJ301IvBoZGoCjVICgilNFSQ/thumbnail.webp"
+      ],
+      "shortDescription": "Inside, the CMF Phone 2 Pro is powered by the MediaTek Dimensity 7300 Pro 5G chip. It has an 8-core CPU that can go up to 2.5GHz, making it 10% faster than the CMF Phone 1. The graphics performance is also 5% better, which should help with gaming and everyday use.",
+      "features": [],
+      "specs": {
+        "Brand": "CMF BY NOTHING",
+        "Operating System": "Android 15",
+        "RAM Memory Installed Size": "8 GB",
+        "Connectivity technologies": "‎Bluetooth, NFC, USB, Wi-Fi"
+      },
+      "variants": {
+        "ram": [
+          "128gb",
+          "256gb"
+        ],
+        "colors": [
+          "orange",
+          "white",
+          "teal"
+        ]
+      },
+      "status": "new"
+    },
+    {
+      "id": "nothing-headphone(1)-42db-anc-1764736564762",
+      "name": "Nothing Headphone(1) 42dB ANC",
+      "category": "Accessory",
+      "brand": "Nothing",
+      "price": 19999,
+      "currency": "INR",
+      "stock": 40,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0586/3270/0077/files/0000s_0021_Headphone1-white.png?v=1753757251",
+        "https://cdn.sanity.io/images/gtd4w1cq/production/c45d469722841bcffddc4bb2520582f0e6c414d8-864x864.jpg?auto=format",
+        "https://cdn.sanity.io/images/gtd4w1cq/production/c05efb71ebf47b15989185802054b726c0b74edf-864x864.jpg?auto=format",
+        "https://image.mux.com/d2SMbGKYhLtjbtiBoNI8jbdZRcszD017dblEwqljLC014/thumbnail.webp"
+      ],
+      "shortDescription": "Clear and Rich Sound\nThis Headphone (1) features a meticulously engineered 40 mm dynamic driver paired with a high-linearity suspension system and 8.9 mm PU surround for exceptional sound performance. The nickel-plated coating minimises distortion, delivering clear high frequencies and depth in the bass. The diaphragm, rim, and dome are balanced to be lightweight yet rigid, allowing enhanced response times and minimising unwanted vibrations. This results in consistent and precise sound reproduction. The advanced PU surround in this Headphone (1) is engineered for efficient sound delivery and vivid bass. It moves more effectively, producing deeper, richer tones in the low frequencies. Its 8.9 mm width exceeds industry norms, minimising sound distortion and keeping the driver stable for precise vibrations, for clear vocals, vibrant mids, and an overall immersive sound.",
+      "features": [],
+      "specs": {
+        "Battery": "Up to 80 hours of playback",
+        "Collab With": "Sound by KEF",
+        "Working ANC": "Real-time adaptive ANC"
+      },
+      "variants": {},
+      "status": "new"
+    },
+    {
+      "id": "nothing-ear-2024-1764736811616",
+      "name": "Nothing Ear 2024",
+      "category": "Accessory",
+      "brand": "Nothing",
+      "price": 8499,
+      "currency": "INR",
+      "stock": 44,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0586/3270/0077/files/0000s_0024_Ear-black.png?v=1753757359&width=600&height=600&crop=center",
+        "https://cdn.shopify.com/s/files/1/0586/3270/0077/files/0000s_0023_Ear-white.png?v=1753757347&width=600&height=600&crop=center",
+        "https://cdn.sanity.io/images/gtd4w1cq/production/892ca1fee54f0c221d55289e8072c84df0537aa2-396x396.jpg?auto=format",
+        "https://cdn.shopify.com/s/files/1/0586/3270/0077/files/BA_360_ENTEI_030_blackBud_rgb_00_4fdaba7c-5568-4db0-aaa5-5129d524d8bd.png?v=1713169144"
+      ],
+      "shortDescription": "We've mastered sound, and now you can too. Nothing Ear delivers our best-ever audio experience, giving you complete control of your sound in high fidelity. Bringing you closer to the artist, wherever you are.",
+      "features": [],
+      "specs": {
+        "Battery": "40.5 h battery 24-bit Hi-Res Audio",
+        "Sound": "24 bit Hi-Res Audio with LDAC & LHDC for the ultimate sound experience",
+        "Noise": "45 dB active noise cancellation"
+      },
+      "variants": {},
+      "status": "active"
     }
   ],
   "support-data": {

@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { 
   LayoutDashboard, 
   Users, 
@@ -20,6 +20,7 @@ const navigation = [
 
 const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
   const location = useLocation()
+  const Navigate = useNavigate()
 
   return (
     <>
@@ -41,7 +42,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
         
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b ">
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-3 hover:cursor-pointer"  onClick={() => Navigate("/admin")}>
             <img
                 alt="EchOo."
                 src="/src/assets/images/Echoo-transparent.png"

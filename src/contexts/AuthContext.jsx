@@ -5,6 +5,7 @@ const AuthContext = createContext();
 export const AuthProvider = ({children}) => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [user, setUser] = useState(null);
+    const [authLoading,setAuthLoading] = useState(true);
 
     const login = (userData) => {
         setIsAuthenticated(true);
@@ -37,6 +38,8 @@ export const AuthProvider = ({children}) => {
             setIsAuthenticated(true); 
             setUser(JSON.parse(storedUser));
         }
+
+        setAuthLoading(false);
     }, []);
 
     return (
@@ -46,7 +49,8 @@ export const AuthProvider = ({children}) => {
             login, 
             logout,
             isAdmin,
-            isUser
+            isUser,
+            authLoading,
         }}>
             {children}
         </AuthContext.Provider>
